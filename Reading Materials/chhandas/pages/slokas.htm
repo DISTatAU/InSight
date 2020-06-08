@@ -45,6 +45,7 @@ the things you should do :</font>
 nayanam madhuram hasitam madhuram <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hrdayam madhuram gamanam madhuram mathuraadhipaterakhilam
 madhuram </font><font size="3" face="Verdana"><strong>&nbsp;&nbsp;&nbsp;&nbsp;</strong></font></p>
+<br><br>
 <audio id="audio2" src="wavefile/adharam.wav" autoplay="false" ></audio>
 <img src="../images/audio.png" width="50" height="50"><a onclick="pnaplaySound();"> Recite</a>&nbsp;<a onclick="pnaplaySound1();"> Pause</a>&nbsp;<a onclick="pnaplaySound2();"> Stop</a>
 <script>
@@ -108,34 +109,54 @@ shuShkaistrNaiH vanagajaa balino bhavanti <br>
 kandaiH phalairmunivaraaH kShapayanti kaalam <br>
 santoSha eva puruShasya param nidhaanam </font>
 <p>
-<object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=sarpah height=0 width=0>
-<param name="filename" value="wavefile\sarpaah.wav">
-</object>
+  <br><br>
+  <audio id="audio3" src="wavefile/sarpaah.wav" autoplay="false" ></audio>
+  <img src="../images/audio.png" width="50" height="50"><a onclick="yplaySound();"> Recite</a>&nbsp;<a onclick="yplaySound1();"> Pause</a>&nbsp;<a onclick="yplaySound2();"> Stop</a>
+  <script>
+  function yplaySound() {
+        var sound = document.getElementById("audio3");
+        sound.play();
+        sound.stop();
+    }
+    function yplaySound1() {
+        var sound = document.getElementById("audio3");
+        
+        sound.pause();
+        
+    }
+    function yplaySound2() {
+        var sound = document.getElementById("audio3");
+        
+        sound.pause();
+        sound.currentTime = 0;
+    }
+  </script>
+<input TYPE="text" SIZE="20" id="T2">
+<button onclick="myFunctiontext1()">Ok</button> <p id="demotext1"></p>
 <script>
-sarpah.showdisplay=false
-sarpah.showcontrols=false
-</script>
-<input type=button name=play value="Recite" onclick = "sarpah.run()">
-<input type=button name=stop value="Stop" onclick = "sarpah.stop()">
+function myFunctiontext1() {
 
-<form METHOD="POST" NAME="sarpa">
-  <p><input TYPE="text" SIZE="20" NAME="T1"> <input LANGUAGE="VBScript" TYPE="button"
-  VALUE="   OK   "
-  ONCLICK="Extract(T1.value)
-if (lcase(strScheme) = &quot;tabhajajagaga&quot;) then
-   msgbox &quot;You are correct! &quot; &amp; chr(13) &amp; _
-          &quot;Scheme  : ta bha ja ja ga ga&quot; &amp; chr(13) &amp; _ 
-          &quot; Name   : vasantatilaka&quot; &amp; chr(13) &amp; _ 
-          &quot; Class  : shakvaree&quot;,,&quot;Chhandas Exercises&quot;
-else
-   msgbox &quot;Sorry! try again.&quot;,, &quot;Chhandas Exercises&quot;
-end if"
-  NAME="ok"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
-  ONCLICK="MSGBOX &quot;Seprents eat only air ,but still are not weak.&quot; &amp; _
-       &quot;The elephants remain strong in spite of the small amount of grass they eat.&quot; &amp; _
-       &quot;The sages spend their lives only on roots and fruits.Contentment alone is man's biggest treasure.&quot;,,&quot;Chhandas Exercies&quot;"
-  NAME="mean"> </p>
-</form>
+var t1 = document.getElementById("T2").value;
+var res = t1.toLowerCase();
+res = res.replace(/\s/g, "");
+  if (res == "tabhajajagaga") {
+    document.getElementById("demotext1").innerHTML = "You are correct!Scheme  : ta bha ja ja ga ga,  Name   : vasantatilaka, Class  : shakvaree";
+    
+  } else {
+    document.getElementById("demotext1").innerHTML = "Sorry! You are off the mark!";
+  }
+  
+}
+</script>
+<button onclick="func1()">Meaning</button>
+
+<p id="d1"></p> </p>
+
+<script>
+function func1() {
+  document.getElementById("d1").innerHTML = "Seprents eat only air ,but still are not weak. The elephants remain strong in spite of the small amount of grass they eat. The sages spend their lives only on roots and fruits.Contentment alone is man's biggest treasure.";
+}
+</script>
 
 <p><font face="Trebuchet MS" size="3"><br>
 </font><big><big>सुखं हि दु:खान्यनुभूय शोभते घनान्धकारेष्विव दीप दर्शनं । <br>
@@ -143,36 +164,54 @@ end if"
 </big></big><font face="Trebuchet MS" size="3">sukham hi duHkhaanyanubhooya shobhate
 ghanaandhakaareShviva deepa darshanam <br>
 sukhaattu yo yaati naro daridrataam dhrtaH shareereNa mrtaH sa jeevati </font>
-
-<p><object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=sukh height=0 width=0>
-<param name="filename" value="wavefile\sukha.wav">
-</object>
+<br><br>
+<audio id="audio4" src="wavefile/sukha.wav" autoplay="false" ></audio>
+  <img src="../images/audio.png" width="50" height="50"><a onclick="aplaySound();"> Recite</a>&nbsp;<a onclick="aplaySound1();"> Pause</a>&nbsp;<a onclick="aplaySound2();"> Stop</a>
+  <script>
+  function aplaySound() {
+        var sound = document.getElementById("audio4");
+        sound.play();
+        sound.stop();
+    }
+    function aplaySound1() {
+        var sound = document.getElementById("audio4");
+        
+        sound.pause();
+        
+    }
+    function aplaySound2() {
+        var sound = document.getElementById("audio4");
+        
+        sound.pause();
+        sound.currentTime = 0;
+    }
+  </script>
+<input TYPE="text" SIZE="20" id="T3">
+<button onclick="myFunctiontext2()">Ok</button> <p id="demotext2"></p>
 <script>
-sukh.showdisplay=false
-sukh.showcontrols=false
-</script>
-<input type=button name=play value="Recite" onclick = "sukh.run()">
-<input type=button name=stop value="Stop" onclick = "sukh.stop()">
+function myFunctiontext2() {
 
-<form METHOD="POST" NAME="sukham">
-  <p><input TYPE="text" SIZE="20" NAME="T1"> <input LANGUAGE="VBScript" TYPE="button"
-  VALUE="   OK   "
-  ONCLICK="Extract(T1.value)
-if (lcase(strScheme) = &quot;jatajara&quot;) then
-   msgbox &quot;You are correct! &quot; &amp; chr(13) &amp; _
-          &quot;Scheme  : ja ta ja ra&quot; &amp; chr(13) &amp; _ 
-          &quot; Name   : vanmshastha&quot; &amp; chr(13) &amp; _ 
-          &quot; Class  : jagatee&quot;,,&quot;Chhandas Exercises&quot;
-else
-   msgbox &quot;Sorry! try again.&quot;,, &quot;Chhandas Exercises&quot;
-end if"
-  NAME="ok"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
-  ONCLICK="msgbox&quot;Happiness is better enjoyed after experiencing &quot; &amp; _
-&quot;miseries. It is like the sight of lamp in darkness. &quot; &amp; _
-&quot;But, if a man becomes poor after enjoying happiness, he &quot; &amp; _
-&quot;is like a dead man, though with a body.&quot;,,&quot;Chhandas Exercises&quot;"
-  NAME="mean"> </p>
-</form>
+var t1 = document.getElementById("T3").value;
+var res = t1.toLowerCase();
+res = res.replace(/\s/g, "");
+  if (res == "jatajara") {
+    document.getElementById("demotext2").innerHTML = "You are correct! Scheme  : ja ta ja ra, Name   : vanmshastha, Class  : jagatee";
+    
+  } else {
+    document.getElementById("demotext2").innerHTML = "Hard luck! Try again.";
+  }
+  
+}
+</script>
+<button onclick="func2()">Meaning</button>
+
+<p id="d2"></p> </p>
+
+<script>
+function func2() {
+  document.getElementById("d2").innerHTML = "Happiness is better enjoyed after experiencing miseries. It is like the sight of lamp in darkness. But, if a man becomes poor after enjoying happiness, he is like a dead man, though with a body.";
+}
+</script>
 
 <p>
 <big><big>
@@ -182,37 +221,54 @@ end if"
 </big></big><font face="Trebuchet MS" size="3">karaaravindena padaaravindam mukhaaravinde
 viniveshayantam <br>
 vaTasya patrasya puTe shayaanam baalam mukundam manasaasmaraami </font>
-
-<p><object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=kara height=0 width=0>
-<param name="filename" value="wavefile\karaara.wav">
-</object>
+<br><br>
+<audio id="audio5" src="wavefile/karaara.wav" autoplay="false" ></audio>
+<img src="../images/audio.png" width="50" height="50"><a onclick="nplaySound();"> Recite</a>&nbsp;<a onclick="nplaySound1();"> Pause</a>&nbsp;<a onclick="nplaySound2();"> Stop</a>
 <script>
-kara.showdisplay=false
-kara.showcontrols=false
+function nplaySound() {
+      var sound = document.getElementById("audio5");
+      sound.play();
+      sound.stop();
+  }
+  function nplaySound1() {
+      var sound = document.getElementById("audio5");
+      
+      sound.pause();
+      
+  }
+  function nplaySound2() {
+      var sound = document.getElementById("audio5");
+      
+      sound.pause();
+      sound.currentTime = 0;
+  }
 </script>
-<input type=button name=play value="Recite" onclick = "kara.run()">
-<input type=button name=stop value="Stop" onclick = "kara.stop()">
+<input TYPE="text" SIZE="20" id="T4">
+<button onclick="myFunctiontext3()">Ok</button> <p id="demotext3"></p>
+<script>
+function myFunctiontext3() {
 
-<form METHOD="POST" NAME="karaaravinda">
-  <p><input TYPE="text" SIZE="20" NAME="T1"> <input LANGUAGE="VBScript" TYPE="button"
-  VALUE="   OK   "
-  ONCLICK="Extract(T1.value)
-if (lcase(strScheme) = &quot;jatajagagatatajagaga&quot;) then
-   msgbox &quot;You are correct! &quot; &amp; chr(13) &amp; _
-          &quot;Schemes : ja ta ja ga ga (upendravajraa)&quot; &amp; chr(13) &amp; _ 
-          &quot;          ta ta ja ga ga (indravajraa)&quot; &amp; chr(13) &amp; _
-          &quot; Name   : upajaati&quot; &amp; chr(13) &amp; _
-          &quot; Class  : triShThubh &quot;,,&quot;Chhandas Exercises&quot;
-else
-   msgbox &quot;Sorry! try again.&quot;,, &quot;Chhandas Exercises&quot;
-end if"
-  NAME="ok"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
-  ONCLICK="msgbox&quot;I bow to that child Mukunda, who has his lotus-foot &quot; &amp; _
-&quot;inserted into his lotus-mouth by his lotus-hands, and who &quot; &amp; _
-&quot;is reclining in the cavity of the basil leaf.&quot; &amp; chr(13) &amp; _
-&quot;(From MukundaaShThakam)&quot;,,&quot;Chhandas Exercises&quot;"
-  NAME="mean"> </p>
-</form>
+var t1 = document.getElementById("T4").value;
+var res = t1.toLowerCase();
+res = res.replace(/\s/g, "");
+if (res == "jatajagagatatajagaga") {
+  document.getElementById("demotext3").innerHTML = "Very good! Your answer is correct! Schemes : ja ta ja ga ga (upendravajraa) ta ta ja ga ga (indravajraa), Name   : upajaati,  Class  : triShThubh ";
+  
+} else {
+  document.getElementById("demotext3").innerHTML = "Sorry! Try again.";
+}
+
+}
+</script>
+<button onclick="func3()">Meaning</button>
+
+<p id="d3"></p> </p>
+
+<script>
+function func3() {
+document.getElementById("d3").innerHTML = "I bow to that child Mukunda, who has his lotus-foot inserted into his lotus-mouth by his lotus-hands, and who is reclining in the cavity of the basil leaf. (From MukundaaShThakam)";
+}
+</script>
 
 <p><font face="Trebuchet MS" size="3"><br>
 </font><big><big>यथा ह्येकेन चक्रेण न रथस्य गतिर्भवेत् । <br>
@@ -220,33 +276,54 @@ end if"
 </big></big><font face="Trebuchet MS" size="3">yathaa hyekena chakreNa na rathasya
 gatirbhavet <br>
 tathaa puruShakaareNa vinaa daivam na sidhyate </font>
-
-<p><object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=yataa height=0 width=0>
-<param name="filename" value="wavefile\yathaa.wav">
-</object>
+<br><br>
+<audio id="audio6" src="wavefile/yathaa.wav" autoplay="false" ></audio>
+<img src="../images/audio.png" width="50" height="50"><a onclick="yasplaySound();"> Recite</a>&nbsp;<a onclick="yasplaySound1();"> Pause</a>&nbsp;<a onclick="yasplaySound2();"> Stop</a>
 <script>
-yataa.showdisplay=false
-yataa.showcontrols=false
+function yasplaySound() {
+      var sound = document.getElementById("audio6");
+      sound.play();
+      sound.stop();
+  }
+  function yasplaySound1() {
+      var sound = document.getElementById("audio6");
+      
+      sound.pause();
+      
+  }
+  function yasplaySound2() {
+      var sound = document.getElementById("audio6");
+      
+      sound.pause();
+      sound.currentTime = 0;
+  }
 </script>
-<input type=button name=play value="Recite" onclick = "yataa.run()">
-<input type=button name=stop value="Stop" onclick = "yataa.stop()">
+<input TYPE="text" SIZE="20" id="T5">
+<button onclick="myFunctiontext4()">Ok</button> <p id="demotext4"></p>
+<script>
+function myFunctiontext4() {
 
-<form METHOD="POST" NAME="yathaa">
-  <p><input TYPE="text" SIZE="20" NAME="T1"> <input LANGUAGE="VBScript" TYPE="button"
-  VALUE="   OK   "
-  ONCLICK="Extract(T1.value)
+var t1 = document.getElementById("T5").value;
+var res = t1.toLowerCase();
+res = res.replace(/\s/g, "");
+if (res == "sloka" || res == "shloka") {
+  document.getElementById("demotext4").innerHTML = "You are correct! This scheme is shloka (or) anuShThubh";
+  
+} else {
+  document.getElementById("demotext4").innerHTML = "Sorry! Try again.";
+}
 
-if (lcase(strScheme) = &quot;shloka&quot; or lcase(strScheme) = &quot;sloka&quot;) then
-   msgbox &quot;You are correct! This scheme is shloka (or) anuShThubh&quot;,,&quot;Chhandas Exercises&quot;
-else
-   msgbox &quot;Sorry! try again.&quot;,, &quot;Chhandas Exercises&quot;
-end if"
-  NAME="ok"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
-  ONCLICK="msgbox&quot;Just as a chariot cannot run on a single wheel, &quot; &amp; _
-&quot;one cannot achieve success by luck alone, without &quot; &amp; _
-&quot;proper effort.&quot;,,&quot;Chhandas Exercises&quot;"
-  NAME="mean"> </p>
-</form>
+}
+</script>
+<button onclick="func4()">Meaning</button>
+
+<p id="d4"></p> </p>
+
+<script>
+function func4() {
+document.getElementById("d4").innerHTML = "Just as a chariot cannot run on a single wheel, one cannot achieve success by luck alone, without proper effort.";
+}
+</script>
 
 <p>
 <big><big>
@@ -256,32 +333,53 @@ end if"
 </big></big><font face="Trebuchet MS" size="3">tilakam madhuvidviSho lalaaTe rajasaa
 gomayajanmanaa vidhaaya <br>
 urasaa parirabhya nandagopaH suchiram tasya sumangalaani dadhyau </font>
-
-<p><object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=tilak height=0 width=0>
-<param name="filename" value="wavefile\tilakam.wav">
-</object>
+<br><br>
+<audio id="audio7" src="wavefile/tilakam.wav" autoplay="false" ></audio>
+<img src="../images/audio.png" width="50" height="50"><a onclick="kplaySound();"> Recite</a>&nbsp;<a onclick="kplaySound1();"> Pause</a>&nbsp;<a onclick="kplaySound2();"> Stop</a>
 <script>
-tilak.showdisplay=false
-tilak.showcontrols=false
+function kplaySound() {
+      var sound = document.getElementById("audio7");
+      sound.play();
+      sound.stop();
+  }
+  function kplaySound1() {
+      var sound = document.getElementById("audio7");
+      
+      sound.pause();
+      
+  }
+  function kplaySound2() {
+      var sound = document.getElementById("audio7");
+      
+      sound.pause();
+      sound.currentTime = 0;
+  }
 </script>
-<input type=button name=play value="Recite" onclick = "tilak.run()">
-<input type=button name=stop value="Stop" onclick = "tilak.stop()">
+<input TYPE="number" SIZE="20" id="T6" min=0>
+<button onclick="myFunctiontext5()">Ok</button> <p id="demotext5"></p>
+<script>
+function myFunctiontext5() {
 
-<form METHOD="POST" NAME="tilakam">
-  <p><input TYPE="text" SIZE="20" NAME="T1"> <input LANGUAGE="VBScript" TYPE="button"
-  VALUE="   OK   "
-  ONCLICK="Extract(T1.value)
-if (lcase(strScheme) = &quot;2&quot;) then
-   msgbox &quot;You are correct! It is 'oupachchhandasika'&quot;,,&quot;Chhandas Exercises&quot;
-else
-   msgbox &quot;Sorry! try again.&quot;,, &quot;Chhandas Exercises&quot;
-end if"
-  NAME="ok"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
-  ONCLICK="msgbox&quot;Nandagopa, applying 'tilaka' on the forehead of &quot; &amp; _
-&quot;KrShNa with the ash of burnt cowdung, hugged him to his &quot; &amp; _
-&quot;chest, and blessed  him.&quot; &amp; chr(13) &amp; &quot;(krshna vilaasa kaavyam - sukumaara kavi)&quot;,,&quot;Chhandas Exercises&quot;"
-  NAME="mean"> </p>
-</form>
+var t1 = document.getElementById("T6").value;
+if (t1 == 2) {
+  document.getElementById("demotext5").innerHTML = "You are correct! It is 'oupachchhandasika";
+  
+} else {
+  document.getElementById("demotext5").innerHTML = "Sorry! try again.";
+}
+
+}
+</script>
+
+<button onclick="func5()">Meaning</button>
+
+<p id="d5"></p> </p>
+
+<script>
+function func5() {
+document.getElementById("d5").innerHTML = "Nandagopa, applying 'tilaka' on the forehead of KrShNa with the ash of burnt cowdung, hugged him to his chest, and blessed  him. ";
+}
+</script>
 
 <p><font face="Trebuchet MS" size="3"><br>
 </font><big><big>
@@ -290,37 +388,55 @@ end if"
 </big></big><font face="Trebuchet MS" size="3">sarasija nilaye saroja haste
 Dhavalatamaamshuka gandhamaalya shobhe <br>
 bhagavati hari vallabhe manojne tribhuvana bhootikari praseeda mahyam </font>
-
-<p><object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=sar height=0 width=0>
-<param name="filename" value="wavefile\sarasija.wav">
-</object>
+<br><br>
+<audio id="audio8" src="wavefile/sarasija.wav" autoplay="false" ></audio>
+<img src="../images/audio.png" width="50" height="50"><a onclick="gplaySound();"> Recite</a>&nbsp;<a onclick="gplaySound1();"> Pause</a>&nbsp;<a onclick="gplaySound2();"> Stop</a>
 <script>
-sar.showdisplay=false
-sar.showcontrols=false
+function gplaySound() {
+      var sound = document.getElementById("audio8");
+      sound.play();
+      sound.stop();
+  }
+  function gplaySound1() {
+      var sound = document.getElementById("audio8");
+      
+      sound.pause();
+      
+  }
+  function gplaySound2() {
+      var sound = document.getElementById("audio8");
+      
+      sound.pause();
+      sound.currentTime = 0;
+  }
 </script>
-<input type=button name=play value="Recite" onclick = "sar.run()">
-<input type=button name=stop value="Stop" onclick = "sar.stop()">
+<input TYPE="text" SIZE="20" id="T7">
+<button onclick="myFunctiontext6()">Ok</button> <p id="demotext6"></p>
+<script>
+function myFunctiontext6() {
 
-<form METHOD="POST" NAME="sarasija">
-  <p><input TYPE="text" SIZE="20" NAME="T1"> <input LANGUAGE="VBScript" TYPE="button"
-  VALUE="   OK   "
-  ONCLICK="Extract(T1.value)
-if (lcase(strScheme) = &quot;nanarayanajajaraga&quot;) then
-   msgbox &quot;You are correct! &quot; &amp; chr(13) &amp; _
-          &quot;Schemes : na na ra ya &quot; &amp; chr(13) &amp; _ 
-          &quot;          na ja ja ra ga&quot; &amp; chr(13) &amp; _ 
-          &quot; Name   : puShpitaagraa&quot;,,&quot;Chhandas Exercises&quot;
-else
-   msgbox &quot;Sorry! try again.&quot;,, &quot;Chhandas Exercises&quot;
-end if"
-  NAME="ok"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
-  ONCLICK="msgbox&quot;O Goddess seated on a lotus flower! One who has a &quot; &amp; _
-&quot;lotus in her hands! Draped in the whitest of clothes, &quot; &amp; _
-&quot;and wearing garland with good smell, one dear to Hari! &quot; &amp; _
-&quot;One who is present in three worlds! Bless me (with wealth).&quot; &amp; chr(13) &amp; _
-&quot;(Kanakadhaara stotram - Shri Aadi Shankara)&quot;,,&quot;Chhandas Exercises&quot;"
-  NAME="mean"> </p>
-</form>
+var t1 = document.getElementById("T7").value;
+var res = t1.toLowerCase();
+res = res.replace(/\s/g, "");
+if (res == "nanarayanajajaraga") {
+  document.getElementById("demotext6").innerHTML = "You are correct! Schemes : na na ra ya na ja ja ra ga, Name   : puShpitaagraa";
+  
+} else {
+  document.getElementById("demotext6").innerHTML = "Please try again.";
+}
+
+}
+</script>
+<button onclick="func6()">Meaning</button>
+
+<p id="d6"></p> </p>
+
+<script>
+function func6() {
+document.getElementById("d6").innerHTML = "O Goddess seated on a lotus flower! One who has a lotus in her hands! Draped in the whitest of clothes, and wearing garland with good smell, one dear to Hari! One who is present in three worlds! Bless me (with wealth).(Kanakadhaara stotram - Shri Aadi Shankara)";
+}
+</script>
+
 
 <p><font face="Trebuchet MS" size="3"><br>
 </font><font face="Trebuchet MS" size="2">(*)</font><big><big> 
@@ -334,35 +450,56 @@ pravaahapaavitasthale <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gale(a)valambya lambitaam bhujanga tunga maalikaam <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DamaDDamaDDamaDDamanninaadamaDDamarvayam <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;chakaara chaNDa taaNDavam tanotunashshivashshivam </font>
-
-<p><object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=jata height=0 width=0>
-<param name="filename" value="wavefile\jataata.wav">
-</object>
+<br><br>
+<audio id="audio9" src="wavefile/jataata.wav" autoplay="false" ></audio>
+<img src="../images/audio.png" width="50" height="50"><a onclick="yaplaySound();"> Recite</a>&nbsp;<a onclick="yaplaySound1();"> Pause</a>&nbsp;<a onclick="yaplaySound2();"> Stop</a>
 <script>
-jata.showdisplay=false
-jata.showcontrols=false
+function yaplaySound() {
+      var sound = document.getElementById("audio9");
+      sound.play();
+      sound.stop();
+  }
+  function yaplaySound1() {
+      var sound = document.getElementById("audio9");
+      
+      sound.pause();
+      
+  }
+  function yaplaySound2() {
+      var sound = document.getElementById("audio9");
+      
+      sound.pause();
+      sound.currentTime = 0;
+  }
 </script>
-<input type=button name=play value="Recite" onclick = "jata.run()">
-<input type=button name=stop value="Stop" onclick = "jata.stop()">
+<input TYPE="text" SIZE="20" id="T8">
+<button onclick="myFunctiontext7()">Ok</button> <p id="demotext7"></p>
+<script>
+function myFunctiontext7() {
 
-<form METHOD="POST" NAME="jataa">
-  <p><input TYPE="text" SIZE="20" NAME="T1"> <input LANGUAGE="VBScript" TYPE="button"
-  VALUE="    OK    "
-  ONCLICK="Extract(T1.value)
-if (lcase(strScheme) = &quot;jarajarajaga&quot;) then
-   msgbox &quot;You are correct! &quot; &amp; chr(13) &amp; _
-          &quot;Scheme : ja ra ja ra ja ga (16 syllables)&quot; &amp; chr(13) &amp; _
-          &quot; Name   : pancha chaamara &quot; &amp; chr(13) &amp; _
-          &quot; Class  : aShTi &quot; &amp; chr(13) &amp; _ 
-          &quot; Speciality : Short and long syllables occur alternately&quot;,, &quot;Chhandas : Exercises&quot;
-else
-   msgbox &quot;Sorry! try again.&quot;,, &quot;Chhandas Exercises&quot;
-end if"
-  NAME="btnOK"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
-  ONCLICK="msgbox &quot;The water of Ganga, flowing from the matted locks of Lord Shiva, purifies the place in which it falls. In that place, the Lord dances, with the snakes around his neck as garland, and the Damaru sounding 'Damaddama'. Let that Lord give us all auspices.&quot; &amp; chr(13) &amp; _
-       &quot;(shiva taandava stotram - RaavaNa)&quot;,,&quot;Chhandas exercises&quot;"
-  NAME="btnMean"> </p>
-</form>
+var t1 = document.getElementById("T8").value;
+var res = t1.toLowerCase();
+res = res.replace(/\s/g, "");
+if (res == "jarajarajaga") {
+  document.getElementById("demotext7").innerHTML = "Very Good!, Scheme : ja ra ja ra ja ga (16 syllables), Name   : pancha chaamara, Class  : aShTi , Speciality : Short and long syllables occur alternately";
+  
+} else {
+  document.getElementById("demotext7").innerHTML = "Bad luck! Give it another try!";
+}
+
+}
+</script>
+
+
+<button onclick="func61()">Meaning</button>
+
+<p id="d61"></p> </p>
+
+<script>
+function func61() {
+document.getElementById("d61").innerHTML = "The water of Ganga, flowing from the matted locks of Lord Shiva, purifies the place in which it falls. In that place, the Lord dances, with the snakes around his neck as garland, and the Damaru sounding 'Damaddama'. Let that Lord give us all auspices. (shiva taandava stotram - RaavaNa)";
+}
+</script>
 
 <p><font face="Trebuchet MS" size="3"><br>
 </font><big><big>
@@ -371,33 +508,54 @@ end if"
 </big></big><font face="Trebuchet MS" size="3">maa kuru dhanajana yauvana garvam harati
 nimeShaat kaalaH sarvam <br>
 maayaa mayamidam akilam hitvaa brahmapadam tvam pravisha viditvaa</font>
-
-<p><object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=maa height=0 width=0>
-<param name="filename" value="wavefile\maakuru.wav">
-</object>
+<br><br>
+<audio id="audio10" src="wavefile/maakuru.wav" autoplay="false" ></audio>
+<img src="../images/audio.png" width="50" height="50"><a onclick="vvplaySound();"> Recite</a>&nbsp;<a onclick="vvplaySound1();"> Pause</a>&nbsp;<a onclick="vvplaySound2();"> Stop</a>
 <script>
-maa.showdisplay=false
-maa.showcontrols=false
+function vvplaySound() {
+      var sound = document.getElementById("audio10");
+      sound.play();
+      sound.stop();
+  }
+  function vvplaySound1() {
+      var sound = document.getElementById("audio10");
+      
+      sound.pause();
+      
+  }
+  function vvplaySound2() {
+      var sound = document.getElementById("audio10");
+      
+      sound.pause();
+      sound.currentTime = 0;
+  }
 </script>
-<input type=button name=play value="Recite" onclick = "maa.run()">
-<input type=button name=stop value="Stop" onclick = "maa.stop()">
+<input TYPE="number" SIZE="20" id="T9" min=0>
+<button onclick="myFunctiontext8()">Ok</button> <p id="demotext8"></p>
+<script>
+function myFunctiontext8() {
 
-<form METHOD="POST" NAME="maakuru">
-  <p><input TYPE="text" SIZE="20" NAME="T1"> <input LANGUAGE="VBScript" TYPE="button"
-  VALUE="   OK   "
-  ONCLICK="Extract(T1.value)
-if (lcase(strScheme) = &quot;1&quot;) then
-   msgbox &quot;You are correct! It is maatraasamaka&quot; ,, &quot;Chhandas Exercises&quot;
-else
-   msgbox &quot;Sorry! try again.&quot;,, &quot;Chhandas Exercises&quot;
-end if"
-  NAME="ok"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
-  ONCLICK="msgbox&quot;Do not be proud of your wealth, relations and youth. &quot; &amp; _
-&quot;It can be destroyed in a minute by Time. Know that this &quot; &amp; _
-&quot;world is full of illusions. Leave everything and attain &quot; &amp; _
-&quot;the Brahman.&quot; &amp; chr(13) &amp; &quot;(Bhaja Govindam - Shri Aadi Shankara)&quot;,,&quot;Chhandas Exercises&quot;"
-  NAME="mean"> </p>
-</form>
+var t1 = document.getElementById("T9").value;
+if (t1 == 1) {
+  document.getElementById("demotext8").innerHTML = "You are correct! It is maatraasamaka";
+  
+} else {
+  document.getElementById("demotext8").innerHTML = "Sorry! try again.";
+}
+
+}
+</script>
+
+<button onclick="func7()">Meaning</button>
+
+<p id="d7"></p> </p>
+
+<script>
+function func7() {
+document.getElementById("d7").innerHTML = "Do not be proud of your wealth, relations and youth. It can be destroyed in a minute by Time. Know that this world is full of illusions. Leave everything and attain the Brahman.";
+}
+</script>
+
 
 <p>
 <big><big>
@@ -411,34 +569,57 @@ na chandrojvalaa <br>
 snaanam na vilepanam na kusumam naalNkrtaa moordhajaaH <br>
 vaaNyekaa samalaNkaroti puruSham yaa samskrtaa dhaaryate <br>
 kSheeyante khalu bhooShaNaani satatam vaak bhooShaNam bhooShaNam </font>
-
-<p><object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=key height=0 width=0>
-<param name="filename" value="wavefile\kaeyura.wav">
-</object>
+<br><br>
+<audio id="audio11" src="wavefile/kaeyura.wav" autoplay="false" ></audio>
+<img src="../images/audio.png" width="50" height="50"><a onclick="dplaySound();"> Recite</a>&nbsp;<a onclick="dplaySound1();"> Pause</a>&nbsp;<a onclick="dplaySound2();"> Stop</a>
 <script>
-key.showdisplay=false
-key.showcontrols=false
+function dplaySound() {
+      var sound = document.getElementById("audio11");
+      sound.play();
+      sound.stop();
+  }
+  function dplaySound1() {
+      var sound = document.getElementById("audio11");
+      
+      sound.pause();
+      
+  }
+  function dplaySound2() {
+      var sound = document.getElementById("audio11");
+      
+      sound.pause();
+      sound.currentTime = 0;
+  }
 </script>
-<input type=button name=play value="Recite" onclick = "key.run()">
-<input type=button name=stop value="Stop" onclick = "key.stop()">
+<input TYPE="text" SIZE="20" id="T10">
+<button onclick="myFunctiontext9()">Ok</button> <p id="demotext9"></p>
+<script>
+function myFunctiontext9() {
 
-<form METHOD="POST" NAME="keyoora">
-  <p><input TYPE="text" SIZE="20" NAME="T1"> <input LANGUAGE="VBScript" TYPE="button"
-  VALUE="   OK   "
-  ONCLICK="Extract(T1.value)
-if (lcase(strScheme) = &quot;masajasatataga&quot;) then
-   msgbox &quot;You are correct! &quot; &amp; chr(13) &amp; _
-          &quot;Scheme  : ma sa ja sa ta ta ga&quot; &amp; chr(13) &amp; _ 
-          &quot; Name   : shaardoolavikreeDitam&quot; &amp; chr(13) &amp; _
-          &quot; Class  : atidhrti&quot;,,&quot;Chhandas Exercises&quot;
-else
-   msgbox &quot;Sorry! try again.&quot;,, &quot;Chhandas Exercises&quot;
-end if"
-  NAME="ok"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
-  ONCLICK="msgbox &quot;Bracelets don't decorate (the arms of) men, nor do necklaces decorate women. Nor do bathing, application of sandal paste, flowers, nor decoration of the head. Only speech decorates people.&quot; &amp; _
-       &quot; All other ornaments may perish, but speech (which does not perish) is alone the true ornament.&quot;,,&quot;Chhandas exercises&quot;"
-  NAME="mean"> </p>
-</form>
+var t1 = document.getElementById("T10").value;
+var res = t1.toLowerCase();
+res = res.replace(/\s/g, "");
+if (res == "masajasatataga") {
+  document.getElementById("demotext9").innerHTML = "Yes! You are correct!, Scheme  : ma sa ja sa ta ta ga, Name   : shaardoolavikreeDitam, Class  : atidhrti";
+  
+} else {
+  document.getElementById("demotext9").innerHTML = "Sorry! You are off the mark!";
+}
+
+}
+</script>
+
+
+<button onclick="func8()">Meaning</button>
+
+<p id="d8"></p> </p>
+
+<script>
+function func8() {
+document.getElementById("d8").innerHTML = "Bracelets don't decorate (the arms of) men, nor do necklaces decorate women. Nor do bathing, application of sandal paste, flowers, nor decoration of the head. Only speech decorates people.  All other ornaments may perish, but speech (which does not perish) is alone the true ornament.";
+}
+</script>
+
 
 <p><font face="Trebuchet MS" size="3"><br>
 </font><big><big>
@@ -453,34 +634,56 @@ nrtyantamapratigha krtyantamapratimamatyanta chaaru vapuSham .<br>
 devaadibhissamaya sevaadaratvarita hevaakaghoSha mukharaiH<br>
 drShTaavadhaanamatha tuShTaavashaurimahiriShTaavarodha sahitaH .. </font>
 
-<p><object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=lol height=0 width=0>
-<param name="filename" value="wavefile\lolaapa.wav">
-</object>
+<br><br>
+<audio id="audio12" src="wavefile/lolaapa.wav" autoplay="false" ></audio>
+<img src="../images/audio.png" width="50" height="50"><a onclick="pplaySound();"> Recite</a>&nbsp;<a onclick="pplaySound1();"> Pause</a>&nbsp;<a onclick="pplaySound2();"> Stop</a>
 <script>
-lol.showdisplay=false
-lol.showcontrols=false
+function pplaySound() {
+      var sound = document.getElementById("audio12");
+      sound.play();
+      sound.stop();
+  }
+  function pplaySound1() {
+      var sound = document.getElementById("audio12");
+      
+      sound.pause();
+      
+  }
+  function pplaySound2() {
+      var sound = document.getElementById("audio12");
+      
+      sound.pause();
+      sound.currentTime = 0;
+  }
 </script>
-<input type=button name=play value="Recite" onclick = "lol.run()">
-<input type=button name=stop value="Stop" onclick = "lol.stop()">
 
-<form METHOD="POST" NAME="lolaa">
-  <p><input TYPE="text" SIZE="20" NAME="T1"> <input LANGUAGE="VBScript" TYPE="button"
-  VALUE="   OK   "
-  ONCLICK="Extract(T1.value)
-if (lcase(strScheme) = &quot;tabhayajasaramaga&quot;) then
-   msgbox &quot;You are correct! &quot; &amp; chr(13) &amp; _
-          &quot;Scheme  : ta bha ya ja sa ra ma ga&quot; &amp; chr(13) &amp; _ 
-          &quot; Name   : mattebha&quot; &amp; chr(13) &amp; _
-          &quot; Class  : aakrti&quot;,,&quot;Chhandas Exercises&quot;
-else
-   msgbox &quot;Sorry! try again.&quot;,, &quot;Chhandas Exercises&quot;
-end if"
-  NAME="ok"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
-  ONCLICK="msgbox&quot;The serpent along with its beloved praised Lord KrShNa's beautiful form, whose &quot; &amp; _
-      &quot;actions were unchecked, who had no equal, who was dancing on the serpent's hood which was being beaten by his feet gushing forth the poison, and who was being looked at with attention by Devas, who were noisy with their joyful cries, being eager to see him on that occasion.&quot; &amp; chr(13) &amp; _
-      &quot;(Yaadavaabhyudayam - Shri deshika)&quot; ,,&quot;Chhandas Exercises&quot;"
-  NAME="mean"> </p>
-</form>
+<input TYPE="text" SIZE="20" id="T11">
+<button onclick="myFunctiontext10()">Ok</button> <p id="demotext10"></p>
+<script>
+function myFunctiontext10() {
+
+var t1 = document.getElementById("T11").value;
+var res = t1.toLowerCase();
+res = res.replace(/\s/g, "");
+if (res == "tabhayajasaramaga") {
+  document.getElementById("demotext10").innerHTML = "Yes! You are correct!Scheme  : ta bha ya ja sa ra ma ga,  Name   : mattebha, Class  : aakrti ";
+  
+} else {
+  document.getElementById("demotext10").innerHTML = "Sorry! You are off the mark!";
+}
+
+}
+</script>
+
+<button onclick="func9()">Meaning</button>
+
+<p id="d9"></p> </p>
+
+<script>
+function func9() {
+document.getElementById("d9").innerHTML = "The serpent along with its beloved praised Lord KrShNa's beautiful form, whose actions were unchecked, who had no equal, who was dancing on the serpent's hood which was being beaten by his feet gushing forth the poison, and who was being looked at with attention by Devas, who were noisy with their joyful cries, being eager to see him on that occasion. (Yaadavaabhyudayam - Shri deshika)";
+}
+</script>
 
 <p>
 <big><big>
@@ -490,34 +693,58 @@ end if"
 </big></big><font face="Trebuchet MS" size="3">vaagarthaaviva samprktau vaagartha
 pratipattaye <br>
 jagataH pitarau vande paarvatee parameshvarau </font>
+<br><br>
 
-<p><object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=vaag height=0 width=0>
-<param name="filename" value="wavefile\vagartha.wav">
-</object>
+<audio id="audio13" src="wavefile/vagartha.wav" autoplay="false" ></audio>
+<img src="../images/audio.png" width="50" height="50"><a onclick="ppplaySound();"> Recite</a>&nbsp;<a onclick="ppplaySound1();"> Pause</a>&nbsp;<a onclick="ppplaySound2();"> Stop</a>
 <script>
-vaag.showdisplay=false
-vaag.showcontrols=false
+function ppplaySound() {
+      var sound = document.getElementById("audio13");
+      sound.play();
+      sound.stop();
+  }
+  function ppplaySound1() {
+      var sound = document.getElementById("audio13");
+      
+      sound.pause();
+      
+  }
+  function ppplaySound2() {
+      var sound = document.getElementById("audio13");
+      
+      sound.pause();
+      sound.currentTime = 0;
+  }
 </script>
-<input type=button name=play value="Recite" onclick = "vaag.run()">
-<input type=button name=stop value="Stop" onclick = "vaag.stop()">
 
-<form METHOD="POST" NAME="vaak">
-  <p><input TYPE="text" SIZE="20" NAME="T1"> <input LANGUAGE="VBScript" TYPE="button"
-  VALUE="   OK   "
-  ONCLICK="Extract(T1.value)
+<input TYPE="text" SIZE="20" id="T12">
+<button onclick="myFunctiontext11()">Ok</button> <p id="demotext11"></p>
+<script>
+function myFunctiontext11() {
 
-if (lcase(strScheme) = &quot;shloka&quot; or lcase(strScheme) = &quot;sloka&quot;) then
-   msgbox &quot;You are correct! This scheme is shloka (or) anuShThubh&quot;,,&quot;Chhandas Exercises&quot;
-else
-   msgbox &quot;Sorry! try again.&quot;,, &quot;Chhandas Exercises&quot;
-end if"
-  NAME="ok"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
-  ONCLICK="msgbox&quot;Shiva and Paarvathee are the parents of the world, &quot; &amp; _
-&quot;as inseperable as a word and its meaning, I bow to them &quot;&amp; _
-&quot;to know the words and their meanings (to get diction &quot; &amp; _
-&quot;and vocabulary).&quot; &amp; chr(13) &amp; &quot;(Raghuvamsham - Kaalidaasa)&quot;,,&quot;Chhandas Exercises&quot;"
-  NAME="mean"> </p>
-</form>
+var t1 = document.getElementById("T12").value;
+var res = t1.toLowerCase();
+res = res.replace(/\s/g, "");
+if (res == "sloka" || res == "shloka") {
+  document.getElementById("demotext11").innerHTML = "You are correct! This scheme is shloka (or) anuShThubh";
+  
+} else {
+  document.getElementById("demotext11").innerHTML = "Sorry! You are off the mark!";
+}
+
+}
+</script>
+
+<button onclick="func10()">Meaning</button>
+
+<p id="d10"></p> </p>
+
+<script>
+function func10() {
+document.getElementById("d10").innerHTML = "Shiva and Paarvathee are the parents of the world, as inseperable as a word and its meaning, I bow to them to know the words and their meanings (to get diction and vocabulary).";
+}
+</script>
+
 
 <p>
 <big><big>
@@ -527,37 +754,58 @@ end if"
 </big></big><font face="Trebuchet MS" size="3">madana parihara sthitim madeeye manasi
 mukunda padaaravinda dhaamni <br>
 hara nayana krshaanunaa krshosi smarasi na chakra paraakramam muraareH </font>
+<br><br>
 
-<p><object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=mad height=0 width=0>
-<param name="filename" value="wavefile\madana.wav">
-</object>
+<audio id="audio14" src="wavefile/madana.wav" autoplay="false" ></audio>
+<img src="../images/audio.png" width="50" height="50"><a onclick="splaySound();"> Recite</a>&nbsp;<a onclick="splaySound1();"> Pause</a>&nbsp;<a onclick="splaySound2();"> Stop</a>
 <script>
-mad.showdisplay=false
-mad.showcontrols=false
+function splaySound() {
+      var sound = document.getElementById("audio14");
+      sound.play();
+      sound.stop();
+  }
+  function splaySound1() {
+      var sound = document.getElementById("audio14");
+      
+      sound.pause();
+      
+  }
+  function splaySound2() {
+      var sound = document.getElementById("audio14");
+      
+      sound.pause();
+      sound.currentTime = 0;
+  }
 </script>
-<input type=button name=play value="Recite" onclick = "mad.run()">
-<input type=button name=stop value="Stop" onclick = "mad.stop()">
 
-<form METHOD="POST" NAME="madana">
-  <p><input TYPE="text" SIZE="20" NAME="T1"> <input LANGUAGE="VBScript" TYPE="button"
-  VALUE="   OK   "
-  ONCLICK="Extract(T1.value)
-if (lcase(strScheme) = &quot;nanarayanajajaraga&quot;) then
-   msgbox &quot;You are correct! &quot; &amp; chr(13) &amp; _
-          &quot;Schemes : na na ra ya &quot; &amp; chr(13) &amp; _ 
-          &quot;          na ja ja ra ga&quot; &amp; chr(13) &amp; _ 
-          &quot; Name   : puShpitaagraa&quot;,,&quot;Chhandas Exercises&quot;
-else
-   msgbox &quot;Sorry! try again.&quot;,, &quot;Chhandas Exercises&quot;
-end if"
-  NAME="ok"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
-  ONCLICK="msgbox&quot;O Manmatha! Forget the thought that you can reside &quot; &amp; _
-&quot;in my mind that is already occupied with the lotus feet &quot; &amp; _
-&quot;of Mukunda. You have already been burnt by Lord Shiva. &quot; &amp; _
-&quot;Have you forgotten the might of Muraari's (KrShNaa's) &quot; &amp; _
-&quot;discus?&quot; &amp; chr(13) &amp; &quot;(Mukunda maala -Shri Kulashekara Aazhvaar)&quot;,,&quot;Chhandas Exercises&quot;"
-  NAME="mean"> </p>
-</form>
+<input TYPE="text" SIZE="20" id="T13">
+<button onclick="myFunctiontext12()">Ok</button> <p id="demotext12"></p>
+<script>
+function myFunctiontext12() {
+
+var t1 = document.getElementById("T13").value;
+var res = t1.toLowerCase();
+res = res.replace(/\s/g, "");
+if (res == "nanarayanajajaraga") {
+  document.getElementById("demotext12").innerHTML = "Yes! You are correct!Schemes : na na ra ya na ja ja ra ga,Name   : puShpitaagraa ";
+  
+} else {
+  document.getElementById("demotext12").innerHTML = "Sorry! You are off the mark!";
+}
+
+}
+</script>
+
+<button onclick="func11()">Meaning</button>
+
+<p id="d11"></p> </p>
+
+<script>
+function func11() {
+document.getElementById("d11").innerHTML = "O Manmatha! Forget the thought that you can reside in my mind that is already occupied with the lotus feet of Mukunda. You have already been burnt by Lord Shiva. Have you forgotten the might of Muraari's (KrShNaa's) (Mukunda maala -Shri Kulashekara Aazhvaar)";
+}
+</script>
+
 
 <p><font face="Trebuchet MS" size="3"><br>
 </font><big><big>
@@ -571,35 +819,57 @@ nibiDatarakalaayaavaleelobhaneeyam <br>
 peeyooShaaplaavitoaham tadanu tadudare divyakaishoraveSham <br>
 taaruNyaarambharamyam paramasukharasaasvaadaromaanchitaangaiH <br>
 aaveetam naaradaadyairvilasadupaniShat sundareemanDalaishcha </font>
+<br><br>
 
-<p><object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=ag height=0 width=0>
-<param name="filename" value="wavefile\agrae.wav">
-</object>
+<audio id="audio15" src="wavefile/agrae.wav" autoplay="false" ></audio>
+<img src="../images/audio.png" width="50" height="50"><a onclick="mplaySound();"> Recite</a>&nbsp;<a onclick="mplaySound1();"> Pause</a>&nbsp;<a onclick="mplaySound2();"> Stop</a>
 <script>
-ag.showdisplay=false
-ag.showcontrols=false
+function mplaySound() {
+      var sound = document.getElementById("audio15");
+      sound.play();
+      sound.stop();
+  }
+  function mplaySound1() {
+      var sound = document.getElementById("audio15");
+      
+      sound.pause();
+      
+  }
+  function mplaySound2() {
+      var sound = document.getElementById("audio15");
+      
+      sound.pause();
+      sound.currentTime = 0;
+  }
 </script>
-<input type=button name=play value="Recite" onclick = "ag.run()">
-<input type=button name=stop value="Stop" onclick = "ag.stop()">
+<input TYPE="text" SIZE="20" id="T14">
+<button onclick="myFunctiontext13()">Ok</button> <p id="demotext13"></p>
+<script>
+function myFunctiontext13() {
 
-<form METHOD="POST" NAME="agre">
-  <p><input TYPE="text" SIZE="20" NAME="T1"> <input LANGUAGE="VBScript" TYPE="button"
-  VALUE="   OK   "
-  ONCLICK="Extract(T1.value)
-if (lcase(strScheme) = &quot;marabhanayayaya&quot;) then
-   msgbox &quot;You are correct! &quot; &amp; chr(13) &amp; _
-          &quot;Scheme : ma ra bha na ya ya ya&quot; &amp; chr(13) &amp; _
-          &quot;Name   : sragdharaa&quot; &amp; chr(13) &amp; _
-          &quot;Class  : prakrti&quot;,,&quot;Chhandas Exercises&quot;
-else
-   msgbox &quot;Sorry! try again.&quot;,, &quot;Chhandas Exercises&quot;
-end if"
-  NAME="ok"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
-  ONCLICK="msgbox&quot;I see a beautiful light in front of me, dense like the flowers of ironwood tree (which are golden in colour). In the middle of that light, I see a divine child, which is beautiful due to the beginning of its youth, surrounded by sages like Naarada, who are experiencing supreme happiness. I also see the Upanishads in the form of ladies surrounding that child. &quot; &amp; _
-       &quot;I am like one drowned in nectar due to this sight. &quot; &amp; chr(13) &amp; _
-       &quot; (NaarayaNeeyam - Naraayana bhatta)&quot;,,&quot;Chhandas Exercises&quot;"
-  NAME="mean"> </p>
-</form>
+var t1 = document.getElementById("T14").value;
+var res = t1.toLowerCase();
+res = res.replace(/\s/g, "");
+if (res == "marabhanayayaya") {
+  document.getElementById("demotext13").innerHTML = "Very Good!, Scheme : ma ra bha na ya ya ya, Name   : sragdharaa, Class  : prakrti";
+  
+} else {
+  document.getElementById("demotext13").innerHTML = "Sorry! You are off the mark!";
+}
+
+}
+</script>
+
+<button onclick="func12()">Meaning</button>
+
+<p id="d12"></p> </p>
+
+<script>
+function func12() {
+document.getElementById("d12").innerHTML = "I see a beautiful light in front of me, dense like the flowers of ironwood tree (which are golden in colour). In the middle of that light, I see a divine child, which is beautiful due to the beginning of its youth, surrounded by sages like Naarada, who are experiencing supreme happiness. I also see the Upanishads in the form of ladies surrounding that child. I am like one drowned in nectar due to this sight. (NaarayaNeeyam - Naraayana bhatta)"; 
+}
+</script>
+
 
 <p>
 <big><big>
@@ -609,31 +879,55 @@ end if"
 </big></big><font face="Trebuchet MS" size="3">vadanam madhusoodanaH karaabhyaam
 charaNaanguShThamupaanayat pipaasuH <br>
 galiteva tataH surasravantee nakhamuktaamaNideedhitichchhalena </font>
-
-<p><object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=vad height=0 width=0>
-<param name="filename" value="wavefile\vadanam.wav">
-</object>
+<br><br>
+<audio id="audio16" src="wavefile/vadanam.wav" autoplay="false" ></audio>
+<img src="../images/audio.png" width="50" height="50"><a onclick="wplaySound();"> Recite</a>&nbsp;<a onclick="wplaySound1();"> Pause</a>&nbsp;<a onclick="wplaySound2();"> Stop</a>
 <script>
-vad.showdisplay=false
-vad.showcontrols=false
+function wplaySound() {
+      var sound = document.getElementById("audio16");
+      sound.play();
+      sound.stop();
+  }
+  function wplaySound1() {
+      var sound = document.getElementById("audio16");
+      
+      sound.pause();
+      
+  }
+  function wplaySound2() {
+      var sound = document.getElementById("audio16");
+      
+      sound.pause();
+      sound.currentTime = 0;
+  }
 </script>
-<input type=button name=play value="Recite" onclick = "vad.run()">
-<input type=button name=stop value="Stop" onclick = "vad.stop()">
 
-<form METHOD="POST" NAME="vadanam">
-  <p><input TYPE="text" SIZE="20" NAME="T1"> <input LANGUAGE="VBScript" TYPE="button"
-  VALUE="   OK   "
-  ONCLICK="Extract(T1.value)
-if (lcase(strScheme) = &quot;2&quot;) then
-   msgbox &quot;You are correct! It is 'oupachchhandasika'&quot;,,&quot;Chhandas Exercises&quot;
-else
-   msgbox &quot;Sorry! try again.&quot;,, &quot;Chhandas Exercises&quot;
-end if"
-  NAME="ok"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
-  ONCLICK="msgbox&quot;KrShNa, the destroyer of Madhu, holding his toe with both hands, brought it to his mouth. It seemed as if Ganga flowed from it in the form of the lustre of the pearl emanating from his nail.&quot; &amp; chr(13) &amp; _
-      &quot;(krshna vilaasa kaavyam - sukumaara kavi)&quot;,,&quot;Chhandas Exercises&quot;"
-  NAME="mean"> </p>
-</form>
+<input TYPE="number" SIZE="20" id="T15" min=0>
+<button onclick="myFunctiontext14()">Ok</button> <p id="demotext14"></p>
+<script>
+function myFunctiontext14() {
+
+var t1 = document.getElementById("T15").value;
+if (t1 == 2) {
+  document.getElementById("demotext14").innerHTML = "You are correct! It is 'oupachchhandasika";
+  
+} else {
+  document.getElementById("demotext14").innerHTML = "Sorry! You are off the mark!";
+}
+
+}
+</script>
+
+<button onclick="func13()">Meaning</button>
+
+<p id="d13"></p> </p>
+
+<script>
+function func13() {
+document.getElementById("d13").innerHTML = "KrShNa, the destroyer of Madhu, holding his toe with both hands, brought it to his mouth. It seemed as if Ganga flowed from it in the form of the lustre of the pearl emanating from his nail. (krshna vilaasa kaavyam - sukumaara kavi)"; 
+}
+</script>
+
 
 <p>
 <big><big>
@@ -646,34 +940,57 @@ end if"
 bhrngaanganeva mukulaabharaNam tamaalam <br>
 angeekrtaakila vibhootirapaangaleelaa <br>
 maangalya daastu mama mangala devataayaaH </font>
-
-<p><object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=ang height=0 width=0>
-<param name="filename" value="wavefile\angam.wav">
-</object>
+<br><br>
+<audio id="audio17" src="wavefile/angam.wav" autoplay="false" ></audio>
+<img src="../images/audio.png" width="50" height="50"><a onclick="woplaySound();"> Recite</a>&nbsp;<a onclick="woplaySound1();"> Pause</a>&nbsp;<a onclick="woplaySound2();"> Stop</a>
 <script>
-ang.showdisplay=false
-ang.showcontrols=false
+function woplaySound() {
+      var sound = document.getElementById("audio17");
+      sound.play();
+      sound.stop();
+  }
+  function woplaySound1() {
+      var sound = document.getElementById("audio17");
+      
+      sound.pause();
+      
+  }
+  function woplaySound2() {
+      var sound = document.getElementById("audio17");
+      
+      sound.pause();
+      sound.currentTime = 0;
+  }
 </script>
-<input type=button name=play value="Recite" onclick = "ang.run()">
-<input type=button name=stop value="Stop" onclick = "ang.stop()">
 
-<form METHOD="POST" NAME="angam">
-  <p><input TYPE="text" SIZE="20" NAME="T1"> <input LANGUAGE="VBScript" TYPE="button"
-  VALUE="   OK   "
-  ONCLICK="Extract(T1.value)
-if (lcase(strScheme) = &quot;tabhajajagaga&quot;) then
-   msgbox &quot;You are correct! &quot; &amp; chr(13) &amp; _
-          &quot;Scheme  : ta bha ja ja ga ga&quot; &amp; chr(13) &amp; _ 
-          &quot; Name   : vasantatilaka&quot; &amp; chr(13) &amp; _ 
-          &quot; Class  : shakvaree&quot;,,&quot;Chhandas Exercises&quot;
-else
-   msgbox &quot;Sorry! try again.&quot;,, &quot;Chhandas Exercises&quot;
-end if"
-  NAME="ok"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
-  ONCLICK="msgbox&quot;Goddess LakShmi is seated on Lord ViShNu's chest, making him happy. He appears like a garland with bees on it. Goddess LakShmi's single glance is enough to make one rich. I bow to you, O LakShmi, and pray to you to  bestow wealth upon me. &quot; &amp; chr(13) &amp; _
-      &quot;(Kanakadhaaraa stotram - shri Aadi shankara)&quot;,,&quot;Chhandas Exercises&quot;"
-  NAME="mean"> </p>
-</form>
+<input TYPE="text" SIZE="20" id="T16">
+<button onclick="myFunctiontext15()">Ok</button> <p id="demotext15"></p>
+<script>
+function myFunctiontext15() {
+
+var t1 = document.getElementById("T16").value;
+var res = t1.toLowerCase();
+res = res.replace(/\s/g, "");
+
+if (res == "tabhajajagaga") {
+  document.getElementById("demotext15").innerHTML = "You are correct! Scheme  : ta bha ja ja ga ga,  Name   : vasantatilaka, Class  : shakvaree";
+  
+} else {
+  document.getElementById("demotext15").innerHTML = "Sorry! You are off the mark!";
+}
+
+}
+</script>
+
+<button onclick="func14()">Meaning</button>
+
+<p id="d14"></p> </p>
+
+<script>
+function func14() {
+document.getElementById("d14").innerHTML = "Goddess LakShmi is seated on Lord ViShNu's chest, making him happy. He appears like a garland with bees on it. Goddess LakShmi's single glance is enough to make one rich. I bow to you, O LakShmi, and pray to you to  bestow wealth upon me. (Kanakadhaaraa stotram - shri Aadi shankara)"; 
+}
+</script>
 
 <p align="center">&nbsp;</p>
 
