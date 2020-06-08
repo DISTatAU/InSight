@@ -45,37 +45,56 @@ the things you should do :</font>
 nayanam madhuram hasitam madhuram <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hrdayam madhuram gamanam madhuram mathuraadhipaterakhilam
 madhuram </font><font size="3" face="Verdana"><strong>&nbsp;&nbsp;&nbsp;&nbsp;</strong></font></p>
-
-<object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=adh height=0 width=0>
-<param name="filename" value="wavefile\adharam.wav">
-</object>
+<audio id="audio2" src="wavefile/adharam.wav" autoplay="false" ></audio>
+<img src="../images/audio.png" width="50" height="50"><a onclick="pnaplaySound();"> Recite</a>&nbsp;<a onclick="pnaplaySound1();"> Pause</a>&nbsp;<a onclick="pnaplaySound2();"> Stop</a>
 <script>
-adh.showdisplay=false
-adh.showcontrols=false
+function pnaplaySound() {
+      var sound = document.getElementById("audio2");
+      sound.play();
+      sound.stop();
+  }
+  function pnaplaySound1() {
+      var sound = document.getElementById("audio2");
+      
+      sound.pause();
+      
+  }
+  function pnaplaySound2() {
+      var sound = document.getElementById("audio2");
+      
+      sound.pause();
+      sound.currentTime = 0;
+  }
 </script>
-<input type=button name=play value="Recite" onclick = "adh.run()">
-<input type=button name=stop value="Stop" onclick = "adh.stop()">
 
-<form METHOD="POST" NAME="adharam">
-  <p><input TYPE="text" SIZE="20" NAME="T1"> <input LANGUAGE="VBScript" TYPE="button"
-  VALUE="   OK   "
-  ONCLICK="Extract(T1.value)
-if (lcase(strScheme) = &quot;sasasasa&quot;) then
-   msgbox &quot;You are correct! &quot; &amp; chr(13) &amp; _
-          &quot;Scheme : sa sa sa sa&quot; &amp; chr(13) &amp; _
-          &quot;Name   : toTaka&quot; &amp; chr(13) &amp; _
-          &quot;Class  : jagatee&quot; &amp; chr(13) &amp; _
-          &quot;Speciality : Only one gaNa is used throughout&quot;,,&quot;Chhandas Exercises&quot;
-else
-   msgbox &quot;Sorry! try again.&quot;,, &quot;Chhandas Exercises&quot;
-end if"
-  NAME="ok"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
-  ONCLICK="msgbox&quot;His lip is sweet, his face is sweet, his eye is &quot; &amp; _
-&quot;sweet, his smile is sweet, his heart is sweet, his gait &quot; &amp; _
-&quot;is sweet, everything of the lord of Mathura (Lord Krshna) &quot; &amp; _
-&quot;is sweet.&quot; &amp; chr(13) &amp; &quot;(MadhuraaShTakam)&quot;,,&quot;Chhandas Exercises&quot;"
-  NAME="mean"> </p>
-</form>
+<input TYPE="text"
+SIZE="20" id="T1" tabindex="1">
+<button onclick="myFunctiontext()">Ok</button> <p id="demotext"></p>
+<script>
+function myFunctiontext() {
+
+var t1 = document.getElementById("T1").value;
+var res = t1.toLowerCase();
+res = res.replace(/\s/g, "");
+if (res == "sasasasa") {
+  document.getElementById("demotext").innerHTML = "You are correct! Scheme : sa sa sa sa, Name   : toTaka, Class  : jagatee, Speciality : Only one gaNa is used throughout";
+  
+} else {
+  document.getElementById("demotext").innerHTML = "Sorry! try again.";
+}
+
+}
+</script>
+
+<button onclick="myFunction()">Meaning</button>
+
+<p id="demo"></p> </p>
+
+<script>
+function myFunction() {
+document.getElementById("demo").innerHTML = "His lip is sweet, his face is sweet, his eye is sweet, his smile is sweet, his heart is sweet, his gait is sweet, everything of the lord of Mathura (Lord Krshna) is sweet. (MadhuraaShTakam)";
+}
+</script>
 
 <p>
 <big><big><blockquote>

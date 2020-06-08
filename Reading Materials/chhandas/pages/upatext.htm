@@ -48,22 +48,38 @@ toya nidhI vagaahya sthitaH prthivyaa iva maanadaNDaH </font></p>
 <table width=100%>
 <tr width=100%>
 <td width=50%>
-<form METHOD="POST" NAME="astyut">
-  <p><input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
-  ONCLICK="msgbox &quot;In the northern direction, there exists a divine mountain called Himaalaya, which is the king of mountains. Spanning the oceans in the East and West, it appears as a measuring stick for the country.     (Kumaarasambhavam - Kaalidaasa) &quot;,,&quot;Chhandas Exercises&quot;"
-  NAME="mean"> </p>
-</form>
-</td>
-<td width=50% top=left>
-<object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=asti height=0 width=0>
-<param name="filename" value="wavefile\astyut.wav">
-</object>
-<script>
-asti.showdisplay = false
-asti.showcontrols = false
-</script>
-<input type=button name=play value="Recite" onclick = "asti.run()">
-<input type=button name=stop value="Stop" onclick = "asti.stop()">
+
+  <button onclick="func13()">Meaning</button>
+
+  <p id="d13"></p> </p>
+  
+  <script>
+  function func13() {
+    document.getElementById("d13").innerHTML = "In the northern direction, there exists a divine mountain called Himaalaya, which is the king of mountains. Spanning the oceans in the East and West, it appears as a measuring stick for the country.     (Kumaarasambhavam - Kaalidaasa) "; 
+  }
+  </script>
+  <audio id="audio16" src="wavefile/astyut.wav" autoplay="false" ></audio>
+  <img src="../images/audio.png" width="50" height="50"><a onclick="wplaySound();"> Recite</a>&nbsp;<a onclick="wplaySound1();"> Pause</a>&nbsp;<a onclick="wplaySound2();"> Stop</a>
+  <script>
+  function wplaySound() {
+        var sound = document.getElementById("audio16");
+        sound.play();
+        sound.stop();
+    }
+    function wplaySound1() {
+        var sound = document.getElementById("audio16");
+        
+        sound.pause();
+        
+    }
+    function wplaySound2() {
+        var sound = document.getElementById("audio16");
+        
+        sound.pause();
+        sound.currentTime = 0;
+    }
+  </script>
+
 </td>
 </tr>
 </table>
@@ -120,22 +136,39 @@ sa trNaam apaneeya shuShkavaan</font>
 <table width=100%>
 <tr width=100%>
 <td width=50%>
-<form METHOD="POST" NAME="soas">
-  <p><input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
-  ONCLICK="msgbox &quot;Fate does not respect the wealths a man has. (When a man falls into bad times,) It sucks up the wealth, just as the sun dries up a pond full of water in summer.   (Mrchchakatikam - shoodraka) &quot;,,&quot;Chhandas Exercises&quot;"   NAME="mean">
-</p>
-</form>
-</td>
-<td width=50% top=left>
-<object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=so height=0 width=0>
-<param name="filename" value="wavefile\soasma.wav">
-</object>
+  
+<button onclick="func12()">Meaning</button>
+
+<p id="d12"></p> </p>
+
 <script>
-so.showdisplay = false
-so.showcontrols = false
+function func12() {
+  document.getElementById("d12").innerHTML = "Fate does not respect the wealths a man has. (When a man falls into bad times,) It sucks up the wealth, just as the sun dries up a pond full of water in summer.   (Mrchchakatikam - shoodraka) "; 
+}
 </script>
-<input type=button name=play value="Recite" onclick = "so.run()">
-<input type=button name=stop value="Stop" onclick = "so.stop()">
+  <audio id="audio15" src="wavefile/soasma.wav" autoplay="false" ></audio>
+  <img src="../images/audio.png" width="50" height="50"><a onclick="mplaySound();"> Recite</a>&nbsp;<a onclick="mplaySound1();"> Pause</a>&nbsp;<a onclick="mplaySound2();"> Stop</a>
+  <script>
+  function mplaySound() {
+        var sound = document.getElementById("audio15");
+        sound.play();
+        sound.stop();
+    }
+    function mplaySound1() {
+        var sound = document.getElementById("audio15");
+        
+        sound.pause();
+        
+    }
+    function mplaySound2() {
+        var sound = document.getElementById("audio15");
+        
+        sound.pause();
+        sound.currentTime = 0;
+    }
+  </script>
+
+
 </td>
 </tr>
 </table>

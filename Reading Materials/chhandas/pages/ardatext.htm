@@ -52,26 +52,39 @@ svayameva sampadaH &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;( IV quarter)</font>
 <table width=100%>
 <tr width=100%>
 <td width=50%>
-<form METHOD="POST" NAME="sahasa">
-  <p><input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
-  ONCLICK="msgbox &quot;Do not do an action in haste. Haste is the cause for &quot; &amp; _
- &quot;all calamities. All wealth come, of their own, to a person &quot; &amp; _
-&quot;who acts patiently and after thinking.&quot;,,&quot;Chhandas Exercises&quot;"
-  NAME="mean"> </p>
-</form>
+
+  <button onclick="func13()">Meaning</button>
+
+  <p id="d13"></p> </p>
+  
+  <script>
+  function func13() {
+    document.getElementById("d13").innerHTML = "Do not do an action in haste. Haste is the cause for all calamities. All wealth come, of their own, to a person who acts patiently and after thinking."; 
+  }
+  </script>
+  <audio id="audio16" src="wavefile/sahasaa.wav" autoplay="false" ></audio>
+  <img src="../images/audio.png" width="50" height="50"><a onclick="wplaySound();"> Recite</a>&nbsp;<a onclick="wplaySound1();"> Pause</a>&nbsp;<a onclick="wplaySound2();"> Stop</a>
+  <script>
+  function wplaySound() {
+        var sound = document.getElementById("audio16");
+        sound.play();
+        sound.stop();
+    }
+    function wplaySound1() {
+        var sound = document.getElementById("audio16");
+        
+        sound.pause();
+        
+    }
+    function wplaySound2() {
+        var sound = document.getElementById("audio16");
+        
+        sound.pause();
+        sound.currentTime = 0;
+    }
+  </script>
+
 </td>
-<td width=50% top=left>
-<object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=saha height=0 width=0>
-<param name="filename" value="wavefile\sahasaa.wav">
-</object>
-<script>
-saha.showdisplay = false
-saha.showcontrols = false
-</script>
-<input type=button name=play value="Recite" onclick = "saha.run()">
-<input type=button name=stop value="Stop" onclick = "saha.stop()">
-</td>
-</tr>
 </table>
 </blockquote>
 <p><font face="Trebuchet MS">Take the first quarter, and split it as usual : </font></p>
@@ -123,30 +136,38 @@ iva divaatanasya lekhaa<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kiraNaparikshaya
 dhoosaraapradoSham</font>
 
-<blockquote>
-<table width=100%>
-<tr width=100%>
-<td width=50%>
-<form METHOD="POST" NAME="atham">
-  <p><input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
-  ONCLICK="msgbox &quot;Rathi (the wife of Kaama), awaited his return (after &quot; &amp; _
-&quot;his body was burnt by Lord Shiva), like the moon that &quot; &amp; _
-&quot;awaits the return of the day to refresh itself after &quot; &amp; _
-&quot;spending its light in the night.&quot;,,&quot;Chhandas Exercises&quot;"
-  NAME="mean"> </p>
-</form>
-</td>
-<td width=50% top=left>
-<object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=atha height=0 width=0>
-<param name="filename" value="wavefile\athamada.wav">
-</object>
+
+<button onclick="func12()">Meaning</button>
+
+<p id="d12"></p> </p>
+
 <script>
-atha.showdisplay = false
-atha.showcontrols = false
+function func12() {
+  document.getElementById("d12").innerHTML = "Rathi (the wife of Kaama), awaited his return (after his body was burnt by Lord Shiva), like the moon that awaits the return of the day to refresh itself after spending its light in the night."; 
+}
 </script>
-<input type=button name=play value="Recite" onclick = "atha.run()">
-<input type=button name=stop value="Stop" onclick = "atha.stop()">
-</td>
+  <audio id="audio15" src="wavefile/athamada.wav" autoplay="false" ></audio>
+  <img src="../images/audio.png" width="50" height="50"><a onclick="mplaySound();"> Recite</a>&nbsp;<a onclick="mplaySound1();"> Pause</a>&nbsp;<a onclick="mplaySound2();"> Stop</a>
+  <script>
+  function mplaySound() {
+        var sound = document.getElementById("audio15");
+        sound.play();
+        sound.stop();
+    }
+    function mplaySound1() {
+        var sound = document.getElementById("audio15");
+        
+        sound.pause();
+        
+    }
+    function mplaySound2() {
+        var sound = document.getElementById("audio15");
+        
+        sound.pause();
+        sound.currentTime = 0;
+    }
+  </script>
+
 </tr>
 </table>
 </blockquote>
