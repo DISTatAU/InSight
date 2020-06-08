@@ -53,28 +53,29 @@ namaami vighneshvara paada pankajam </font>
 <table width=100%>
 <tr width=100%>
 <td width=50%>
-  <!--
-<form METHOD="POST" NAME="gajaa">
-  <p><input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
-  ONCLICK="msgbox&quot;I bow to the lotus feet of Vighneshvara, &quot; &amp; _
-&quot;whose face is of an elephant, who is worshipped by the &quot; &amp; _
-&quot;BhootagaNaas, who eats 'Jamboo' fruit, who is the son of &quot; &amp; _
-&quot;Umaa (Paarvatee), and who is the cause of destruction of &quot; &amp; _
-&quot;all sorrow.&quot;,,&quot;Meaning&quot;"
-  NAME="mean"> </p>
-</form>
--->
 </td>
 <td width=50% top=left>
-<object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=gaja height=0 width=0>
-<param name="filename" value="wavefile\gaja.wav">
-</object>
-<script>
-gaja.showdisplay = false
-gaja.showcontrols = false
-</script>
-<input type=button name=play value="Recite" onclick = "gaja.run()">
-<input type=button name=stop value="Stop" onclick = "gaja.stop()">
+  <audio id="audio2" src="wavefile/gaja.wav" autoplay="false" ></audio>
+  <img src="../images/audio.png" width="50" height="50"><a onclick="pplaySound();"> Recite</a>&nbsp;<a onclick="pplaySound1();"> Pause</a>&nbsp;<a onclick="pplaySound2();"> Stop</a>
+  <script>
+  function pplaySound() {
+        var sound = document.getElementById("audio2");
+        sound.play();
+        sound.stop();
+    }
+    function pplaySound1() {
+        var sound = document.getElementById("audio2");
+        
+        sound.pause();
+        
+    }
+    function pplaySound2() {
+        var sound = document.getElementById("audio2");
+        
+        sound.pause();
+        sound.currentTime = 0;
+    }
+  </script>
 </td>
 </tr>
 </table>
@@ -220,29 +221,31 @@ viShnum bhava bhaya haram sarvalokaika naatham </font>
 <table width=100%>
 <tr width=100%>
 <td width=50%>
-<form METHOD="POST" NAME="shaanta">
-  <p><input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
-  ONCLICK="msgbox&quot;I bow to that ViShNu, who is the embodiment &quot; &amp; _
-&quot;of peace, reclined on the serpent-bed, with lotus &quot; &amp; _
-&quot;from his navel, the Lord of all Devas, the supporter &quot; &amp; _
-&quot;of the Universe, infinite like the sky, dark in colour &quot; &amp; _
-&quot;like a cloud, with handsome limbs, the Lord of LakShmee, &quot; &amp; _
-&quot;lotus-eyed, seen by the meditating sages in their hearts, &quot; &amp; _
-&quot;destroyer of the cycle of birth and death, the one Lord of &quot; &amp; _
-&quot;all worlds.&quot;,,&quot;Meaning&quot;"
-  NAME="mean"> </p>
-</form>
+
 </td>
 <td width=50% top=left>
-<object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=shan height=0 width=0>
-<param name="filename" value="wavefile\shaanta.wav">
-</object>
-<script>
-shan.showdisplay = false
-shan.showcontrols = false
-</script>
-<input type=button name=play value="Recite" onclick = "shan.run()">
-<input type=button name=stop value="Stop" onclick = "shan.stop()">
+  <audio id="audio" src="wavefile/shaanta.wav" autoplay="false" ></audio>
+  <img src="../images/audio.png" width="50" height="50"> <a onclick="playSound();"> Recite</a>&nbsp;<a onclick="playSound1();"> Pause</a>&nbsp;<a onclick="playSound2();"> Stop</a>
+  <script>
+  function playSound() {
+        var sound = document.getElementById("audio");
+        sound.play();
+        sound.stop();
+    }
+    function playSound1() {
+        var sound = document.getElementById("audio");
+        
+        sound.pause();
+        
+    }
+    function playSound2() {
+        var sound = document.getElementById("audio");
+        
+        sound.pause();
+        sound.currentTime = 0;
+    }
+  </script>
+ 
 </td>
 </tr>
 </table>

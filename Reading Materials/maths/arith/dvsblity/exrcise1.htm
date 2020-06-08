@@ -14,10 +14,9 @@
 
 <p><font color="#000000" face="Comic Sans MS">1. Is 4008 divisible by 13 ?</font></p>
 
-<form METHOD="POST">
+
   <div align="left"><p><font face="Copperplate Gothic Bold"><input TYPE="radio" VALUE="V1" CHECKED NAME="R1"> Yes <input TYPE="radio" VALUE="V2" NAME="R1"> No </font></p>
   </div>
-</form>
 
 <p><font color="#000000" face="Comic Sans MS">2. Determine if 2369 is divisible by 23.</font></p>
 
@@ -41,13 +40,21 @@ multiple of 61.</font></p>
 <p><font face="Copperplate Gothic Bold"><input TYPE="radio" VALUE="V1" CHECKED NAME="R5">
 Yes <input TYPE="radio" VALUE="V2" NAME="R5"> No </font></p>
 
-<form METHOD="POST" NAME="ans">
-  <p><font face="Copperplate Gothic Bold"><input LANGUAGE="VBScript" TYPE="button" VALUE="Answers" ONCLICK="msgbox&quot;     1 . NO &quot; &amp; chr(13)&amp; _
-      &quot;     2 . YES &quot; &amp; chr(13)&amp; _
-      &quot;     3 . YES &quot; &amp; chr(13)&amp; _
-      &quot;     4 . NO &quot; &amp; chr(13)&amp; _
-      &quot;     5 . YES &quot; ,, &quot;Answers to the exercises&quot;" NAME="B1"> </font></p>
-</form>
+  <p><font face="Copperplate Gothic Bold">
+    Click to view the &nbsp; 
+  
+  </font></p>
+
+  <button onclick="myFunction()">Answers</button>
+
+      <p id="demo"></p>
+      
+      <script>
+      function myFunction() {
+        document.getElementById("demo").innerHTML = "1)No &nbsp; 2)Yes &nbsp; 3)Yes &nbsp; 4)No &nbsp; 5)Yes ";
+      }
+      </script>
+
 </font mstheme>
 </body>
 </html>

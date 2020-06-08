@@ -36,15 +36,28 @@ chaturthake panchadashasaarya
 </font>
 <br>
 <blockquote>
-<object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=yasya height=0 width=0>
-<param name="filename" value="wavefile\yasyapra.wav">
-</object>
-<script>
-yasya.showdisplay = false
-yasya.showcontrols = false
-</script>
-<input type=button name=play value="Recite" onclick = "yasya.run()">
-<input type=button name=stop value="Stop" onclick = "yasya.stop()">
+  <audio id="audio2" src="wavefile/yasyapra.wav" autoplay="false" ></audio>
+  <img src="../images/audio.png" width="50" height="50"><a onclick="pplaySound();"> Recite</a>&nbsp;<a onclick="pplaySound1();"> Pause</a>&nbsp;<a onclick="pplaySound2();"> Stop</a>
+  <script>
+  function pplaySound() {
+        var sound = document.getElementById("audio2");
+        sound.play();
+        sound.stop();
+    }
+    function pplaySound1() {
+        var sound = document.getElementById("audio2");
+        
+        sound.pause();
+        
+    }
+    function pplaySound2() {
+        var sound = document.getElementById("audio2");
+        
+        sound.pause();
+        sound.currentTime = 0;
+    }
+  </script>
+  
 </blockquote>
 <p><font size="3" face="Trebuchet MS">That is, there are 12 syllables in the 1<sup>st</sup>
 and 3<sup>rd</sup> quarters of the verse, 18 in the 2<sup>nd</sup>, and 15 in the 4<sup>th</sup>
@@ -126,29 +139,30 @@ known as <em>Bhaja Govindam</em>) by Shri Aadi shankara : </font></p>
 <table width=100%>
 <tr width=100%>
 <td width=50%>
-<!--
-<form METHOD="POST" NAME="mooda">
-  <p><input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
-  ONCLICK="msgbox &quot;O fool! Leave your desire of wealth. Concentrate &quot; &amp; _
-&quot;on the Brahman. Be satisfied with what you get by sticking &quot; &amp; _
-&quot;to your dharma. &quot;,,&quot;Meaning&quot;"
-  NAME="B1"> </p>
-</form>
--->
+
 </td>
-<td width=50% top=left>
-<object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=moodaja height=0 width=0>
-<param name="filename" value="wavefile\moodaja.wav">
-</object>
-<script>
-moodaja.showdisplay = false
-moodaja.showcontrols = false
-</script>
-<input type=button name=play value="Recite" onclick = "moodaja.run()">
-<input type=button name=stop value="Stop" onclick = "moodaja.stop()">
-</td>
-</tr>
-</table>
+
+  <audio id="audio" src="wavefile/moodaja.wav" autoplay="false" ></audio>
+  <img src="../images/audio.png" width="50" height="50"> <a onclick="playSound();"> Recite</a>&nbsp;<a onclick="playSound1();"> Pause</a>&nbsp;<a onclick="playSound2();"> Stop</a>
+  <script>
+  function playSound() {
+        var sound = document.getElementById("audio");
+        sound.play();
+        sound.stop();
+    }
+    function playSound1() {
+        var sound = document.getElementById("audio");
+        
+        sound.pause();
+        
+    }
+    function playSound2() {
+        var sound = document.getElementById("audio");
+        
+        sound.pause();
+        sound.currentTime = 0;
+    }
+  </script>
   </blockquote>
 </blockquote>
 
@@ -209,29 +223,32 @@ Moreover, there must be a 'ra ' gaNaa and a 'ya' gaNaa at the end of each quarte
 <table width=100%>
 <tr width=100%>
 <td width=50%>
-  <!--
-<form METHOD="POST" NAME="adhara">
-  <p><input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
-  ONCLICK="msgbox &quot;When I am about to die, the only forms that should appear &quot; &amp; _
-&quot;before me should be that of the Lord (KrShNa) with the beautiful flute &quot; &amp; _
-&quot;kept on his lips, with the peacock plumes slantingly placed &quot; &amp; _
-&quot;on his head, and with the body as blue as bluestone.       (Gopaala vimshati - Sri Vedaanta Deshika)&quot;,,&quot;Meaning&quot;"
-  NAME="mean"> </p>
-</form>
--->
+
 </td>
+
 <td width=50% top=left>
-<object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=adharahi height=0 width=0>
-<param name="filename" value="wavefile\adharahi.wav">
-</object>
+  <img src="../images/audio.png" width="50" height="50">  <audio id="audio1" src="wavefile/adharahi.wav" autoplay="false" ></audio>
+<a onclick="splaySound();"> Recite</a>&nbsp;<a onclick="splaySound1();"> Pause</a>&nbsp;<a onclick="splaySound2();"> Stop</a>
 <script>
-adharahi.showdisplay = false
-adharahi.showcontrols = false
+function splaySound() {
+      var sound = document.getElementById("audio1");
+      sound.play();
+      sound.stop();
+  }
+  function splaySound1() {
+      var sound = document.getElementById("audio1");
+      
+      sound.pause();
+      
+  }
+  function splaySound2() {
+      var sound = document.getElementById("audio1");
+      
+      sound.pause();
+      sound.currentTime = 0;
+  }
 </script>
-<input type=button name=play value="Recite" onclick = "adharahi.run()">
-<input type=button name=stop value="Stop" onclick = "adharahi.stop()">
 </td>
-</tr>
 </table>
 
 <p><font size="3" face="Trebuchet MS">The calculations are as follows : </font></p>

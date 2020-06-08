@@ -30,17 +30,28 @@ for this metre. The rule is as follows :</font></p>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;dvichatuH paadayorhrasvam saptamam deerghamanyayoH</font>
 
-<p><blockquote>
-<object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=shlok height=0 width=0>
-<param name="filename" value="wavefile\shloke.wav">
-</object>
+<audio id="audio2" src="wavefile/shloke.wav" autoplay="false" ></audio>
+<img src="../images/audio.png" width="50" height="50"><a onclick="pplaySound();"> Recite</a>&nbsp;<a onclick="pplaySound1();"> Pause</a>&nbsp;<a onclick="pplaySound2();"> Stop</a>
 <script>
-shlok.showdisplay = false
-shlok.showcontrols = false
+function pplaySound() {
+      var sound = document.getElementById("audio2");
+      sound.play();
+      sound.stop();
+  }
+  function pplaySound1() {
+      var sound = document.getElementById("audio2");
+      
+      sound.pause();
+      
+  }
+  function pplaySound2() {
+      var sound = document.getElementById("audio2");
+      
+      sound.pause();
+      sound.currentTime = 0;
+  }
 </script>
-<input type=button name=play value="Recite" onclick = "shlok.run()">
-<input type=button name=stop value="Stop" onclick = "shlok.stop()">
-</blockquote>
+
 
 <p><font face="Trebuchet MS" size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;In
 the shloka type of metre, 5th position shall have a short syllable and 6th a long
@@ -77,28 +88,47 @@ namastubhyam varade kaamaroopiNee <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vidyaarambham
 kariShyaami siddhirbhavatu me sadaa</font>
 
+<button onclick="myFunctionn()">Meaning</button>
+
+  <p id="demoo"></p> </p>
+  
+  <script>
+  function myFunctionn() {
+    document.getElementById("demoo").innerHTML = "O Sarasvatee, one who grants all the required boons, I bow to you. I begin my learning. May I always be successfull.";
+  }
+  </script>
+  
+  
 <table width=100%>
 <tr width=100%>
 <td width=50%>
-<form METHOD="POST" NAME="sarasvatee">
-  <p><input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
-  ONCLICK="msgbox&quot;O Sarasvatee, one who grants all the required boons, &quot; &amp; _
-&quot;I bow to you. I begin my learning. May I always be &quot; &amp; _
-&quot;successfull.&quot; ,, &quot;Meaning&quot;"
-  NAME="mean"> </p>
-</form>
+
 
 </td>
 <td width=50% top=left>
-<object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=sara height=0 width=0>
-<param name="filename" value="wavefile\saraswa.wav">
-</object>
-<script>
-sara.showdisplay = false
-sara.showcontrols = false
-</script>
-<input type=button name=play value="Recite" onclick = "sara.run()">
-<input type=button name=stop value="Stop" onclick = "sara.stop()">
+  <audio id="audio" src="wavefile/saraswa.wav" autoplay="false" ></audio>
+  <img src="../images/audio.png" width="50" height="50"> <a onclick="playSound();"> Recite</a>&nbsp;<a onclick="playSound1();"> Pause</a>&nbsp;<a onclick="playSound2();"> Stop</a>
+  <script>
+  function playSound() {
+        var sound = document.getElementById("audio");
+        sound.play();
+        sound.stop();
+    }
+    function playSound1() {
+        var sound = document.getElementById("audio");
+        
+        sound.pause();
+        
+    }
+    function playSound2() {
+        var sound = document.getElementById("audio");
+        
+        sound.pause();
+        sound.currentTime = 0;
+    }
+  </script>
+
+
 </td>
 </tr>
 </table>
@@ -158,28 +188,44 @@ viShNum shashivarNam chaturbhujam<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;prasanna
 vadanam dhyaayet sarva vighnopashaantaye.</font>
 
+<button onclick="myFunction()">Meaning</button>
+
+  <p id="demo1"></p> </p>
+  
+  <script>
+  function myFunction() {
+    document.getElementById("demo1").innerHTML = "Meditate on that Lord ViShNu, who is draped in white, who is present everywhere, who is of the colour of moon, who has four arms, who is of pleasing countenance, to overcome all troubles.";
+  }
+  </script>
+
 <table width=100%>
 <tr width=100%>
 <td width=50%>
-<form METHOD="POST" NAME="shukla">
-  <p><input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
-  ONCLICK="msgbox&quot;Meditate on that Lord ViShNu, who is draped in white, &quot; &amp; _
-&quot;who is present everywhere, who is of the colour of moon, &quot; &amp; _
-&quot;who has four arms, who is of pleasing countenance, to &quot; &amp; _
-&quot;overcome all troubles.&quot; ,, &quot;Meaning&quot;"
-  NAME="mean"> </p>
-</form>
 </td>
 <td width=50% top=left>
-<object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=shuk height=0 width=0>
-<param name="filename" value="wavefile\shuklam.wav">
-</object>
-<script>
-shuk.showdisplay = false
-shuk.showcontrols = false
-</script>
-<input type=button name=play value="Recite" onclick = "shuk.run()">
-<input type=button name=stop value="Stop" onclick = "shuk.stop()">
+  <img src="../images/audio.png" width="50" height="50">  <audio id="audio1" src="wavefile/shuklam.wav" autoplay="false" ></audio>
+  <a onclick="splaySound();"> Recite</a>&nbsp;<a onclick="splaySound1();"> Pause</a>&nbsp;<a onclick="splaySound2();"> Stop</a>
+  <script>
+  function splaySound() {
+        var sound = document.getElementById("audio1");
+        sound.play();
+        sound.stop();
+    }
+    function splaySound1() {
+        var sound = document.getElementById("audio1");
+        
+        sound.pause();
+        
+    }
+    function splaySound2() {
+        var sound = document.getElementById("audio1");
+        
+        sound.pause();
+        sound.currentTime = 0;
+    }
+  </script>
+  
+
 </td>
 </tr>
 </table>
@@ -233,27 +279,45 @@ niShaada pratiShThaa tvam agamaH shaashvateeH samaa<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;yatkrouncha
 mithunaadekam avadheeH kaamamohitam</font></i>
 
+<button onclick="myFunction2()">Meaning</button>
+
+  <p id="demo2"></p> </p>
+  
+  <script>
+  function myFunction2() {
+    document.getElementById("demo2").innerHTML = "O hunter! You have killed one of the Krauncha birds, which were involved in love-play. For this, you will not stay in one place, but be roaming about throughout your life.";
+  }
+  </script>
+
 <table width=100%>
 <tr width=100%>
 <td width=50%>
-<form METHOD="POST" NAME="maa">
-  <p><input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
-  ONCLICK="msgbox&quot;O hunter! You have killed one of the Krauncha birds, &quot; &amp; _
-&quot;which were involved in love-play. For this, you will not stay &quot; &amp; _
-&quot;in one place, but be roaming about throughout your life.&quot;,, &quot;Meaning&quot;"
-  NAME="mean"> </p>
-</form>
+
 </td>
 <td width=50% top=left>
-<object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=mani height=0 width=0>
-<param name="filename" value="wavefile\manishad.wav">
-</object>
-<script>
-mani.showdisplay = false
-mani.showcontrols = false
-</script>
-<input type=button name=play value="Recite" onclick = "mani.run()">
-<input type=button name=stop value="Stop" onclick = "mani.stop()">
+  <img src="../images/audio.png" width="50" height="50">  <audio id="audio4" src="wavefile/manishad.wav" autoplay="false" ></audio>
+  <a onclick="mplaySound();"> Recite</a>&nbsp;<a onclick="mplaySound1();"> Pause</a>&nbsp;<a onclick="mplaySound2();"> Stop</a>
+  <script>
+  function mplaySound() {
+        var sound = document.getElementById("audio4");
+        sound.play();
+        sound.stop();
+    }
+    function mplaySound1() {
+        var sound = document.getElementById("audio4");
+        
+        sound.pause();
+        
+    }
+    function mplaySound2() {
+        var sound = document.getElementById("audio4");
+        
+        sound.pause();
+        sound.currentTime = 0;
+    }
+  </script>
+  
+
 </td>
 </tr>
 </table>
@@ -272,28 +336,44 @@ choodam chapalaiH vatsakulaiH keliparam <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;dhyaaya sakhe smera mukham nanda sutam maaNavakam</font>
 
+<button onclick="myFunction3()">Meaning</button>
+
+  <p id="demo3"></p> </p>
+  
+  <script>
+  function myFunction3() {
+    document.getElementById("demo3").innerHTML = "O friend! Meditate on the smiling face of the boy (named) KrShNaa, the plumes on whose head are constantly swaying, born in the race of cowherds, who is playful, who is the son of Nanda.";
+  }
+  </script>
+
 <table width=100%>
 <tr width=100%>
 <td width=50%>
-<form METHOD="POST" NAME="chanchala">
-  <p><input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
-  ONCLICK="msgbox &quot;O friend! Meditate on the smiling face of the &quot; &amp; _
-&quot;boy (named) KrShNaa, the plumes on whose head are &quot; &amp; _
-&quot;constantly swaying, born in the race of cowherds, who is &quot; &amp; _
-&quot;playful, who is the son of Nanda.&quot; ,, &quot;Meaning&quot;"
-  NAME="mean"> </p>
-</form>
+
 </td>
 <td width=50% top=left>
-<object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=chan height=0 width=0>
-<param name="filename" value="wavefile\chanchal.wav">
-</object>
-<script>
-chan.showdisplay = false
-chan.showcontrols = false
-</script>
-<input type=button name=play value="Recite" onclick = "chan.run()">
-<input type=button name=stop value="Stop" onclick = "chan.stop()">
+  <img src="../images/audio.png" width="50" height="50">  <audio id="audio5" src="wavefile/chanchal.wav" autoplay="false" ></audio>
+  <a onclick="cplaySound();"> Recite</a>&nbsp;<a onclick="cplaySound1();"> Pause</a>&nbsp;<a onclick="cplaySound2();"> Stop</a>
+  <script>
+  function cplaySound() {
+        var sound = document.getElementById("audio5");
+        sound.play();
+        sound.stop();
+    }
+    function cplaySound1() {
+        var sound = document.getElementById("audio5");
+        
+        sound.pause();
+        
+    }
+    function cplaySound2() {
+        var sound = document.getElementById("audio5");
+        
+        sound.pause();
+        sound.currentTime = 0;
+    }
+  </script>
+  
 </td>
 </tr>
 </table>

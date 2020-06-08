@@ -31,16 +31,27 @@ exercises in simultaneous equations :</u> </strong></font>
     application of the method, just to stress upon its simplicity &amp; elegance <br>
     <strong>7x - 3y=8<br>
     5x + 9y=28 </strong></font><form METHOD="POST" NAME="simex1">
-      <p><font face="Comic Sans MS">x = <input LANGUAGE="VBScript" TYPE="text"
-      ONCHANGE="xvalue=simex1.xval.value" SIZE="4" NAME="xval"> &nbsp;&nbsp;&nbsp;&nbsp; y = <input
-      LANGUAGE="VBScript" TYPE="text" ONCHANGE="yvalue=simex1.yval.value" SIZE="4" NAME="yval">
-      &nbsp;&nbsp;&nbsp; <input LANGUAGE="VBScript" TYPE="button" VALUE="Submit"
-      ONCLICK="if xvalue = 2 and yvalue = 2 then
-	Window.location.href=&quot;simright.htm&quot;
-else
-	Window.location.href=&quot;simwrong.htm&quot;
-end if"
-      NAME="Sub"> <br>
+      <p><font face="Comic Sans MS">x = <input TYPE="number" SIZE="4" id="xval" min=0> &nbsp;&nbsp;&nbsp;&nbsp;
+         y = <input TYPE="number" SIZE="4" id="yval" min=0>
+      &nbsp;&nbsp;&nbsp;
+      <input type="button" name="confirm" value="Submit" onClick="message2()">
+      <script>
+        function message2() {
+  
+        var t1 = document.getElementById("xval").value;
+        var t2 = document.getElementById("yval").value;
+
+        if  (t1 == 2 && t2 == 2)
+        {
+          location.href = 'simright.htm';
+        }
+        else
+        {
+          location.href = 'simwrong.htm';
+        }
+        }
+      </script>            
+     <br>
       </font></p>
     </form>
   </li>
@@ -48,15 +59,28 @@ end if"
     the age of the father. In 12 years time the sum of the ages of the sons will be double
     that of their father. What is the father's age now ? </font><form METHOD="POST"
     NAME="simex2">
-      <p><font face="Comic Sans MS">The father's age is <input LANGUAGE="VBScript" TYPE="text"
-      ONCHANGE="agevalue=simex2.ageval.value" SIZE="4" NAME="ageval"> &nbsp;&nbsp;&nbsp; <input
-      LANGUAGE="VBScript" TYPE="button" VALUE="Submit"
-      ONCLICK="if agevalue = 36 then
-	Window.location.href=&quot;simright.htm&quot;
-else
-	Window.location.href=&quot;simwrong.htm&quot;
-end if"
-      NAME="Sub2"> <br>
+      <p><font face="Comic Sans MS">The father's age is <input TYPE="number" SIZE="4" id="ageval" min=0> &nbsp;&nbsp;&nbsp; 
+        
+        <input type="button" name="confirm" value="Submit" onClick="message1()">
+      <script>
+        function message1() {
+  
+        var t1 = document.getElementById("ageval").value;
+       
+
+        if  (t1 == 36)
+        {
+          location.href = 'simright.htm';
+        }
+        else
+        {
+          location.href = 'simwrong.htm';
+        }
+        }
+      </script>            
+        
+        
+        <br>
       </font></p>
     </form>
   </li>
@@ -65,15 +89,28 @@ end if"
     and 60% on the assignment, while my friend's scores were just the opposite. Our total
     individual scores were 40 and 38 respectively. For how many marks was the examination ? <br>
     </font><form METHOD="POST" NAME="simex3">
-      <p><font face="Comic Sans MS">The examination was for <input LANGUAGE="VBScript"
-      TYPE="text" ONCHANGE="rval1=simex3.mark1.value" SIZE="4" NAME="mark1"> marks.
-      &nbsp;&nbsp;&nbsp;&nbsp; <input LANGUAGE="VBScript" TYPE="button" VALUE="Submit"
-      ONCLICK="if rval1 = 60 then
-	Window.location.href=&quot;simright.htm&quot;
-else
-	Window.location.href=&quot;simwrong.htm&quot;
-end if"
-      NAME="rsub"> <br>
+      <p><font face="Comic Sans MS">The examination was for <input TYPE="number" SIZE="4" id="mark1" min=0> marks.
+      &nbsp;&nbsp;&nbsp;&nbsp; 
+      
+      <input type="button" name="confirm" value="Submit" onClick="message()">
+      <script>
+        function message() {
+  
+        var t1 = document.getElementById("mark1").value;
+       
+
+        if  (t1 == 60)
+        {
+          location.href = 'simright.htm';
+        }
+        else
+        {
+          location.href = 'simwrong.htm';
+        }
+        }
+      </script>   
+      
+      <br>
       </font></p>
     </form>
   </li>

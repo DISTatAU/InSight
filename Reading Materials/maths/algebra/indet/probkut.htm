@@ -48,40 +48,49 @@ equations : </big></strong></u></font>
       <table border="1" cellpadding="0" cellspacing="0" width="60%" height="75%">
         <tr>
           <td width="50%" align="center"><font face="Century Schoolbook"><strong>3</strong></font></td>
-          <td width="50%" align="center"><font face="Century Schoolbook"><input LANGUAGE="VBScript"
-          TYPE="text" ONCHANGE="r6c2val=indetex0.r6c2.value" SIZE="7" NAME="r6c2"> </font></td>
+          <td width="50%" align="center"><font face="Century Schoolbook"><input TYPE="number" SIZE="4" id="r6c2" min=0> </font></td>
         </tr>
         <tr>
           <td width="50%" align="center"><font face="Century Schoolbook"><strong>1</strong></font></td>
-          <td width="50%" align="center"><font face="Century Schoolbook"><input LANGUAGE="VBScript"
-          TYPE="text" ONCHANGE="r5c2val=indetex0.r5c2.value" SIZE="7" NAME="r5c2"> </font></td>
+          <td width="50%" align="center"><font face="Century Schoolbook"><input TYPE="number" SIZE="4" id="r5c2" min=0></font></td>
         </tr>
         <tr>
-          <td width="50%" align="center"><font face="Century Schoolbook"><input LANGUAGE="VBScript"
-          TYPE="text" ONCHANGE="r4c1val=indetex0.r4c1.value" SIZE="7" NAME="r4c1"> </font></td>
+          <td width="50%" align="center"><font face="Century Schoolbook"><input TYPE="number" SIZE="4" id="r4c1" min=0> </font></td>
           <td width="50%" align="center"><font face="Century Schoolbook"><strong>370</strong></font></td>
         </tr>
         <tr>
           <td width="50%" align="center"><font face="Century Schoolbook"><strong>1</strong></font></td>
-          <td width="50%" align="center"><font face="Century Schoolbook"><input LANGUAGE="VBScript"
-          TYPE="text" ONCHANGE="r3c2val=indetex0.r3c2.value" SIZE="7" NAME="r3c2"> </font></td>
+          <td width="50%" align="center"><font face="Century Schoolbook"><input TYPE="number" SIZE="4" id="r3c2" min=0> </font></td>
         </tr>
         <tr>
-          <td width="50%" align="center"><font face="Century Schoolbook"><input LANGUAGE="VBScript"
-          TYPE="text" ONCHANGE="r2c1val=indetex0.r2c1.value" SIZE="7" NAME="r2c1"> </font></td>
-          <td width="50%" align="center"><font face="Century Schoolbook"><input LANGUAGE="VBScript"
-          TYPE="text" ONCHANGE="r2c2val=indetex0.r2c2.value" SIZE="7" NAME="r2c2"> </font></td>
+          <td width="50%" align="center"><font face="Century Schoolbook"><input TYPE="number" SIZE="4" id="r2c1" min=0> </font></td>
+          <td width="50%" align="center"><font face="Century Schoolbook"><input TYPE="number" SIZE="4" id="r2c2" min=0> </font></td>
         </tr>
         <tr>
           <td width="50%" align="center"><font face="Century Schoolbook"><strong>1</strong></font></td>
-          <td width="50%" align="center"><font face="Century Schoolbook"><input LANGUAGE="VBScript"
-          TYPE="button" VALUE="Submit"
-          ONCLICK="if r2c1val=52 and r2c2val=52 and r3c2val=53 and r4c1val=6 and r5c2val=423 and r6c2val=1639 then
-	Window.location.href = &quot;indright.htm&quot;
-else
-	Window.location.href = &quot;ex0ans.htm&quot;
-end if"
-          NAME="indsub0"> </font></td>
+          <td width="50%" align="center"><font face="Century Schoolbook">
+            <input type="button" name="confirm" value="Submit" onClick="message2()">
+            <script>
+              function message2() {
+        
+              var t1 = document.getElementById("r6c2").value;
+              var t2 = document.getElementById("r5c2").value;
+              var t3 = document.getElementById("r4c1").value;
+              var t4 = document.getElementById("r3c2").value;
+              var t5 = document.getElementById("r2c1").value;
+              var t6 = document.getElementById("r2c2").value;
+      
+              if  (t5 == 52 && t6 == 52 && t4 == 53 && t3 == 6 && t2 == 423 && t1 == 1639)
+              {
+                location.href = 'indright.htm';
+              }
+              else
+              {
+                location.href = 'ex0ans.htm';
+              }
+              }
+            </script>
+             </font></td>
         </tr>
       </table>
       <p><font face="Century Schoolbook"><br>
@@ -94,31 +103,51 @@ end if"
     and Bhaskara's method to find the two numbers.<br>
     <br>
     Aryabhatta's method : </font><form METHOD="POST" NAME="indetex1">
-      <p><font face="Century Schoolbook">The first number&nbsp; = <input LANGUAGE="VBScript"
-      TYPE="text" ONCHANGE="xvalue1=indetex1.xval1.value" SIZE="5" NAME="xval1"> &nbsp; The
-      second number = <input LANGUAGE="VBScript" TYPE="text"
-      ONCHANGE="yvalue1=indetex1.yval1.value" SIZE="5" NAME="yval1"> &nbsp;&nbsp;&nbsp; <input
-      LANGUAGE="VBScript" TYPE="button" VALUE="Submit"
-      ONCLICK="if xvalue1=226 and yvalue1=216 then
-	Window.location.href = &quot;indright.htm&quot;
-else
-	Window.location.href = &quot;indwrong.htm&quot;
-end if"
-      NAME="indsub"> </font></p>
+      <p><font face="Century Schoolbook">The first number&nbsp; = <input TYPE="number" SIZE="4" id="xval" min=0>&nbsp; The
+      second number = <input TYPE="number" SIZE="4" id="yval" min=0> &nbsp;&nbsp;&nbsp;
+      <input type="button" name="confirm" value="Submit" onClick="message23()">
+      <script>
+        function message23() {
+  
+        var t1 = document.getElementById("xval").value;
+        var t2 = document.getElementById("yval").value;
+
+        if  (t1 == 226 && t2 == 216)
+        {
+          location.href = 'indright.htm';
+        }
+        else
+        {
+          location.href = 'ex0ans.htm';
+        }
+        }
+      </script> 
+      
+    </p>
     </form>
     <p><font face="Century Schoolbook">Bhaskara's method :</font></p>
     <form METHOD="POST" NAME="indetex11">
-      <p><font face="Century Schoolbook">The first number = <input LANGUAGE="VBScript"
-      TYPE="text" ONCHANGE="xvalue11=indetex11.xval11.value" SIZE="5" NAME="xval11"> The second
-      number = <input LANGUAGE="VBScript" TYPE="text" ONCHANGE="yvalue11=indetex11.yval11.value"
-      SIZE="5" NAME="yval11"> &nbsp;&nbsp;&nbsp; <input LANGUAGE="VBScript" TYPE="button"
-      VALUE="Submit"
-      ONCLICK="if xvalue11=160 and yvalue11=150 then
-	Window.location.href=&quot;indright.htm&quot;
-else
-	Window.location.href=&quot;indwrong.htm&quot;
-end if"
-      NAME="insub2"> </font></p>
+      <p><font face="Century Schoolbook">The first number = <input TYPE="number" SIZE="4" id="xval1" min=0> The second
+      number = <input TYPE="number" SIZE="4" id="yval1" min=0> &nbsp;&nbsp;&nbsp; 
+      <input type="button" name="confirm" value="Submit" onClick="message233()">
+      <script>
+        function message233() {
+  
+        var t1 = document.getElementById("xval1").value;
+        var t2 = document.getElementById("yval1").value;
+
+        if  (t1 == 160 && t2 == 150)
+        {
+          location.href = 'indright.htm';
+        }
+        else
+        {
+          location.href = 'ex0ans.htm';
+        }
+        }
+      </script> 
+      
+    </font></p>
     </form>
   </li>
   <li><font face="Century Schoolbook">Three numbers 16, 3a and 17b are in arithmetic
@@ -128,17 +157,26 @@ end if"
     2 * 3 = 1 + 5<br>
     So, for 16, 3a, and 17b, find the values of a &amp; b for which the three numbers are in
     A.P. Use Bhaskara's method. </font><form METHOD="POST" NAME="indetex2">
-      <p><font face="Century Schoolbook">a = <input LANGUAGE="VBScript" TYPE="text"
-      ONCHANGE="avalue=indetex2.aval.value" SIZE="6" NAME="aval"> &nbsp;&nbsp;&nbsp; b = <input
-      LANGUAGE="VBScript" TYPE="text" ONCHANGE="bvalue=indetex2.bval.value" SIZE="6" NAME="bval">
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input LANGUAGE="VBScript" TYPE="button"
-      VALUE="Submit"
-      ONCLICK="if avalue = 48 and bvalue = 16 then
-	Window.location.href=&quot;indright.htm&quot;
-else
-	Window.location.href=&quot;indwrong.htm&quot;
-end if"
-      NAME="indsub3"> </font></p>
+      <p><font face="Century Schoolbook">a = <input TYPE="number" SIZE="4" id="xval11" min=0> &nbsp;&nbsp;&nbsp; b = <input TYPE="number" SIZE="4" id="yval11" min=0>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="button" name="confirm" value="Submit" onClick="message213()">
+      <script>
+        function message213() {
+  
+        var t1 = document.getElementById("xval11").value;
+        var t2 = document.getElementById("yval11").value;
+
+        if  (t1 == 48 && t2 == 16)
+        {
+          location.href = 'indright.htm';
+        }
+        else
+        {
+          location.href = 'ex0ans.htm';
+        }
+        }
+      </script> 
+     </font></p>
     </form>
   </li>
 </ul>
@@ -147,19 +185,29 @@ end if"
   <li><font face="Century Schoolbook">Consider the four bases 2, 5, 7 and 9. Express the
     number 303 as a quartet with respect to these bases. </font><form METHOD="POST"
     NAME="indetex4">
-      <p><font face="Century Schoolbook">303 = <strong>(</strong> <input LANGUAGE="VBScript"
-      TYPE="text" ONCHANGE="xvalue1=indetex4.q1.value" SIZE="2" NAME="q1"> &nbsp; ,&nbsp; <input
-      LANGUAGE="VBScript" TYPE="text" ONCHANGE="xvalue11=indetex4.q2.value" SIZE="2" NAME="q2">
-      &nbsp; , <input LANGUAGE="VBScript" TYPE="text" ONCHANGE="yvalue1=indetex4.q3.value"
-      SIZE="2" NAME="q3"> &nbsp; ,&nbsp; <input LANGUAGE="VBScript" TYPE="text"
-      ONCHANGE="yvalue11=indetex4.q4.value" SIZE="2" NAME="q4"> <strong>)</strong>&nbsp;&nbsp;&nbsp;
-      <input LANGUAGE="VBScript" TYPE="button" VALUE="Submit"
-      ONCLICK="if xvalue1=1 and xvalue11=3 and yvalue1=2 and yvalue11=6 then
-	Window.location.href=&quot;indright.htm&quot;
-else
-	Window.location.href=&quot;indwrong.htm&quot;
-end if"
-      NAME="insub4"> </font></p>
+      <p><font face="Century Schoolbook">303 = <strong>(</strong> <input TYPE="number" SIZE="4" id="xxval1" min=0> &nbsp; ,&nbsp; <input TYPE="number" SIZE="4" id="xxval11" min=0>
+      &nbsp; , <input TYPE="number" SIZE="4" id="yyval1" min=0> &nbsp; ,&nbsp; <input TYPE="number" SIZE="4" id="yyval11" min=0> <strong>)</strong>&nbsp;&nbsp;&nbsp;
+      <input type="button" name="confirm" value="Submit" onClick="message231()">
+      <script>
+        function message231() {
+  
+        var t1 = document.getElementById("xxval1").value;
+        var t2 = document.getElementById("xxval11").value;
+        var t3 = document.getElementById("yyval1").value;
+        var t4 = document.getElementById("yyval11").value;
+
+        if (t1 == 1 && t2 == 3 && t3 == 2 && t4 == 6)
+        {
+          location.href = 'indright.htm';
+        }
+        else
+        {
+          location.href = 'ex0ans.htm';
+        }
+        }
+      </script>
+      
+       </font></p>
     </form>
   </li>
 </ul>

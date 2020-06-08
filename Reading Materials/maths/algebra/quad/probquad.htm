@@ -1,19 +1,6 @@
 <html>
 
-<head><script LANGUAGE="VBScript">
-<!--
-dim swanval
-
-dim twinval
-
-dim lossvalue
-
-dim xvalue1
-
-dim xvalue2
-
--->
-    </script>
+<head>
 
 <title>Some exercises in quadratic equations </title>
 <meta name="GENERATOR" content="Microsoft FrontPage 3.0">
@@ -30,17 +17,27 @@ equations </font></strong></u>
   <li><font color="#FFFF80" face="Garamond" size="4">Solve this simple quadratic equation <br>
     2x<sup>2</sup> - 12x&nbsp; + 16 = 0<br>
     The values x can take are </font><form METHOD="POST" NAME="quadex1">
-      <p><font color="#FFFF80" face="Garamond" size="4">x&nbsp; = <input LANGUAGE="VBScript" TYPE="text" ONCHANGE="xvalue1 = quadex1.xval1.value" SIZE="3" NAME="xval1">
-      &nbsp;&nbsp;and&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x&nbsp; = <input LANGUAGE="VBScript" TYPE="text" ONCHANGE="xvalue2=quadex1.xval2.value" SIZE="3" NAME="xval2">
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input LANGUAGE="VBScript" TYPE="button" VALUE="Submit" ONCLICK="if xvalue1 = 2 and xvalue2 = 4 then
-	Window.location.href=&quot;qright.htm&quot;
-else
-	if xvalue1 = 4 and xvalue2 = 2 then
-		Window.location.href=&quot;qright.htm&quot;
-	else
-		Window.location.href=&quot;qwrong.htm&quot;
-	end if
-end if" NAME="qsub1"> <br>
+      <p><font color="#FFFF80" face="Garamond" size="4">x = <input TYPE="number" SIZE="4" id="xval" min=0> &nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;and&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x&nbsp; = <input TYPE="number" SIZE="4" id="xval1" min=0>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      <input type="button" name="confirm" value="Submit" onClick="message2()">
+      <script>
+        function message2() {
+  
+        var t1 = document.getElementById("xval").value;
+        var t2 = document.getElementById("xval1").value;
+
+        if  (t1 == 4 && t2 == 2)
+        {
+          location.href = 'qright.htm';
+        }
+        else
+        {
+          location.href = 'qwrong.htm';
+        }
+        }
+      </script>            
+      <br>
       </font></p>
     </form>
   </li>
@@ -49,12 +46,30 @@ end if" NAME="qsub1"> <br>
 <ul style="color: rgb(255,255,255)">
   <li><font color="#FFFF80" face="Garamond" size="4">The sum of the ages of 2 sisters, Sunita
     and Sujata,&nbsp; is 18 and the product of their ages is 81. Prove that they are twins. </font><form METHOD="POST" NAME="quadex2">
-      <p><font face="Garamond" size="4"><font color="#FFFF80">And their age is </font><input LANGUAGE="VBScript" TYPE="text" ONCHANGE="twinval=quadex2.ages.value" SIZE="3" NAME="ages">
-      <font color="#FFFF80">years.</font>&nbsp;&nbsp;&nbsp;&nbsp; <input LANGUAGE="VBScript" TYPE="button" VALUE="Submit" ONCLICK="if twinval = 9 then
-	Window.location.href=&quot;qright.htm&quot;
-else
-	Window.location.href=&quot;qwrong.htm&quot;
-end if" NAME="qsub2"> </font></p>
+      <p><font face="Garamond" size="4"><font color="#FFFF80">And their age is </font><input TYPE="number" SIZE="4" id="twinval" min=0> &nbsp;&nbsp;&nbsp; 
+      <font color="#FFFF80">years.</font>&nbsp;&nbsp;&nbsp;&nbsp; 
+      <input type="button" name="confirm" value="Submit" onClick="message1()">
+      <script>
+        function message1() {
+  
+        var t1 = document.getElementById("twinval").value;
+       
+
+        if  (t1 == 9)
+        {
+          location.href = 'qright.htm';
+        }
+        else
+        {
+          location.href = 'qwrong.htm';
+        }
+        }
+      </script>            
+        
+    
+    
+    
+    </font></p>
     </form>
     <p><font color="#FFFF80" face="Garamond" size="4">Check your proof in the 'Solutions'
     page.<br>
@@ -62,13 +77,29 @@ end if" NAME="qsub2"> </font></p>
   </li>
   <li><font color="#FFFF80" face="Garamond" size="4">Amita sells&nbsp; a gramaphone to Bharat
     at a certain loss percentage. Bharat sells it to Chandni at the same loss %. Chandni sells
-    the gramaphone to Amita at the original price, thus gaining 56¼%. At what loss percentage
+    the gramaphone to Amita at the original price, thus gaining 56ï¿½%. At what loss percentage
     did Amita sell? </font><form METHOD="POST" NAME="quadex3">
-      <p><font face="Garamond" size="4"><font color="#FFFF80">Loss % is&nbsp;&nbsp;&nbsp; </font><input LANGUAGE="VBScript" TYPE="text" ONCHANGE="lossvalue = quadex3.lossval.value" SIZE="4" NAME="lossval"> <font color="#FFFF80">%</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input LANGUAGE="VBScript" TYPE="button" VALUE="Submit" ONCLICK="if lossvalue = 20 then
-	Window.location.href = &quot;qright.htm&quot;
-else 
-	Window.location.href = &quot;qwrong.htm&quot;
-end if" NAME="qsub3"> <br>
+      <p><font face="Garamond" size="4"><font color="#FFFF80">Loss % is&nbsp;&nbsp;&nbsp; </font>
+        <input TYPE="number" SIZE="4" id="loss" min=0> &nbsp;&nbsp;&nbsp; 
+
+        <input type="button" name="confirm" value="Submit" onClick="message2()">
+      <script>
+        function message2() {
+  
+        var t1 = document.getElementById("loss").value;
+       
+
+        if  (t1 == 20)
+        {
+          location.href = 'qright.htm';
+        }
+        else
+        {
+          location.href = 'qwrong.htm';
+        }
+        }
+      </script>            
+     <br>
       </font></p>
     </form>
   </li>
@@ -86,12 +117,26 @@ end if" NAME="qsub3"> <br>
     while the remaining two are involved in a playful fight in the lake. What is the total
     number of swans ?<br>
     </font><form METHOD="POST" NAME="quadex5">
-      <p><font color="#FFFF80" face="Garamond" size="4">Total number of swans = </font><input LANGUAGE="VBScript" TYPE="text" ONCHANGE="swanval=quadex5.sval.value" SIZE="5" NAME="sval">
-      &nbsp;&nbsp;&nbsp; <input LANGUAGE="VBScript" TYPE="button" VALUE="Submit" ONCLICK="if swanval = 16 then
-	Window.location.href=&quot;qright.htm&quot;
-else
-	Window.location.href=&quot;qwrong.htm&quot;
-end if" NAME="swansub"> <br>
+      <p><font color="#FFFF80" face="Garamond" size="4">Total number of swans = </font><input TYPE="number" SIZE="4" id="swanval" min=0> &nbsp;&nbsp;&nbsp; 
+      &nbsp;&nbsp;&nbsp; 
+      <input type="button" name="confirm" value="Submit" onClick="message3()">
+      <script>
+        function message3() {
+  
+        var t1 = document.getElementById("swanval").value;
+       
+
+        if  (t1 == 16)
+        {
+          location.href = 'qright.htm';
+        }
+        else
+        {
+          location.href = 'qwrong.htm';
+        }
+        }
+      </script>            
+      <br>
       </p>
     </form>
   </li>

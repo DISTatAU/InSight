@@ -41,35 +41,56 @@ sphaTikaakrtim <br>
 aadhaaram sarva vidyaanaam hayagreevamupaasmahe </font>
 
 <p>
-<object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=jnaana height=0 width=0>
-<param name="filename" value="wavefile\jnaana.wav">
-</object>
+  <audio id="audio2" src="wavefile/jnaana.wav" autoplay="false" ></audio>
+  <img src="../images/audio.png" width="50" height="50"><a onclick="pplaySound();"> Recite</a>&nbsp;<a onclick="pplaySound1();"> Pause</a>&nbsp;<a onclick="pplaySound2();"> Stop</a>
+  <script>
+  function pplaySound() {
+        var sound = document.getElementById("audio2");
+        sound.play();
+        sound.stop();
+    }
+    function pplaySound1() {
+        var sound = document.getElementById("audio2");
+        
+        sound.pause();
+        
+    }
+    function pplaySound2() {
+        var sound = document.getElementById("audio2");
+        
+        sound.pause();
+        sound.currentTime = 0;
+    }
+  </script>
+
+<input TYPE="text"
+  SIZE="20" id="T1" tabindex="1">
+  <button onclick="myFunctiontext()">Ok</button> <p id="demotext"></p>
 <script>
-jnaana.showdisplay = false
-jnaana.showcontrols = false
+function myFunctiontext() {
+
+var t1 = document.getElementById("T1").value;
+var res = t1.toLowerCase();
+res = res.replace(/\s/g, "");
+  if (res == "sloka" || res == "shloka") {
+    document.getElementById("demotext").innerHTML = "You are correct! This scheme is shloka (or) anuShThubh";
+    
+  } else {
+    document.getElementById("demotext").innerHTML = "Sorry! try again.";
+  }
+  
+}
 </script>
-<input type=button name=play value="Recite" onclick = "jnaana.run()">
-<input type=button name=stop value="Stop" onclick = "jnaana.stop()">
 
-<form METHOD="POST" target="_self" onsubmit="return FrontPage_Form1_Validator(this)"
-name="FrontPage_Form1">
-  <!--webbot bot="Validation" startspan S-Data-Type="String" B-Allow-Letters="TRUE"
-  B-Allow-WhiteSpace="TRUE" --><!--webbot bot="Validation" endspan --><input TYPE="text"
-  SIZE="20" NAME="T1" tabindex="1"> <input LANGUAGE="VBScript" TYPE="button"
-  VALUE="    OK    "
-  ONCLICK="Extract(T1.value)
+<button onclick="myFunction()">Meaning</button>
 
-if (lcase(strScheme) = &quot;shloka&quot; or lcase(strScheme) = &quot;sloka&quot;) then
-   msgbox &quot;You are correct! This scheme is shloka (or) anuShThubh&quot;,,&quot;Chhandas Exercises&quot;
-else
-   msgbox &quot;Sorry! try again.&quot;,, &quot;Chhandas Exercises&quot;
-end if"
-  NAME="btnOK" tabindex="2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Meaning"
-  ONCLICK="msgbox &quot;I worship Lord Hayagreeva, who is the embodiment of knowledge and happiness, whose body is spotless as a crystal, and who is the base for all studies.&quot; &amp; chr(13) &amp; _
-       &quot;(From Hayagreeva stotram - Sri Desika)&quot;,, &quot;Chhandas Exercises&quot;"
-  NAME="btnmean" tabindex="3"> 
-</form>
+<p id="demo"></p> </p>
 
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "I worship Lord Hayagreeva, who is the embodiment of knowledge and happiness, whose body is spotless as a crystal, and who is the base for all studies.(From Hayagreeva stotram - Sri Desika) ";
+}
+</script>
 <p><big><big>या कुन्देन्दुतुषारहारधवला या शुभ्रवस्त्रावृता <br>
   या वीणावरदण्डमण्डितकरा या श्वेतपद्मासना । <br>
   या ब्रह्माच्युतशंकरप्रभृतिभिर्देवैः सदा पूजिता <br>
@@ -80,15 +101,28 @@ yaa veeNaa varadaNDa maNDita karaa yaa shveta padmaasanaa <br>
 yaa brahmaachyuta shankara prabhrtibhiH devaiH sadaa poojitaa <br>
 saa maam paatu sarasvatee bhagavatee niHsheSha jaaDyaapahaa&nbsp; </font>
 <p>
-<object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=yaa height=0 width=0>
-<param name="filename" value="wavefile\yaakunda.wav">
-</object>
-<script>
-yaa.showdisplay = false
-yaa.showcontrols = false
-</script>
-<input type=button name=play value="Recite" onclick = "yaa.run()">
-<input type=button name=stop value="Stop" onclick = "yaa.stop()">
+  <audio id="audio3" src="wavefile/yaakunda.wav" autoplay="false" ></audio>
+  <img src="../images/audio.png" width="50" height="50"><a onclick="yplaySound();"> Recite</a>&nbsp;<a onclick="yplaySound1();"> Pause</a>&nbsp;<a onclick="yplaySound2();"> Stop</a>
+  <script>
+  function yplaySound() {
+        var sound = document.getElementById("audio3");
+        sound.play();
+        sound.stop();
+    }
+    function yplaySound1() {
+        var sound = document.getElementById("audio3");
+        
+        sound.pause();
+        
+    }
+    function yplaySound2() {
+        var sound = document.getElementById("audio3");
+        
+        sound.pause();
+        sound.currentTime = 0;
+    }
+  </script>
+
 
 <form METHOD="POST" target="_self" onsubmit="return FrontPage_Form2_Validator(this)"
 name="FrontPage_Form2">
@@ -120,15 +154,27 @@ naaraayaNam krShNa daamodaram vaasudevam harim&nbsp; <br>
 jaanakee naayakam raamachandram bhaje. </font></p>
 
 <p>
-<object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=ach height=0 width=0>
-<param name="filename" value="wavefile\achutam.wav">
-</object>
-<script>
-ach.showdisplay = false
-ach.showcontrols = false
-</script>
-<input type=button name=play value="Recite" onclick = "ach.run()">
-<input type=button name=stop value="Stop" onclick = "ach.stop()">
+  <audio id="audio4" src="wavefile/achutam.wav" autoplay="false" ></audio>
+  <img src="../images/audio.png" width="50" height="50"><a onclick="aplaySound();"> Recite</a>&nbsp;<a onclick="aplaySound1();"> Pause</a>&nbsp;<a onclick="aplaySound2();"> Stop</a>
+  <script>
+  function aplaySound() {
+        var sound = document.getElementById("audio4");
+        sound.play();
+        sound.stop();
+    }
+    function aplaySound1() {
+        var sound = document.getElementById("audio4");
+        
+        sound.pause();
+        
+    }
+    function aplaySound2() {
+        var sound = document.getElementById("audio4");
+        
+        sound.pause();
+        sound.currentTime = 0;
+    }
+  </script>
 
 <form METHOD="POST" target="_self" onsubmit="return FrontPage_Form3_Validator(this)"
 name="FrontPage_Form3">
@@ -159,15 +205,28 @@ bhraatrbhaajyam na cha bhaarakaari <br>
 vyaye krte vardhata eva nityam vidyaa dhanam sarva dhanapradhaanam
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font>
 <p>
-<object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=nach height=0 width=0>
-<param name="filename" value="wavefile\nachora.wav">
-</object>
-<script>
-nach.showdisplay = false
-nach.showcontrols = false
-</script>
-<input type=button name=play value="Recite" onclick = "nach.run()">
-<input type=button name=stop value="Stop" onclick = "nach.stop()">
+
+  <audio id="audio5" src="wavefile/nachora.wav" autoplay="false" ></audio>
+  <img src="../images/audio.png" width="50" height="50"><a onclick="nplaySound();"> Recite</a>&nbsp;<a onclick="nplaySound1();"> Pause</a>&nbsp;<a onclick="nplaySound2();"> Stop</a>
+  <script>
+  function nplaySound() {
+        var sound = document.getElementById("audio5");
+        sound.play();
+        sound.stop();
+    }
+    function nplaySound1() {
+        var sound = document.getElementById("audio5");
+        
+        sound.pause();
+        
+    }
+    function nplaySound2() {
+        var sound = document.getElementById("audio5");
+        
+        sound.pause();
+        sound.currentTime = 0;
+    }
+  </script>
 
 <form METHOD="POST" target="_self" onsubmit="return FrontPage_Form4_Validator(this)"
 name="FrontPage_Form4">
@@ -194,15 +253,28 @@ end if"
 karoti kim <br>
 lochanaabhyaam viheenasya darpaNaH kim kariShyati</font>
 <p>
-<object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=yasya height=0 width=0>
-<param name="filename" value="wavefile\yasya.wav">
-</object>
-<script>
-yasya.showdisplay = false
-yasya.showcontrols = false
-</script>
-<input type=button name=play value="Recite" onclick = "yasya.run()">
-<input type=button name=stop value="Stop" onclick = "yasya.stop()">
+
+  <audio id="audio6" src="wavefile/yasya.wav" autoplay="false" ></audio>
+  <img src="../images/audio.png" width="50" height="50"><a onclick="yasplaySound();"> Recite</a>&nbsp;<a onclick="yasplaySound1();"> Pause</a>&nbsp;<a onclick="yasplaySound2();"> Stop</a>
+  <script>
+  function yasplaySound() {
+        var sound = document.getElementById("audio6");
+        sound.play();
+        sound.stop();
+    }
+    function yasplaySound1() {
+        var sound = document.getElementById("audio6");
+        
+        sound.pause();
+        
+    }
+    function yasplaySound2() {
+        var sound = document.getElementById("audio6");
+        
+        sound.pause();
+        sound.currentTime = 0;
+    }
+  </script>
 
 <form METHOD="POST" target="_self" onsubmit="return FrontPage_Form5_Validator(this)"
 name="FrontPage_Form5">
@@ -231,15 +303,29 @@ choochuka kunkumato niyataaruNitaakhila neela tano <br>
 &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;kamalaayata lochanalokapate vijayeebhava
 venkaTashailapate </font>
 <p>
-<object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=kam height=0 width=0>
-<param name="filename" value="wavefile\kamalaa.wav">
-</object>
-<script>
-kam.showdisplay = false
-kam.showcontrols = false
-</script>
-<input type=button name=play value="Recite" onclick = "kam.run()">
-<input type=button name=stop value="Stop" onclick = "kam.stop()">
+
+  <audio id="audio7" src="wavefile/kamalaa.wav" autoplay="false" ></audio>
+  <img src="../images/audio.png" width="50" height="50"><a onclick="kplaySound();"> Recite</a>&nbsp;<a onclick="kplaySound1();"> Pause</a>&nbsp;<a onclick="kplaySound2();"> Stop</a>
+  <script>
+  function kplaySound() {
+        var sound = document.getElementById("audio7");
+        sound.play();
+        sound.stop();
+    }
+    function kplaySound1() {
+        var sound = document.getElementById("audio7");
+        
+        sound.pause();
+        
+    }
+    function kplaySound2() {
+        var sound = document.getElementById("audio7");
+        
+        sound.pause();
+        sound.currentTime = 0;
+    }
+  </script>
+
 
 <form METHOD="POST" target="_self" onsubmit="return FrontPage_Form6_Validator(this)"
 name="FrontPage_Form6">
@@ -277,15 +363,28 @@ darbhaiH ardhaavaleeDaiH shramavivrtamukha bhramshibhiH keerNa vartmaa <br>
 pashyodagra plutatvaat viyati bahutaram stokamoorvyaam prayaati <br>
 <b>(Hint : 'ti' at the end of the last quarter to be treated as long syllable)</b></font>
 <p>
-<object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=greevaa height=0 width=0>
-<param name="filename" value="wavefile\greevaa.wav">
-</object>
-<script>
-greevaa.showdisplay = false
-greevaa.showcontrols = false
-</script>
-<input type=button name=play value="Recite" onclick = "greevaa.run()">
-<input type=button name=stop value="Stop" onclick = "greevaa.stop()">
+
+  <audio id="audio8" src="wavefile/greevaa.wav" autoplay="false" ></audio>
+  <img src="../images/audio.png" width="50" height="50"><a onclick="gplaySound();"> Recite</a>&nbsp;<a onclick="gplaySound1();"> Pause</a>&nbsp;<a onclick="gplaySound2();"> Stop</a>
+  <script>
+  function gplaySound() {
+        var sound = document.getElementById("audio8");
+        sound.play();
+        sound.stop();
+    }
+    function gplaySound1() {
+        var sound = document.getElementById("audio8");
+        
+        sound.pause();
+        
+    }
+    function gplaySound2() {
+        var sound = document.getElementById("audio8");
+        
+        sound.pause();
+        sound.currentTime = 0;
+    }
+  </script>
 
 <form METHOD="POST" target="_self" onsubmit="return FrontPage_Form7_Validator(this)"
 name="FrontPage_Form7">
@@ -314,15 +413,29 @@ chr(13) &amp; &quot;(From Abhijnaana shaakuntalam - Kaalidaasa)&quot;,,&quot;Chh
 tatra krtamastakaanjalim <br>
 baaShpavaari paripoorNa lochanam maarutim namata raakShasaantakam </font>
 <p>
-<object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=yatra height=0 width=0>
-<param name="filename" value="wavefile\yatra.wav">
-</object>
-<script>
-yatra.showdisplay = false
-yatra.showcontrols = false
-</script>
-<input type=button name=play value="Recite" onclick = "yatra.run()">
-<input type=button name=stop value="Stop" onclick = "yatra.stop()">
+
+
+  <audio id="audio9" src="wavefile/yatra.wav" autoplay="false" ></audio>
+  <img src="../images/audio.png" width="50" height="50"><a onclick="yaplaySound();"> Recite</a>&nbsp;<a onclick="yaplaySound1();"> Pause</a>&nbsp;<a onclick="yaplaySound2();"> Stop</a>
+  <script>
+  function yaplaySound() {
+        var sound = document.getElementById("audio9");
+        sound.play();
+        sound.stop();
+    }
+    function yaplaySound1() {
+        var sound = document.getElementById("audio9");
+        
+        sound.pause();
+        
+    }
+    function yaplaySound2() {
+        var sound = document.getElementById("audio9");
+        
+        sound.pause();
+        sound.currentTime = 0;
+    }
+  </script>
 
 <form METHOD="POST" target="_self" onsubmit="return FrontPage_Form8_Validator(this)"
 name="FrontPage_Form8">

@@ -24,57 +24,69 @@ dim score
   <li><font face="Comic Sans MS">593</font></li>
 </ul>
 
-<p><font face="Comic Sans MS">Ans:&nbsp; <input TYPE="text" VALUE="0" SIZE="20" NAME="T1">
+<p><font face="Comic Sans MS">Ans:&nbsp; <input TYPE="number" VALUE="0" SIZE="20" id="T1" min=0>
 </font>
 
 <ul>
   <li><font face="Comic Sans MS">74612</font></li>
 </ul>
 
-<p><font face="Comic Sans MS">Ans: <input TYPE="text" VALUE="0" SIZE="20" NAME="T2"> </font>
+<p><font face="Comic Sans MS">Ans: <input TYPE="number" VALUE="0" SIZE="20" id="T2" min=0> </font>
 
 <ul>
   <li><font face="Comic Sans MS">327.8</font></li>
 </ul>
 
-<p><font face="Comic Sans MS">Ans: <input TYPE="text" VALUE="0" SIZE="20" NAME="T3"> </font></p>
+<p><font face="Comic Sans MS">Ans: <input TYPE="number" VALUE="0" SIZE="20" id="T3" min=0> </font></p>
 
 <p><font face="Comic Sans MS">2. Find the fourth power of 31</font></p>
 
-<p><font face="Comic Sans MS"><input TYPE="text" VALUE="0" SIZE="20" NAME="T4"> </font></p>
+<p><font face="Comic Sans MS"><input TYPE="number" VALUE="0" SIZE="20" id="T4" min=0> </font></p>
 
-<p><font face="Comic Sans MS">Press <input LANGUAGE="VBScript" TYPE="button"
-VALUE="Submit"
-ONCLICK="score = 0
-if t1.value = &quot;351649&quot; then
- score = score+1
-end if
-if t2.value = &quot;5566950544&quot; then
- score = score+1
-end if
-if t3.value = &quot;107452.84&quot; then 
- score = score+1
-end if
-if t4.value = &quot;923521&quot; then 
-score = score+1
-end if
-
-if score = 0 then
-MsgBox &quot;Your score is 0. &quot;, vbOKOnly,&quot;Scores&quot; 
-end if
-if score = 1 then
-MsgBox &quot;Your score is 1.  &quot;, vbOKOnly, &quot;Scores&quot;
-end if
-if score = 2 then 
-MsgBox &quot;Your score is 2 &quot;, vbOKOnly, &quot;Scores&quot;
-end if
-if score = 3 then 
-MsgBox &quot;Your score is 3 &quot;, vbOKOnly, &quot;Scores&quot;
-end if
-if score = 4 then 
-MsgBox &quot;Your score is 4 &quot;, vbOKOnly, &quot;Scores&quot;
-end if"
-NAME="B1"> after &nbsp; you've finished </font></p>
+<p><font face="Comic Sans MS">Press Submit<button onclick="myFunction()">Submit</button> <p id="demo"></p>
+  <script>
+  function myFunction() {
+  var score = 0;
+  var t1 = document.getElementById("T1").value;
+  var t2 = document.getElementById("T2").value;
+  var t3 = document.getElementById("T3").value;
+  var t4 = document.getElementById("T4").value;
+    if (t1 == 351649) {
+      score = score+1;
+  
+    } if (t2 == 5566950544) {
+      score = score+1;
+  
+    } if (t3 == 107452.84) {
+      score = score+1;
+  
+  } if (t4 == 923521) {
+      score = score+1;
+  
+  }
+  
+  if (score == 0)
+  {
+  document.getElementById("demo").innerHTML = "Your score is "+ score + " No. This isn't good. You got none correct. Review this section again and try the exercises once more";
+  }
+  if (score == 1)
+  {
+  document.getElementById("demo").innerHTML = "Your score is " + score + " Sorry. You got 1 answer correct. Dont worry. Try for a better score next time.";
+  }
+  if (score == 2)
+  {
+  document.getElementById("demo").innerHTML = "Your score is " + score+" You got 2 answers correct. Better luck next time !";
+  }
+  if (score == 3)
+  {
+  document.getElementById("demo").innerHTML = "Your score is " +score+" Good. You got 3 answers correct. Try for 100%!";
+  }
+  if (score == 4)
+  {
+  document.getElementById("demo").innerHTML = "Your score is " +score+"  Great!. You got all 4 answers correct! Keep it up.";
+  }
+  }
+  </script>
 
 <p><font face="Abadi MT Condensed" size="4" color="#004000">Click<a href="answers.htm">
 here</a> to view the answers</font></p>
