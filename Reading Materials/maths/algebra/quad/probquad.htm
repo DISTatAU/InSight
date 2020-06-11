@@ -20,14 +20,14 @@ equations </font></strong></u>
       <p><font color="#FFFF80" face="Garamond" size="4">x = <input TYPE="number" SIZE="4" id="xval" min=0> &nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;and&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x&nbsp; = <input TYPE="number" SIZE="4" id="xval1" min=0>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-      <input type="button" name="confirm" value="Submit" onClick="message2()">
+      <input type="button" name="confirm" value="Submit" onClick="message220()">
       <script>
-        function message2() {
+        function message220() {
   
         var t1 = document.getElementById("xval").value;
         var t2 = document.getElementById("xval1").value;
 
-        if  (t1 == 4 && t2 == 2)
+        if  ((t1 == 4 && t2 == 2) || (t1 == 2 && t2 == 4))
         {
           location.href = 'qright.htm';
         }
