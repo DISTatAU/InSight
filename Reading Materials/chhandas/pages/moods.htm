@@ -309,18 +309,27 @@ mood of the verse. What emotion do you think is foremost in it? </font></p>
     krpaa kapaTakesarin danujaDimbha dattastanaa <br>
     saroja sadrshaa drshaa vyatibhiShajya te vyajyate ..</font>
 <p>
-<object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=sat height=0 width=0>
-<param name="filename" value="wavefile\sataa.wav">
-</object>
-<script>
-sat.showdisplay=false
-sat.showcontrols=false
-</script>
-<input type=button name=play value="Recite" onclick = "sat.run()">
-<input type=button name=stop value="Stop" onclick = "sat.stop()">
-  </blockquote>
-</blockquote>
-
+  <audio id="audio2" src="wavefile/sataa.wav" autoplay="false" ></audio>
+  <img src="../images/audio.png" width="50" height="50"><button onclick="pplaySound();"> Recite</button>&nbsp;<button onclick="pplaySound1();"> Pause</button>&nbsp;<button onclick="pplaySound2();"> Stop</button>
+  <script>
+  function pplaySound() {
+        var sound = document.getElementById("audio2");
+        sound.play();
+        sound.stop();
+    }
+    function pplaySound1() {
+        var sound = document.getElementById("audio2");
+        
+        sound.pause();
+        
+    }
+    function pplaySound2() {
+        var sound = document.getElementById("audio2");
+        
+        sound.pause();
+        sound.currentTime = 0;
+    }
+  </script>
 <p align="left"><font face="Trebuchet MS">Obviously, the first two lines sound very hard,
 and depict, probably, something violent. You may also note that the next two lines sound
 relatively soft. This is because the poet has used hard consonants&nbsp; 'bha', 'pha',

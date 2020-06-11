@@ -152,15 +152,29 @@ describes the gaNaas. The verse is given below : <br>
   laaghavam<br> bhajasaa gouravam yaanti manau tu guru laaghave </font></font> 
 
 <p>
-<object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" name=adi height=0 width=0>
-<param name="filename" value="wavefile\aadhi.wav">
-</object>
-<script>
-adi.showdisplay = false
-adi.showcontrols = false
-</script>
-<input type=button name=play value="Recite" onclick = "adi.run()">
-<input type=button name=stop value="Stop" onclick = "adi.stop()">
+
+
+  <audio id="audio" src="wavefile/aadhi.wav" autoplay="false" ></audio>
+  <img src="../images/audio.png" width="50" height="50"><button onclick="playSound();"> Recite</button>&nbsp;<button onclick="playSound1();"> Pause</button>&nbsp;<button onclick="playSound2();"> Stop</button>
+  <script>
+  function playSound() {
+        var sound = document.getElementById("audio");
+        sound.play();
+        sound.stop();
+    }
+    function playSound1() {
+        var sound = document.getElementById("audio");
+        
+        sound.pause();
+        
+    }
+    function playSound2() {
+        var sound = document.getElementById("audio");
+        
+        sound.pause();
+        sound.currentTime = 0;
+    }
+  </script>
 
 <p><font face="Trebuchet MS" size="3">This means, there is a short syllable at the start
 (aadi), middle (madhya) and end (avasaana) positions for the gaNaas ya, ra and ta
