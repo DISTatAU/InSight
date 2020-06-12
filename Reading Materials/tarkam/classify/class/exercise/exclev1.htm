@@ -1,46 +1,6 @@
 <html>
 
-<head><script LANGUAGE="VBScript">
-<!--
-Sub Message(msg)
-call msgbox(msg,0," Reason ")
-end sub
-dim counter
-
-Sub Right(cnt)
-if (cnt=0) then 
-call msgbox("Excellent. You got it right.",0," Right ")
-elseif (cnt=1) then
-call msgbox("Perfect. Keep it up.",0," Right ")
-elseif (cnt=2) then
-call msgbox("Right answer. But you've got to improve",0," Right ")
-elseif (cnt=3) then
-call msgbox("Right answer. But next time try to answer in less number of chances",0," Right ")
-else
-call msgbox("You finally got it. Better do your homework.",0," Right ")
-end if
-end sub
-
-Sub Wrong(cnt)
-if cnt=1 then 
-call msgbox("No. Go ahead. Try again.",0," Wrong ")
-elseif cnt=2 then
-call msgbox("Just think a little.",0," Wrong ")
-elseif cnt=3 then
-call msgbox("Come on. Give it a thinking.",0," Wrong ")
-elseif cnt=4 then
-call msgbox("Think .. Think .. Think ...",0," Wrong ")
-elseif cnt=5 then
-call msgbox("Come on its easy.",0," Wrong ")
-elseif cnt=6 then
-call msgbox("I don't think you do your homework.",0," Wrong ")
-else
-call msgbox("Go ahead. Click on solve and find out the right answer.",0," Wrong ")
-end if
-end sub
--->
-</script>
-
+<head>
 <title>Your first exercise</title>
 <meta name="Microsoft Theme" content="none">
 <meta name="Microsoft Border" content="none">
@@ -60,332 +20,1144 @@ end sub
   </tr>
   <tr>
     <td width="87%"><font face="Abadi MT Condensed Light" size="4">Check-in one of the
-    padhaartaas and click on the 'Answer' button.<br>
-    Click on 'Solve' if you want to use auto-solve.</font></td>
+    padhaartaas and click on the 'Check' button.<br>
+    Click on 'Solution and Reason' if you want to know the answer</font></td>
   </tr>
 </table>
 
 <hr>
+<form name="f1">  <div align="left"><p><font size="5"><i>1. Paper<br>
+	
+</font>
+<font size="3">
+	<input type="radio" id="sub" name="tarka" value="sub">
+	<label for="sub">Substance</label>
+	<input type="radio" id="qual" name="tarka" value="qual">
+	<label for="qual">Quality</label>
+	<input type="radio" id="act" name="tarka" value="act">
+	<label for="act">Activity</label>
+	<input type="radio" id="gen" name="tarka" value="gen">
+	<label for="gen">Generality</label>
+	<input type="radio" id="spe" name="tarka" value="spe">
+	<label for="spe">Speciality</label>
+	<input type="radio" id="inh" name="tarka" value="inh">
+	<label for="inh">Inherence</label>
+  <input type="radio" id="abs" name="tarka" value="abs">
+	<label for="abs">Absence</label>
+</div>
+  <input type="button" id="btn" value="Check" ><p id="d1"></p>
+  </i>
 
-<form METHOD="POST" NAME="f1">
-  <div align="left"><p><font size="5"><i>1. Paper<br>
-  </i></font><font face="Lucida Sans"><font size="2"><strong><input LANGUAGE="VBScript" TYPE="checkbox" VALUE="ON" NAME="C1"> Substance&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C2"> Quality &nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C3"> Action&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C4"> Generality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C5"> Speciality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C6"> Inherence&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C7"> Absence <br>
-  </strong></font><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (f1.c1.checked) then
-	call Right(counter)
-	counter=0
-	else
-	counter=counter+1
-	call Wrong(counter)
-	call f1.reset()
-	end if
-" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="f1.C1.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;Paper is a substance. It is made of wood which is also a substance.&quot;)" NAME="B3"> </p>
-  </div>
 </form>
+<script>
+const btn = document.querySelector('#btn');
+        // handle click button
+        btn.onclick = function () {
+ var ele = document.getElementsByName('tarka'); 
+              
+            for(i = 0; i < ele.length; i++) { 
+                if(ele[i].checked) 
+               {
+                if (ele[i].value == "sub") {
+                    	document.getElementById("d1").innerHTML = "Perfect!You are right";
+                }
+else
+{
+document.getElementById("d1").innerHTML = "Try Again or click the Solution button";
+}    }
+
+}
+
+            } 
+    </script>
 </font>
 
-<form METHOD="POST" NAME="f2">
-  <div align="left"><p><font size="5"><i>2. Rain<br>
-  </i></font><font face="Lucida Sans"><font size="2"><strong><input LANGUAGE="VBScript" TYPE="checkbox" VALUE="ON" NAME="C1"> Substance&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C2"> Quality &nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C3"> Action&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C4"> Generality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C5"> Speciality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C6"> Inherence&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C7"> Absence <br>
-  </strong></font><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (f2.c1.checked) then
-	call Right(counter)
-	counter=0
-	else
-	counter=counter+1
-	call Wrong(counter)
-	call f2.reset()
-	end if
-" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="f2.C1.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;Rain is made of water particles. Water particles are again substances that are made of water which in turn is a substance.&quot;)" NAME="B3"> </p>
-  </div>
+<button onclick="myFunction1()">Solution & Reason</button>
+  
+<p id="demo1"></p> </p>
+
+<script>
+function myFunction1() {
+  document.getElementById("demo1").innerHTML = "Answer: Substance. Reason: Paper is a substance. It is made of wood which is also a substance.";
+}
+</script>
+
+<form name="f2">  <div align="left"><p><font size="5"><i>2. Rain<br>
+	
+</font>
+<font size="3">
+	<input type="radio" id="sub" name="tarka1" value="sub">
+	<label for="sub">Substance</label>
+	<input type="radio" id="qual" name="tarka1" value="qual">
+	<label for="qual">Quality</label>
+	<input type="radio" id="act" name="tarka1" value="act">
+	<label for="act">Activity</label>
+	<input type="radio" id="gen" name="tarka1" value="gen">
+	<label for="gen">Generality</label>
+	<input type="radio" id="spe" name="tarka1" value="spe">
+	<label for="spe">Speciality</label>
+	<input type="radio" id="inh" name="tarka1" value="inh">
+	<label for="inh">Inherence</label>
+  <input type="radio" id="abs" name="tarka1" value="abs">
+	<label for="abs">Absence</label>
+</div>
+  <input type="button" id="btn2" value="Check" ><p id="d2"></p>
+  </i>
+
 </form>
+<script>
+const btn2 = document.querySelector('#btn2');
+        // handle click button
+        btn2.onclick = function () {
+ var ele = document.getElementsByName('tarka1'); 
+              
+            for(i = 0; i < ele.length; i++) { 
+                if(ele[i].checked) 
+               {
+                if (ele[i].value == "sub") {
+                    	document.getElementById("d2").innerHTML = "Perfect!You are right";
+                }
+else
+{
+document.getElementById("d2").innerHTML = "Try Again or click the Solution button";
+}    }
+
+}
+
+            } 
+    </script>
 </font>
 
-<form METHOD="POST" NAME="f3">
-  <div align="left"><p><font size="5"><i>3. Anger<br>
-  </i></font><font face="Lucida Sans"><font size="2"><strong><input LANGUAGE="VBScript" TYPE="checkbox" VALUE="ON" NAME="C1"> Substance&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C2"> Quality &nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C3"> Action&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C4"> Generality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C5"> Speciality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C6"> Inherence&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C7"> Absence <br>
-  </strong></font><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (f3.c2.checked) then
-	call Right(counter)
-	counter=0
-	else
-	counter=counter+1
-	call Wrong(counter)
-	call f3.reset()
-	end if
-" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="f3.C2.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;Anger is a quality posessed by all living beings.&quot;)" NAME="B3"> </p>
-  </div>
+<button onclick="myFunction2()">Solution & Reason</button>
+  
+<p id="demo2"></p> </p>
+
+<script>
+function myFunction2() {
+  document.getElementById("demo2").innerHTML = "Answer: Substance. Reason: Rain is made of water particles. Water particles are again substances that are made of water which in turn is a substance.";
+}
+</script>
+
+
+<form name="f3">  <div align="left"><p><font size="5"><i>3. Anger<br>
+	
+</font>
+<font size="3">
+	<input type="radio" id="sub" name="tarka2" value="sub">
+	<label for="sub">Substance</label>
+	<input type="radio" id="qual" name="tarka2" value="qual">
+	<label for="qual">Quality</label>
+	<input type="radio" id="act" name="tarka2" value="act">
+	<label for="act">Activity</label>
+	<input type="radio" id="gen" name="tarka2" value="gen">
+	<label for="gen">Generality</label>
+	<input type="radio" id="spe" name="tarka2" value="spe">
+	<label for="spe">Speciality</label>
+	<input type="radio" id="inh" name="tarka2" value="inh">
+	<label for="inh">Inherence</label>
+  <input type="radio" id="abs" name="tarka2" value="abs">
+	<label for="abs">Absence</label>
+</div>
+  <input type="button" id="btn3" value="Check" ><p id="d3"></p>
+  </i>
+
 </form>
+<script>
+const btn3 = document.querySelector('#btn3');
+        // handle click button
+        btn3.onclick = function () {
+ var ele = document.getElementsByName('tarka2'); 
+              
+            for(i = 0; i < ele.length; i++) { 
+                if(ele[i].checked) 
+               {
+                if (ele[i].value == "qual") {
+                    	document.getElementById("d3").innerHTML = "Perfect!You are right";
+                }
+else
+{
+document.getElementById("d3").innerHTML = "Try Again or click the Solution button";
+}    }
+
+}
+
+            } 
+    </script>
 </font>
 
-<form METHOD="POST" NAME="f4">
-  <div align="left"><p><font size="5"><i>4. Sleep<br>
-  </i></font><font face="Lucida Sans"><font size="2"><strong><input LANGUAGE="VBScript" TYPE="checkbox" VALUE="ON" NAME="C1"> Substance&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C2"> Quality &nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C3"> Action&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C4"> Generality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C5"> Speciality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C6"> Inherence&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C7"> Absence <br>
-  </strong></font><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (f4.c3.checked) then
-	call Right(counter)
-	counter=0
-	else
-	counter=counter+1
-	call Wrong(counter)
-	call f4.reset()
-	end if
-" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="f4.C3.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;Zzzz..... yeah, who does'nt like to sleep. It is an action, whereby the human mind and body comes to rest. There is yet another definition of sleep. We'll take a look at it later.&quot;)" NAME="B3"> </p>
-  </div>
+<button onclick="myFunction3()">Solution & Reason</button>
+  
+<p id="demo3"></p> </p>
+
+<script>
+function myFunction3() {
+  document.getElementById("demo3").innerHTML = "Answer: Quality. Reason: Anger is a quality posessed by all living beings.";
+}
+</script>
+
+
+<form name="f4">  <div align="left"><p><font size="5"><i>4. Sleep<br>
+	
+</font>
+<font size="3">
+	<input type="radio" id="sub" name="tarka3" value="sub">
+	<label for="sub">Substance</label>
+	<input type="radio" id="qual" name="tarka3" value="qual">
+	<label for="qual">Quality</label>
+	<input type="radio" id="act" name="tarka3" value="act">
+	<label for="act">Activity</label>
+	<input type="radio" id="gen" name="tarka3" value="gen">
+	<label for="gen">Generality</label>
+	<input type="radio" id="spe" name="tarka3" value="spe">
+	<label for="spe">Speciality</label>
+	<input type="radio" id="inh" name="tarka3" value="inh">
+	<label for="inh">Inherence</label>
+  <input type="radio" id="abs" name="tarka3" value="abs">
+	<label for="abs">Absence</label>
+</div>
+  <input type="button" id="btn4" value="Check" ><p id="d4"></p>
+  </i>
+
 </form>
+<script>
+const btn4 = document.querySelector('#btn4');
+        // handle click button
+        btn4.onclick = function () {
+ var ele = document.getElementsByName('tarka3'); 
+              
+            for(i = 0; i < ele.length; i++) { 
+                if(ele[i].checked) 
+               {
+                if (ele[i].value == "act") {
+                    	document.getElementById("d4").innerHTML = "Perfect!You are right";
+                }
+else
+{
+document.getElementById("d4").innerHTML = "Try Again or click the Solution button";
+}    }
+
+}
+
+            } 
+    </script>
 </font>
 
-<form METHOD="POST" NAME="f5">
-  <div align="left"><p><font size="5"><i>5. Flight<br>
-  </i></font><font face="Lucida Sans"><font size="2"><strong><input LANGUAGE="VBScript" TYPE="checkbox" VALUE="ON" NAME="C1"> Substance&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C2"> Quality &nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C3"> Action&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C4"> Generality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C5"> Speciality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C6"> Inherence&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C7"> Absence <br>
-  </strong></font><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (f5.c3.checked) then
-	call Right(counter)
-	counter=0
-	else
-	counter=counter+1
-	call Wrong(counter)
-	call f5.reset()
-	end if
-" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="f5.C3.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;Flight is the action of 'Walking on Air'. Birds fly; even planes do. It is the action of going up and staying up the air.&quot;)" NAME="B3"> </p>
-  </div>
+<button onclick="myFunction4()">Solution & Reason</button>
+  
+<p id="demo4"></p> </p>
+
+<script>
+function myFunction4() {
+  document.getElementById("demo4").innerHTML = "Answer: Action. Reason:Zzzzz... yeah, who does'nt like to sleep. It is an action, whereby the human mind and body comes to rest. There is yet another definition of sleep. We'll take a look at it later.";
+}
+</script>
+
+
+<form name="f5">  <div align="left"><p><font size="5"><i>5. Flight<br>
+	
+</font>
+<font size="3">
+	<input type="radio" id="sub" name="tarka4" value="sub">
+	<label for="sub">Substance</label>
+	<input type="radio" id="qual" name="tarka4" value="qual">
+	<label for="qual">Quality</label>
+	<input type="radio" id="act" name="tarka4" value="act">
+	<label for="act">Activity</label>
+	<input type="radio" id="gen" name="tarka4" value="gen">
+	<label for="gen">Generality</label>
+	<input type="radio" id="spe" name="tarka4" value="spe">
+	<label for="spe">Speciality</label>
+	<input type="radio" id="inh" name="tarka4" value="inh">
+	<label for="inh">Inherence</label>
+  <input type="radio" id="abs" name="tarka4" value="abs">
+	<label for="abs">Absence</label>
+</div>
+  <input type="button" id="btn5" value="Check" ><p id="d5"></p>
+  </i>
+
 </form>
+<script>
+const btn5 = document.querySelector('#btn5');
+        // handle click button
+        btn5.onclick = function () {
+ var ele = document.getElementsByName('tarka4'); 
+              
+            for(i = 0; i < ele.length; i++) { 
+                if(ele[i].checked) 
+               {
+                if (ele[i].value == "act") {
+                    	document.getElementById("d5").innerHTML = "Perfect!You are right";
+                }
+else
+{
+document.getElementById("d5").innerHTML = "Try Again or click the Solution button";
+}    }
+
+}
+
+            } 
+    </script>
 </font>
 
-<form METHOD="POST" NAME="f6">
-  <div align="left"><p><font size="5"><i>6. Light<br>
-  </i></font><font face="Lucida Sans"><font size="2"><strong><input LANGUAGE="VBScript" TYPE="checkbox" VALUE="ON" NAME="C1"> Substance&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C2"> Quality &nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C3"> Action&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C4"> Generality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C5"> Speciality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C6"> Inherence&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C7"> Absence <br>
-  </strong></font><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (f6.c1.checked) then
-	call Right(counter)
-	counter=0
-	else
-	counter=counter+1
-	call Wrong(counter)
-	call f6.reset()
-	end if
-" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="f6.C1.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;'God said let there be light and switched on the bulb'.   Yes, light is a substance that exists in the universe. Stars are the source of light and are themselves substances.&quot;)" NAME="B3"> </p>
-  </div>
+<button onclick="myFunction5()">Solution & Reason</button>
+  
+<p id="demo5"></p> </p>
+
+<script>
+function myFunction5() {
+  document.getElementById("demo5").innerHTML = "Answer: Action. Reason: Flight is the action of 'Walking on Air'. Birds fly; even planes do. It is the action of going up and staying up the air.";
+}
+</script>
+
+
+<form name="f6">  <div align="left"><p><font size="5"><i>6. Light<br>
+	
+</font>
+<font size="3">
+	<input type="radio" id="sub" name="tarka5" value="sub">
+	<label for="sub">Substance</label>
+	<input type="radio" id="qual" name="tarka5" value="qual">
+	<label for="qual">Quality</label>
+	<input type="radio" id="act" name="tarka5" value="act">
+	<label for="act">Activity</label>
+	<input type="radio" id="gen" name="tarka5" value="gen">
+	<label for="gen">Generality</label>
+	<input type="radio" id="spe" name="tarka5" value="spe">
+	<label for="spe">Speciality</label>
+	<input type="radio" id="inh" name="tarka5" value="inh">
+	<label for="inh">Inherence</label>
+  <input type="radio" id="abs" name="tarka5" value="abs">
+	<label for="abs">Absence</label>
+</div>
+  <input type="button" id="btn6" value="Check" ><p id="d6"></p>
+  </i>
+
 </form>
+<script>
+const btn6 = document.querySelector('#btn6');
+        // handle click button
+        btn6.onclick = function () {
+ var ele = document.getElementsByName('tarka5'); 
+              
+            for(i = 0; i < ele.length; i++) { 
+                if(ele[i].checked) 
+               {
+                if (ele[i].value == "sub") {
+                    	document.getElementById("d6").innerHTML = "Perfect!You are right";
+                }
+else
+{
+document.getElementById("d6").innerHTML = "Try Again or click the Solution button";
+}    }
+
+}
+
+            } 
+    </script>
 </font>
 
-<form METHOD="POST" NAME="f7">
-  <div align="left"><p><font size="5"><i>7. Yolk<br>
-  </i></font><font face="Lucida Sans"><font size="2"><strong><input LANGUAGE="VBScript" TYPE="checkbox" VALUE="ON" NAME="C1"> Substance&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C2"> Quality &nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C3"> Action&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C4"> Generality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C5"> Speciality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C6"> Inherence&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C7"> Absence <br>
-  </strong></font><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (f7.c1.checked) then
-	call Right(counter)
-	counter=0
-	else
-	counter=counter+1
-	call Wrong(counter)
-	call f7.reset()
-	end if
-" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="f7.C1.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;The yolk of the egg is a substance that contains all nutrients for a chicken ... Does that mean the egg came first , then the yolk and then the chicken ? .. Not again&quot;)" NAME="B3"> </p>
-  </div>
+<button onclick="myFunction6()">Solution & Reason</button>
+  
+<p id="demo6"></p> </p>
+
+<script>
+function myFunction6() {
+  document.getElementById("demo6").innerHTML = "Answer: Substance. Reason: God said let there be light and switched on the bulb'.   Yes, light is a substance that exists in the universe. Stars are the source of light and are themselves substances.";
+}
+</script>
+
+
+<form name="f7">  <div align="left"><p><font size="5"><i>7. Yolk<br>
+	
+</font>
+<font size="3">
+	<input type="radio" id="sub" name="tarka6" value="sub">
+	<label for="sub">Substance</label>
+	<input type="radio" id="qual" name="tarka6" value="qual">
+	<label for="qual">Quality</label>
+	<input type="radio" id="act" name="tarka6" value="act">
+	<label for="act">Activity</label>
+	<input type="radio" id="gen" name="tarka6" value="gen">
+	<label for="gen">Generality</label>
+	<input type="radio" id="spe" name="tarka6" value="spe">
+	<label for="spe">Speciality</label>
+	<input type="radio" id="inh" name="tarka6" value="inh">
+	<label for="inh">Inherence</label>
+  <input type="radio" id="abs" name="tarka6" value="abs">
+	<label for="abs">Absence</label>
+</div>
+  <input type="button" id="btn7" value="Check" ><p id="d7"></p>
+  </i>
+
 </form>
+<script>
+const btn7 = document.querySelector('#btn7');
+        // handle click button
+        btn7.onclick = function () {
+ var ele = document.getElementsByName('tarka6'); 
+              
+            for(i = 0; i < ele.length; i++) { 
+                if(ele[i].checked) 
+               {
+                if (ele[i].value == "sub") {
+                    	document.getElementById("d7").innerHTML = "Perfect!You are right";
+                }
+else
+{
+document.getElementById("d7").innerHTML = "Try Again or click the Solution button";
+}    }
+
+}
+
+            } 
+    </script>
 </font>
 
-<form METHOD="POST" NAME="f8">
-  <div align="left"><p><font size="5"><i>8. Nectar<br>
-  </i></font><font face="Lucida Sans"><font size="2"><strong><input LANGUAGE="VBScript" TYPE="checkbox" VALUE="ON" NAME="C1"> Substance&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C2"> Quality &nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C3"> Action&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C4"> Generality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C5"> Speciality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C6"> Inherence&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C7"> Absence <br>
-  </strong></font><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (f8.c1.checked) then
-	call Right(counter)
-	counter=0
-	else
-	counter=counter+1
-	call Wrong(counter)
-	call f8.reset()
-	end if
-" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="f8.C1.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;Nectar is the sweet substance that is found in the flowers.&quot;)" NAME="B3"> </p>
-  </div>
+<button onclick="myFunction7()">Solution & Reason</button>
+  
+<p id="demo7"></p> </p>
+
+<script>
+function myFunction7() {
+  document.getElementById("demo7").innerHTML = "Answer: Substance. Reason: The yolk of the egg is a substance that contains all nutrients for a chicken ... Does that mean the egg came first , then the yolk and then the chicken ? .. Not again";
+}
+</script>
+
+
+<form name="f8">  <div align="left"><p><font size="5"><i>8. Nectar<br>
+	
+</font>
+<font size="3">
+	<input type="radio" id="sub" name="tarka7" value="sub">
+	<label for="sub">Substance</label>
+	<input type="radio" id="qual" name="tarka7" value="qual">
+	<label for="qual">Quality</label>
+	<input type="radio" id="act" name="tarka7" value="act">
+	<label for="act">Activity</label>
+	<input type="radio" id="gen" name="tarka7" value="gen">
+	<label for="gen">Generality</label>
+	<input type="radio" id="spe" name="tarka7" value="spe">
+	<label for="spe">Speciality</label>
+	<input type="radio" id="inh" name="tarka7" value="inh">
+	<label for="inh">Inherence</label>
+  <input type="radio" id="abs" name="tarka7" value="abs">
+	<label for="abs">Absence</label>
+</div>
+  <input type="button" id="btn8" value="Check" ><p id="d8"></p>
+  </i>
+
 </form>
+<script>
+const btn8 = document.querySelector('#btn8');
+        // handle click button
+        btn8.onclick = function () {
+ var ele = document.getElementsByName('tarka7'); 
+              
+            for(i = 0; i < ele.length; i++) { 
+                if(ele[i].checked) 
+               {
+                if (ele[i].value == "sub") {
+                    	document.getElementById("d8").innerHTML = "Perfect!You are right";
+                }
+else
+{
+document.getElementById("d8").innerHTML = "Try Again or click the Solution button";
+}    }
+
+}
+
+            } 
+    </script>
 </font>
 
-<form METHOD="POST" NAME="f9">
-  <div align="left"><p><font size="5"><i>9. Hardness of a diamond<br>
-  </i></font><font face="Lucida Sans"><font size="2"><strong><input LANGUAGE="VBScript" TYPE="checkbox" VALUE="ON" NAME="C1"> Substance&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C2"> Quality &nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C3"> Action&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C4"> Generality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C5"> Speciality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C6"> Inherence&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C7"> Absence <br>
-  </strong></font><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (f9.c2.checked) then
-	call Right(counter)
-	counter=0
-	else
-	counter=counter+1
-	call Wrong(counter)
-	call f9.reset()
-	end if
-" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="f9.C2.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;Hardness is a quality of Diamond. It is perceived by touch. &quot;)" NAME="B3"> </p>
-  </div>
+<button onclick="myFunction8()">Solution & Reason</button>
+  
+<p id="demo8"></p> </p>
+
+<script>
+function myFunction8() {
+  document.getElementById("demo8").innerHTML = "Answer: Substance. Reason: Nectar is the sweet substance that is found in the flowers";
+}
+</script>
+
+
+<form name="f9">  <div align="left"><p><font size="5"><i>9. Hardness of a diamond<br>
+	
+</font>
+<font size="3">
+	<input type="radio" id="sub" name="tarka8" value="sub">
+	<label for="sub">Substance</label>
+	<input type="radio" id="qual" name="tarka8" value="qual">
+	<label for="qual">Quality</label>
+	<input type="radio" id="act" name="tarka8" value="act">
+	<label for="act">Activity</label>
+	<input type="radio" id="gen" name="tarka8" value="gen">
+	<label for="gen">Generality</label>
+	<input type="radio" id="spe" name="tarka8" value="spe">
+	<label for="spe">Speciality</label>
+	<input type="radio" id="inh" name="tarka8" value="inh">
+	<label for="inh">Inherence</label>
+  <input type="radio" id="abs" name="tarka8" value="abs">
+	<label for="abs">Absence</label>
+</div>
+  <input type="button" id="btn9" value="Check" ><p id="d9"></p>
+  </i>
+
 </form>
+<script>
+const btn9 = document.querySelector('#btn9');
+        // handle click button
+        btn9.onclick = function () {
+ var ele = document.getElementsByName('tarka8'); 
+              
+            for(i = 0; i < ele.length; i++) { 
+                if(ele[i].checked) 
+               {
+                if (ele[i].value == "qual") {
+                    	document.getElementById("d9").innerHTML = "Perfect!You are right";
+                }
+else
+{
+document.getElementById("d9").innerHTML = "Try Again or click the Solution button";
+}    }
+
+}
+
+            } 
+    </script>
 </font>
 
-<form METHOD="POST" NAME="f10">
-  <div align="left"><p><font size="5"><i>10. Development<br>
-  </i></font><font face="Lucida Sans"><font size="2"><strong><input LANGUAGE="VBScript" TYPE="checkbox" VALUE="ON" NAME="C1"> Substance&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C2"> Quality &nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C3"> Action&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C4"> Generality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C5"> Speciality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C6"> Inherence&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C7"> Absence <br>
-  </strong></font><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (f10.c3.checked) then
-	call Right(counter)
-	counter=0
-	else
-	counter=counter+1
-	call Wrong(counter)
-	call f10.reset()
-	end if
-" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="f10.C3.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;It is the act of growing up. To bring up to a highly organized state.  &quot;)" NAME="B3"> </p>
-  </div>
+<button onclick="myFunction9()">Solution & Reason</button>
+  
+<p id="demo9"></p> </p>
+
+<script>
+function myFunction9() {
+  document.getElementById("demo9").innerHTML = "Answer: Quality. Reason: Hardness is a quality of Diamond. It is perceived by touch. ";
+}
+</script>
+
+
+<form name="f10">  <div align="left"><p><font size="5"><i>10. Development<br>
+	
+</font>
+<font size="3">
+	<input type="radio" id="sub" name="tarka9" value="sub">
+	<label for="sub">Substance</label>
+	<input type="radio" id="qual" name="tarka9" value="qual">
+	<label for="qual">Quality</label>
+	<input type="radio" id="act" name="tarka9" value="act">
+	<label for="act">Activity</label>
+	<input type="radio" id="gen" name="tarka9" value="gen">
+	<label for="gen">Generality</label>
+	<input type="radio" id="spe" name="tarka9" value="spe">
+	<label for="spe">Speciality</label>
+	<input type="radio" id="inh" name="tarka9" value="inh">
+	<label for="inh">Inherence</label>
+  <input type="radio" id="abs" name="tarka9" value="abs">
+	<label for="abs">Absence</label>
+</div>
+  <input type="button" id="btn10" value="Check" ><p id="d10"></p>
+  </i>
+
 </form>
+<script>
+const btn10 = document.querySelector('#btn10');
+        // handle click button
+        btn10.onclick = function () {
+ var ele = document.getElementsByName('tarka9'); 
+              
+            for(i = 0; i < ele.length; i++) { 
+                if(ele[i].checked) 
+               {
+                if (ele[i].value == "act") {
+                    	document.getElementById("d10").innerHTML = "Perfect!You are right";
+                }
+else
+{
+document.getElementById("d10").innerHTML = "Try Again or click the Solution button";
+}    }
+
+}
+
+            } 
+    </script>
 </font>
 
-<form METHOD="POST" NAME="f11">
-  <div align="left"><p><font size="5"><i>11. Elasticity<br>
-  </i></font><font face="Lucida Sans"><font size="2"><strong><input LANGUAGE="VBScript" TYPE="checkbox" VALUE="ON" NAME="C1"> Substance&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C2"> Quality &nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C3"> Action&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C4"> Generality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C5"> Speciality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C6"> Inherence&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C7"> Absence <br>
-  </strong></font><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (f11.c2.checked) then
-	call Right(counter)
-	counter=0
-	else
-	counter=counter+1
-	call Wrong(counter)
-	call f11.reset()
-	end if
-" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="f11.C2.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;It is that quality which causes a substance to recover to its original form of size after stretching.&quot;)" NAME="B3"> </p>
-  </div>
+<button onclick="myFunction10()">Solution & Reason</button>
+  
+<p id="demo10"></p> </p>
+
+<script>
+function myFunction10() {
+  document.getElementById("demo10").innerHTML = "Answer: Action. Reason: It is the act of growing up. To bring up to a highly organized state.";
+}
+</script>
+
+<form name="f11">  <div align="left"><p><font size="5"><i>11. Elasticity<br>
+	
+</font>
+<font size="3">
+	<input type="radio" id="sub" name="tarka10" value="sub">
+	<label for="sub">Substance</label>
+	<input type="radio" id="qual" name="tarka10" value="qual">
+	<label for="qual">Quality</label>
+	<input type="radio" id="act" name="tarka10" value="act">
+	<label for="act">Activity</label>
+	<input type="radio" id="gen" name="tarka10" value="gen">
+	<label for="gen">Generality</label>
+	<input type="radio" id="spe" name="tarka10" value="spe">
+	<label for="spe">Speciality</label>
+	<input type="radio" id="inh" name="tarka10" value="inh">
+	<label for="inh">Inherence</label>
+  <input type="radio" id="abs" name="tarka10" value="abs">
+	<label for="abs">Absence</label>
+</div>
+  <input type="button" id="btn11" value="Check" ><p id="d11"></p>
+  </i>
+
 </form>
+<script>
+const btn11 = document.querySelector('#btn11');
+        // handle click button
+        btn11.onclick = function () {
+ var ele = document.getElementsByName('tarka10'); 
+              
+            for(i = 0; i < ele.length; i++) { 
+                if(ele[i].checked) 
+               {
+                if (ele[i].value == "qual") {
+                    	document.getElementById("d11").innerHTML = "Perfect!You are right";
+                }
+else
+{
+document.getElementById("d11").innerHTML = "Try Again or click the Solution button";
+}    }
+
+}
+
+            } 
+    </script>
 </font>
 
-<form METHOD="POST" NAME="f12">
-  <div align="left"><p><font size="5"><i>12. Hunger<br>
-  </i></font><font face="Lucida Sans"><font size="2"><strong><input LANGUAGE="VBScript" TYPE="checkbox" VALUE="ON" NAME="C1"> Substance&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C2"> Quality &nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C3"> Action&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C4"> Generality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C5"> Speciality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C6"> Inherence&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C7"> Absence <br>
-  </strong></font><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (f12.c2.checked) then
-	call Right(counter)
-	counter=0
-	else
-	counter=counter+1
-	call Wrong(counter)
-	call f12.reset()
-	end if
-" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="f12.C2.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;Hunger is a quality of living things.&quot;)" NAME="B3"> </p>
-  </div>
+<button onclick="myFunction11()">Solution & Reason</button>
+  
+<p id="demo11"></p> </p>
+
+<script>
+function myFunction11() {
+  document.getElementById("demo11").innerHTML = "Answer: Quality. Reason: It is that quality which causes a substance to recover to its original form of size after stretching.";
+}
+</script>
+
+<form name="f12">  <div align="left"><p><font size="5"><i>12. Hunger<br>
+	
+</font>
+<font size="3">
+	<input type="radio" id="sub" name="tarka11" value="sub">
+	<label for="sub">Substance</label>
+	<input type="radio" id="qual" name="tarka11" value="qual">
+	<label for="qual">Quality</label>
+	<input type="radio" id="act" name="tarka11" value="act">
+	<label for="act">Activity</label>
+	<input type="radio" id="gen" name="tarka11" value="gen">
+	<label for="gen">Generality</label>
+	<input type="radio" id="spe" name="tarka11" value="spe">
+	<label for="spe">Speciality</label>
+	<input type="radio" id="inh" name="tarka11" value="inh">
+	<label for="inh">Inherence</label>
+  <input type="radio" id="abs" name="tarka11" value="abs">
+	<label for="abs">Absence</label>
+</div>
+  <input type="button" id="btn12" value="Check" ><p id="d12"></p>
+  </i>
+
 </form>
+<script>
+const btn12 = document.querySelector('#btn12');
+        // handle click button
+        btn12.onclick = function () {
+ var ele = document.getElementsByName('tarka11'); 
+              
+            for(i = 0; i < ele.length; i++) { 
+                if(ele[i].checked) 
+               {
+                if (ele[i].value == "qual") {
+                    	document.getElementById("d12").innerHTML = "Perfect!You are right";
+                }
+else
+{
+document.getElementById("d12").innerHTML = "Try Again or click the Solution button";
+}    }
+
+}
+
+            } 
+    </script>
 </font>
 
-<form METHOD="POST" NAME="f13">
-  <div align="left"><p><font size="5"><i>13. Vacuum<br>
-  </i></font><font face="Lucida Sans"><font size="2"><strong><input LANGUAGE="VBScript" TYPE="checkbox" VALUE="ON" NAME="C1"> Substance&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C2"> Quality &nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C3"> Action&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C4"> Generality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C5"> Speciality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C6"> Inherence&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C7"> Absence <br>
-  </strong></font><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (f13.c7.checked) then
-	call Right(counter)
-	counter=0
-	else
-	counter=counter+1
-	call Wrong(counter)
-	call f13.reset()
-	end if
-" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="f13.C7.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;Vacuum is caused due to absence of air.&quot;)" NAME="B3"> </p>
-  </div>
+<button onclick="myFunction12()">Solution & Reason</button>
+  
+<p id="demo12"></p> </p>
+
+<script>
+
+function myFunction12() {
+  document.getElementById("demo12").innerHTML = "Answer: Quality. Reason: Hunger is a quality of living things.";
+}
+</script>
+
+<form name="f13">  <div align="left"><p><font size="5"><i>13. Vaccum<br>
+	
+</font>
+<font size="3">
+	<input type="radio" id="sub" name="tarka12" value="sub">
+	<label for="sub">Substance</label>
+	<input type="radio" id="qual" name="tarka12" value="qual">
+	<label for="qual">Quality</label>
+	<input type="radio" id="act" name="tarka12" value="act">
+	<label for="act">Activity</label>
+	<input type="radio" id="gen" name="tarka12" value="gen">
+	<label for="gen">Generality</label>
+	<input type="radio" id="spe" name="tarka12" value="spe">
+	<label for="spe">Speciality</label>
+	<input type="radio" id="inh" name="tarka12" value="inh">
+	<label for="inh">Inherence</label>
+  <input type="radio" id="abs" name="tarka12" value="abs">
+	<label for="abs">Absence</label>
+</div>
+  <input type="button" id="btn13" value="Check" ><p id="d13"></p>
+  </i>
+
 </form>
+<script>
+const btn13 = document.querySelector('#btn13');
+        // handle click button
+        btn13.onclick = function () {
+ var ele = document.getElementsByName('tarka12'); 
+              
+            for(i = 0; i < ele.length; i++) { 
+                if(ele[i].checked) 
+               {
+                if (ele[i].value == "abs") {
+                    	document.getElementById("d13").innerHTML = "Perfect!You are right";
+                }
+else
+{
+document.getElementById("d13").innerHTML = "Try Again or click the Solution button";
+}    }
+
+}
+
+            } 
+    </script>
 </font>
 
-<form METHOD="POST" NAME="f14">
-  <div align="left"><p><font size="5"><i>14. Ring<br>
-  </i></font><font face="Lucida Sans"><font size="2"><strong><input LANGUAGE="VBScript" TYPE="checkbox" VALUE="ON" NAME="C1"> Substance&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C2"> Quality &nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C3"> Action&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C4"> Generality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C5"> Speciality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C6"> Inherence&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C7"> Absence <br>
-  </strong></font><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (f14.c1.checked) then
-	call Right(counter)
-	counter=0
-	else
-	counter=counter+1
-	call Wrong(counter)
-	call f14.reset()
-	end if
-" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="f14.C1.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;Ring is a small circular band worn on the finger, nose or ears. Is is substance made of metals like gold,silver,etc. &quot;)" NAME="B3"> </p>
-  </div>
+<button onclick="myFunction13()">Solution & Reason</button>
+  
+<p id="demo13"></p> </p>
+
+<script>
+function myFunction13() {
+  document.getElementById("demo13").innerHTML = "Answer: Absence. Reason: Vacuum is caused due to absence of air.";
+}
+</script>
+
+<form name="f14">  <div align="left"><p><font size="5"><i>14. Ring<br>
+	
+</font>
+<font size="3">
+	<input type="radio" id="sub" name="tarka13" value="sub">
+	<label for="sub">Substance</label>
+	<input type="radio" id="qual" name="tarka13" value="qual">
+	<label for="qual">Quality</label>
+	<input type="radio" id="act" name="tarka13" value="act">
+	<label for="act">Activity</label>
+	<input type="radio" id="gen" name="tarka13" value="gen">
+	<label for="gen">Generality</label>
+	<input type="radio" id="spe" name="tarka13" value="spe">
+	<label for="spe">Speciality</label>
+	<input type="radio" id="inh" name="tarka13" value="inh">
+	<label for="inh">Inherence</label>
+  <input type="radio" id="abs" name="tarka13" value="abs">
+	<label for="abs">Absence</label>
+</div>
+  <input type="button" id="btn14" value="Check" ><p id="d14"></p>
+  </i>
+
 </form>
+<script>
+const btn14 = document.querySelector('#btn14');
+        // handle click button
+        btn14.onclick = function () {
+ var ele = document.getElementsByName('tarka13'); 
+              
+            for(i = 0; i < ele.length; i++) { 
+                if(ele[i].checked) 
+               {
+                if (ele[i].value == "sub") {
+                    	document.getElementById("d14").innerHTML = "Perfect!You are right";
+                }
+else
+{
+document.getElementById("d14").innerHTML = "Try Again or click the Solution button";
+}    }
+
+}
+
+            } 
+    </script>
 </font>
 
-<form METHOD="POST" NAME="f15">
-  <div align="left"><p><font size="5"><i>15. Shoot<br>
-  </i></font><font face="Lucida Sans"><font size="2"><strong><input LANGUAGE="VBScript" TYPE="checkbox" VALUE="ON" NAME="C1"> Substance&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C2"> Quality &nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C3"> Action&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C4"> Generality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C5"> Speciality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C6"> Inherence&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C7"> Absence <br>
-  </strong></font><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (f15.c3.checked) then
-	call Right(counter)
-	counter=0
-	else
-	counter=counter+1
-	call Wrong(counter)
-	call f15.reset()
-	end if
-" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="f15.C3.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;Shooting is the action of letting to fly with force. For example, a bullet flies from a gun. &quot;)" NAME="B3"> </p>
-  </div>
+<button onclick="myFunction14()">Solution & Reason</button>
+  
+<p id="demo14"></p> </p>
+
+<script>
+function myFunction14() {
+  document.getElementById("demo14").innerHTML = "Answer: Substance. Reason: Ring is a small circular band worn on the finger, nose or ears. Is is substance made of metals like gold,silver,etc. ";
+}
+</script>
+
+<form name="f15">  <div align="left"><p><font size="5"><i>15. Shoot<br>
+	
+</font>
+<font size="3">
+	<input type="radio" id="sub" name="tarka14" value="sub">
+	<label for="sub">Substance</label>
+	<input type="radio" id="qual" name="tarka14" value="qual">
+	<label for="qual">Quality</label>
+	<input type="radio" id="act" name="tarka14" value="act">
+	<label for="act">Activity</label>
+	<input type="radio" id="gen" name="tarka14" value="gen">
+	<label for="gen">Generality</label>
+	<input type="radio" id="spe" name="tarka14" value="spe">
+	<label for="spe">Speciality</label>
+	<input type="radio" id="inh" name="tarka14" value="inh">
+	<label for="inh">Inherence</label>
+  <input type="radio" id="abs" name="tarka14" value="abs">
+	<label for="abs">Absence</label>
+</div>
+  <input type="button" id="btn15" value="Check" ><p id="d15"></p>
+  </i>
+
 </form>
+<script>
+const btn15 = document.querySelector('#btn15');
+        // handle click button
+        btn15.onclick = function () {
+ var ele = document.getElementsByName('tarka14'); 
+              
+            for(i = 0; i < ele.length; i++) { 
+                if(ele[i].checked) 
+               {
+                if (ele[i].value == "act") {
+                    	document.getElementById("d15").innerHTML = "Perfect!You are right";
+                }
+else
+{
+document.getElementById("d15").innerHTML = "Try Again or click the Solution button";
+}    }
+
+}
+
+            } 
+    </script>
 </font>
 
-<form METHOD="POST" NAME="f16">
-  <div align="left"><p><font size="5"><i>16. Nest<br>
-  </i></font><font face="Lucida Sans"><font size="2"><strong><input LANGUAGE="VBScript" TYPE="checkbox" VALUE="ON" NAME="C1"> Substance&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C2"> Quality &nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C3"> Action&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C4"> Generality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C5"> Speciality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C6"> Inherence&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C7"> Absence <br>
-  </strong></font><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (f16.c1.checked) then
-	call Right(counter)
-	counter=0
-	else
-	counter=counter+1
-	call Wrong(counter)
-	call f16.reset()
-	end if
-" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="f16.C1.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;Home of a bird.  It is a substance made of leaves and twigs.&quot;)" NAME="B3"> </p>
-  </div>
+<button onclick="myFunction15()">Solution & Reason</button>
+  
+<p id="demo15"></p> </p>
+
+<script>
+function myFunction15() {
+  document.getElementById("demo15").innerHTML = "Answer: Action. Reason: Shooting is the action of letting to fly with force. For example, a bullet flies from a gun.";
+}
+</script>
+
+<form name="f16">  <div align="left"><p><font size="5"><i>16. Nest<br>
+	
+</font>
+<font size="3">
+	<input type="radio" id="sub" name="tarka15" value="sub">
+	<label for="sub">Substance</label>
+	<input type="radio" id="qual" name="tarka15" value="qual">
+	<label for="qual">Quality</label>
+	<input type="radio" id="act" name="tarka15" value="act">
+	<label for="act">Activity</label>
+	<input type="radio" id="gen" name="tarka15" value="gen">
+	<label for="gen">Generality</label>
+	<input type="radio" id="spe" name="tarka15" value="spe">
+	<label for="spe">Speciality</label>
+	<input type="radio" id="inh" name="tarka15" value="inh">
+	<label for="inh">Inherence</label>
+  <input type="radio" id="abs" name="tarka15" value="abs">
+	<label for="abs">Absence</label>
+</div>
+  <input type="button" id="btn16" value="Check" ><p id="d16"></p>
+  </i>
+
 </form>
+<script>
+const btn16 = document.querySelector('#btn16');
+        // handle click button
+        btn16.onclick = function () {
+ var ele = document.getElementsByName('tarka15'); 
+              
+            for(i = 0; i < ele.length; i++) { 
+                if(ele[i].checked) 
+               {
+                if (ele[i].value == "sub") {
+                    	document.getElementById("d16").innerHTML = "Perfect!You are right";
+                }
+else
+{
+document.getElementById("d16").innerHTML = "Try Again or click the Solution button";
+}    }
+
+}
+
+            } 
+    </script>
 </font>
 
-<form METHOD="POST" NAME="f17">
-  <div align="left"><p><font size="5"><i>17. Maximum<br>
-  </i></font><font face="Lucida Sans"><font size="2"><strong><input LANGUAGE="VBScript" TYPE="checkbox" VALUE="ON" NAME="C1"> Substance&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C2"> Quality &nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C3"> Action&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C4"> Generality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C5"> Speciality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C6"> Inherence&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C7"> Absence <br>
-  </strong></font><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (f17.c2.checked) then
-	call Right(counter)
-	counter=0
-	else
-	counter=counter+1
-	call Wrong(counter)
-	call f17.reset()
-	end if
-" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="f17.C2.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;Maximum is greatest possible number or quantity.&quot;)" NAME="B3"> </p>
-  </div>
+<button onclick="myFunction16()">Solution & Reason</button>
+  
+<p id="demo16"></p> </p>
+
+<script>
+function myFunction16() {
+  document.getElementById("demo16").innerHTML = "Answer: Substance. Reason: Home of a bird.  It is a substance made of leaves and twigs.";
+}
+</script>
+
+
+<form name="f15">  <div align="left"><p><font size="5"><i>17. Maximum<br>
+	
+</font>
+<font size="3">
+	<input type="radio" id="sub" name="tarka16" value="sub">
+	<label for="sub">Substance</label>
+	<input type="radio" id="qual" name="tarka16" value="qual">
+	<label for="qual">Quality</label>
+	<input type="radio" id="act" name="tarka16" value="act">
+	<label for="act">Activity</label>
+	<input type="radio" id="gen" name="tarka16" value="gen">
+	<label for="gen">Generality</label>
+	<input type="radio" id="spe" name="tarka16" value="spe">
+	<label for="spe">Speciality</label>
+	<input type="radio" id="inh" name="tarka16" value="inh">
+	<label for="inh">Inherence</label>
+  <input type="radio" id="abs" name="tarka16" value="abs">
+	<label for="abs">Absence</label>
+</div>
+  <input type="button" id="btn17" value="Check" ><p id="d17"></p>
+  </i>
+
 </form>
+<script>
+const btn17 = document.querySelector('#btn17');
+        // handle click button
+        btn17.onclick = function () {
+ var ele = document.getElementsByName('tarka16'); 
+              
+            for(i = 0; i < ele.length; i++) { 
+                if(ele[i].checked) 
+               {
+                if (ele[i].value == "qual") {
+                    	document.getElementById("d17").innerHTML = "Perfect!You are right";
+                }
+else
+{
+document.getElementById("d17").innerHTML = "Try Again or click the Solution button";
+}    }
+
+}
+
+            } 
+    </script>
 </font>
 
-<form METHOD="POST" NAME="f18">
-  <div align="left"><p><font size="5"><i>18. Salt<br>
-  </i></font><font face="Lucida Sans"><font size="2"><strong><input LANGUAGE="VBScript" TYPE="checkbox" VALUE="ON" NAME="C1"> Substance&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C2"> Quality &nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C3"> Action&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C4"> Generality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C5"> Speciality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C6"> Inherence&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C7"> Absence <br>
-  </strong></font><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (f18.c1.checked) then
-	call Right(counter)
-	counter=0
-	else
-	counter=counter+1
-	call Wrong(counter)
-	call f18.reset()
-	end if
-" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="f18.C1.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;Salt is primarily a substance obtained from natural substances like sea water and minerals.&quot;)" NAME="B3"> </p>
-  </div>
+<button onclick="myFunction17()">Solution & Reason</button>
+  
+<p id="demo17"></p> </p>
+
+<script>
+function myFunction17() {
+  document.getElementById("demo17").innerHTML = "Answer: Quantity. Reason: Maximum is greatest possible number or quantity.";
+}
+</script>
+
+
+<form name="f18">  <div align="left"><p><font size="5"><i>18. Salt<br>
+	
+</font>
+<font size="3">
+	<input type="radio" id="sub" name="tarka17" value="sub">
+	<label for="sub">Substance</label>
+	<input type="radio" id="qual" name="tarka17" value="qual">
+	<label for="qual">Quality</label>
+	<input type="radio" id="act" name="tarka17" value="act">
+	<label for="act">Activity</label>
+	<input type="radio" id="gen" name="tarka17" value="gen">
+	<label for="gen">Generality</label>
+	<input type="radio" id="spe" name="tarka17" value="spe">
+	<label for="spe">Speciality</label>
+	<input type="radio" id="inh" name="tarka17" value="inh">
+	<label for="inh">Inherence</label>
+  <input type="radio" id="abs" name="tarka17" value="abs">
+	<label for="abs">Absence</label>
+</div>
+  <input type="button" id="btn18" value="Check" ><p id="d18"></p>
+  </i>
+
 </form>
+<script>
+const btn18 = document.querySelector('#btn18');
+        // handle click button
+        btn18.onclick = function () {
+ var ele = document.getElementsByName('tarka17'); 
+              
+            for(i = 0; i < ele.length; i++) { 
+                if(ele[i].checked) 
+               {
+                if (ele[i].value == "sub") {
+                    	document.getElementById("d18").innerHTML = "Perfect!You are right";
+                }
+else
+{
+document.getElementById("d18").innerHTML = "Try Again or click the Solution button";
+}    }
+
+}
+
+            } 
+    </script>
 </font>
 
-<form METHOD="POST" NAME="f19">
-  <div align="left"><p><font size="5"><i>19. Tender coconut<br>
-  </i></font><font face="Lucida Sans"><font size="2"><strong><input LANGUAGE="VBScript" TYPE="checkbox" VALUE="ON" NAME="C1"> Substance&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C2"> Quality &nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C3"> Action&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C4"> Generality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C5"> Speciality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C6"> Inherence&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C7"> Absence <br>
-  </strong></font><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (f19.c1.checked) then
-	call Right(counter)
-	counter=0
-	else
-	counter=counter+1
-	call Wrong(counter)
-	call f19.reset()
-	end if
-" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="f19.C1.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;Tender Coconut is a substance.  It contains an element of water in it.&quot;)" NAME="B3"> </p>
-  </div>
+<button onclick="myFunction18()">Solution & Reason</button>
+  
+<p id="demo18"></p> </p>
+
+<script>
+function myFunction18() {
+  document.getElementById("demo18").innerHTML = "Answer: Substance. Reason: Salt is primarily a substance obtained from natural substances like sea water and minerals.";
+}
+</script>
+
+
+<form name="f19">  <div align="left"><p><font size="5"><i>19. Tender Coconut<br>
+	
+</font>
+<font size="3">
+	<input type="radio" id="sub" name="tarka18" value="sub">
+	<label for="sub">Substance</label>
+	<input type="radio" id="qual" name="tarka18" value="qual">
+	<label for="qual">Quality</label>
+	<input type="radio" id="act" name="tarka18" value="act">
+	<label for="act">Activity</label>
+	<input type="radio" id="gen" name="tarka18" value="gen">
+	<label for="gen">Generality</label>
+	<input type="radio" id="spe" name="tarka18" value="spe">
+	<label for="spe">Speciality</label>
+	<input type="radio" id="inh" name="tarka18" value="inh">
+	<label for="inh">Inherence</label>
+  <input type="radio" id="abs" name="tarka18" value="abs">
+	<label for="abs">Absence</label>
+</div>
+  <input type="button" id="btn19" value="Check" ><p id="d19"></p>
+  </i>
+
 </form>
+<script>
+const btn19 = document.querySelector('#btn19');
+        // handle click button
+        btn19.onclick = function () {
+ var ele = document.getElementsByName('tarka18'); 
+              
+            for(i = 0; i < ele.length; i++) { 
+                if(ele[i].checked) 
+               {
+                if (ele[i].value == "sub") {
+                    	document.getElementById("d19").innerHTML = "Perfect!You are right";
+                }
+else
+{
+document.getElementById("d19").innerHTML = "Try Again or click the Solution button";
+}    }
+
+}
+
+            } 
+    </script>
 </font>
 
-<form METHOD="POST" NAME="f20">
-  <div align="left"><p><font size="5"><i>20. Sharpness of a knife<br>
-  </i></font><font face="Lucida Sans"><font size="2"><strong><input LANGUAGE="VBScript" TYPE="checkbox" VALUE="ON" NAME="C1"> Substance&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C2"> Quality &nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C3"> Action&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C4"> Generality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C5"> Speciality&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C6"> Inherence&nbsp; <input TYPE="checkbox" VALUE="ON" NAME="C7"> Absence <br>
-  </strong></font><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (f20.c2.checked) then
-	call Right(counter)
-	counter=0
-	else
-	counter=counter+1
-	call Wrong(counter)
-	call f20.reset()
-	end if
-" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="f20.C2.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;The relationship between knife and its sharpness is inherent, ie. it is inseparable. &quot;)" NAME="B3"> </p>
-  </div>
-</form>
+<button onclick="myFunction19()">Solution & Reason</button>
+  
+<p id="demo19"></p> </p>
+
+<script>
+function myFunction19() {
+  document.getElementById("demo19").innerHTML = "Answer: Substance. Reason: Tender Coconut is a substance.  It contains an element of water in it.";
+}
+</script>
+
+
+<form name="f20">  <div align="left"><p><font size="5"><i>20. Sharpness of a knife<br>
+	
 </font>
+<font size="3">
+	<input type="radio" id="sub" name="tarka19" value="sub">
+	<label for="sub">Substance</label>
+	<input type="radio" id="qual" name="tarka19" value="qual">
+	<label for="qual">Quality</label>
+	<input type="radio" id="act" name="tarka19" value="act">
+	<label for="act">Activity</label>
+	<input type="radio" id="gen" name="tarka19" value="gen">
+	<label for="gen">Generality</label>
+	<input type="radio" id="spe" name="tarka19" value="spe">
+	<label for="spe">Speciality</label>
+	<input type="radio" id="inh" name="tarka19" value="inh">
+	<label for="inh">Inherence</label>
+  <input type="radio" id="abs" name="tarka19" value="abs">
+	<label for="abs">Absence</label>
+</div>
+  <input type="button" id="btn20" value="Check" ><p id="d20"></p>
+  </i>
+
+</form>
+<script>
+const btn20 = document.querySelector('#btn20');
+        // handle click button
+        btn20.onclick = function () {
+ var ele = document.getElementsByName('tarka19'); 
+              
+            for(i = 0; i < ele.length; i++) { 
+                if(ele[i].checked) 
+               {
+                if (ele[i].value == "qual") {
+                    	document.getElementById("d20").innerHTML = "Perfect!You are right";
+                }
+else
+{
+document.getElementById("d20").innerHTML = "Try Again or click the Solution button";
+}    }
+
+}
+
+            } 
+    </script>
+</font>
+
+<button onclick="myFunction20()">Solution & Reason</button>
+  
+<p id="demo20"></p> </p>
+
+<script>
+function myFunction20() {
+  document.getElementById("demo20").innerHTML = "Answer: Quality. Reason: The relationship between knife and its sharpness is inherent, ie. it is inseparable. ";
+}
+</script>
 
 <hr>
 

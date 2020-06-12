@@ -1,46 +1,6 @@
 <html>
 
-<head><script LANGUAGE="VBScript">
-<!--
-Sub Message(msg)
-call msgbox(msg,,"Reason ")
-end sub
-dim counter
-
-Sub Right(cnt)
-if (cnt=0) then 
-call msgbox("EXCELLENT. Keep it up.")
-elseif (cnt=1) then
-call msgbox("PERFECT.")
-elseif (cnt=2) then
-call msgbox("RIGHT answer. But you gotta improve")
-elseif (cnt=3) then
-call msgbox("RIGHT answer. But next time try to answer in less number of chances")
-else
-call msgbox("Finally got it RIGHT. Better do your homework.")
-end if
-end sub
-
-Sub Wrong(cnt)
-if cnt=1 then 
-call msgbox("WRONG. Go ahead. Try again.")
-elseif cnt=2 then
-call msgbox("Just think a little.")
-elseif cnt=3 then
-call msgbox("Come on. Give it a thinking.")
-elseif cnt=4 then
-call msgbox("Think .. Think .. Think ...")
-elseif cnt=5 then
-call msgbox("Come on its easy.")
-elseif cnt=6 then
-call msgbox("I don't think you do your homework.")
-else
-call msgbox("Go ahead. Click on solve and find out the right answer.")
-end if
-end sub
--->
-    </script>
-
+<head>
 <title>Exercise II - (dravya)</title>
 <meta name="Microsoft Theme" content="none">
 <meta name="Microsoft Border" content="none">
@@ -68,257 +28,529 @@ II - Dravya</font></p>
 
 <hr>
 
-<form METHOD="POST" NAME="f1">
-  <div align="left"><p><font size="5"><i><b>1. Fruit</b></i></font><font face="Lucida Sans"></p>
-  </div></font><table border="0" width="760" cellspacing="0" cellpadding="0">
-    <tr>
-      <td width="520"><font face="Lucida Sans" size="2"><strong><input TYPE="checkbox" VALUE="ON" NAME="C2"> Air <input TYPE="checkbox" VALUE="ON" NAME="C3"> Light <input TYPE="checkbox" VALUE="ON" NAME="C4"> Water <input TYPE="checkbox" VALUE="ON" NAME="C5">
-      Earth <input TYPE="checkbox" VALUE="ON" NAME="C8"> Soul <input TYPE="checkbox" VALUE="ON" NAME="C9"> Mind</strong></font></td>
-      <td width="32%"><font face="Lucida Sans"><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (  (f1.c5.checked) ) then
-	call Right(counter)
-	counter=0
-	else
-	counter=counter+1
-	call Wrong(counter)
-	call f1.reset()
-	end if" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="
-f1.C5.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;Fruit is primarily one form of earth. But it also has water content in it.  It is this water that is referred to as juice in some fruits.&quot;)
-call f1.reset()" NAME="B3"> </font></td>
-    </tr>
+<form name="fm1">
+  <font size="5"><i><b>1. Fruit</b></i></font>
+  <table id="t1">
+      <tr>
+          <td><input name="dravya1" id="air" type="checkbox" value="1"/><label for="air">Air</label></td>
+      
+          <td><input name="dravya1" id="light" type="checkbox" value="2"/><label for="light">Light</label></td>
+      
+          <td><input name="dravya1" id="water" type="checkbox" value="3"/><label for="water">Water</label></td>
+      
+          <td><input name="dravya1" id="earth" type="checkbox" value="4"/><label for="earth">Earth</label></td>
+      
+          <td><input name="dravya1" id="soul" type="checkbox" value="5"/><label for="soul">Soul</label></td>
+  <td><input name="dravya1" id="mind" type="checkbox" value="6"/><label for="mind">Mind</label></td>
+      </tr>
   </table>
-  <font face="Lucida Sans">
-</form>
-</font>
-
-<p align="left">&nbsp;</p>
-
-<form METHOD="POST" NAME="f2">
-  <div align="left"><p><font size="5"><i><b>2. Animals </b></i></font></p>
-  </div><table border="0" width="100%" cellspacing="0" cellpadding="0">
-    <tr>
-      <td width="68%"><font face="Lucida Sans" size="2"><strong><input TYPE="checkbox" VALUE="ON" NAME="C2"> Air <input TYPE="checkbox" VALUE="ON" NAME="C3"> Light <input TYPE="checkbox" VALUE="ON" NAME="C4"> Water <input TYPE="checkbox" VALUE="ON" NAME="C5">
-      Earth <input TYPE="checkbox" VALUE="ON" NAME="C8"> Soul <input TYPE="checkbox" VALUE="ON" NAME="C9"> Mind </strong></font></td>
-      <td width="32%"><font face="Lucida Sans"><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if ( (f2.c5.checked) and (f2.c8.checked) and (f2.c9.checked) ) then
-	call Right(counter)
-	counter=0
-	else
-	counter=counter+1
-	call Wrong(counter)
-	call f2.reset()
-	end if" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="
-f2.C5.Checked=true
-f2.C8.Checked=true
-f2.C9.Checked=true" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot; Animals just like humans are made of earth, but are also characterized by soul and mind.&quot;)
-call f2.reset()" NAME="B3"> </font></td>
-    </tr>
+  <br />
+  </form>
+  
+  <input type = "button" value = "Check" onclick = "getSelectedCheckboxValues1('dravya1')" /><p id="da1"></p>
+  <script type="text/javascript">
+      function getSelectedCheckboxValues1(name) {
+  
+  const checkboxes = document.querySelectorAll(`input[name="${name}"]:checked`);
+      let values = [];
+      checkboxes.forEach((checkbox) => {
+          values.push(checkbox.value);
+      });
+   
+          //Loop and count the number of checked CheckBoxes.
+          
+              if (values == 4) {
+                                document.getElementById("da1").innerHTML = "Perfect!You are right";
+              }
+  else
+  {
+  document.getElementById("da1").innerHTML = "Try Again or click the Solution button";
+  }
+          
+   
+      };
+  </script>
+  
+  <button onclick="myFunc1()">Solution and Reason</button>
+    
+    <p id="de2"></p> </p>
+    
+    <script>
+    function myFunc1() {
+    document.getElementById("de2").innerHTML = "Answer:Earth. Reason: Fruit is primarily one form of earth. But it also has water content in it.  It is this water that is referred to as juice in some fruits.";
+    }
+    </script>
+  
+  
+  
+  <form name="fm2">
+  <font size="5"><i><b>2. Animals</b></i></font>
+  <table id="t2">
+      <tr>
+          <td><input name="dravya2" id="air" type="checkbox" value="1"/><label for="air">Air</label></td>
+      
+          <td><input name="dravya2" id="light" type="checkbox" value="2"/><label for="light">Light</label></td>
+      
+          <td><input name="dravya2" id="water" type="checkbox" value="3"/><label for="water">Water</label></td>
+      
+          <td><input name="dravya2" id="earth" type="checkbox" value="4"/><label for="earth">Earth</label></td>
+      
+          <td><input name="dravya2" id="soul" type="checkbox" value="5"/><label for="soul">Soul</label></td>
+  <td><input name="dravya2" id="mind" type="checkbox" value="6"/><label for="mind">Mind</label></td>
+      </tr>
   </table>
-  <font face="Lucida Sans">
-</form>
-</font>
+  <br />
+  </form>
+  
+  <input type = "button" value = "Check" onclick = "getSelectedCheckboxValues2('dravya2')" /><p id="da2"></p>
+  <script type="text/javascript">
+      function getSelectedCheckboxValues2(name) {
+  
+  const checkboxes2 = document.querySelectorAll(`input[name="${name}"]:checked`);
+      let values2 = [];
+      checkboxes2.forEach((checkbox2) => {
+          values2.push(checkbox2.value);
+      }); 
+          //Loop and count the number of checked CheckBoxes.
+          
+              if (values2 == "4,5,6") {
+                                document.getElementById("da2").innerHTML = "Perfect!You are right";
+              }
+  else
+  {
+  document.getElementById("da2").innerHTML = "Try Again or click the Solution button";
+  }
+          
+   
+      };
+  </script>
+  
+  <button onclick="myFunc2()">Solution and Reason</button>
+    
+    <p id="de3"></p> </p>
+    
+    <script>
+    function myFunc2() {
+    document.getElementById("de3").innerHTML = "Answer: Earth,Soul,Mind. Reason: Animals just like humans are made of earth, but are also characterized by soul and mind.";
+    }
+    </script>
 
-<p align="left">&nbsp;</p>
-
-<form METHOD="POST" NAME="f3">
-  <div align="left"><p><font size="5"><i><b>3. Lens</b></i></font><font face="Lucida Sans"></p>
-  </div></font><table border="0" width="100%" cellspacing="0" cellpadding="0">
-    <tr>
-      <td width="68%"><font face="Lucida Sans" size="2"><strong><input TYPE="checkbox" VALUE="ON" NAME="C2"> Air <input TYPE="checkbox" VALUE="ON" NAME="C3"> Light <input TYPE="checkbox" VALUE="ON" NAME="C4"> Water <input TYPE="checkbox" VALUE="ON" NAME="C5">
-      Earth <input TYPE="checkbox" VALUE="ON" NAME="C8"> Soul <input TYPE="checkbox" VALUE="ON" NAME="C9"> Mind </strong></font></td>
-      <td width="32%"><font face="Lucida Sans"><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if ( f3.c5.checked ) then
-	call Right(counter)
-	counter=0
-	else
-	counter=counter+1
-	call Wrong(counter)
-	call f3.reset()
-	end if" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="
-f3.C5.Checked=true
-" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot; Lens are made of glass (Earth), and have the property of refracting light.&quot;)
-call f3.reset()" NAME="B3"> </font></td>
-    </tr>
+<form name="fm3">
+  <font size="5"><i><b>3. Lens</b></i></font>
+  <table id="t3">
+      <tr>
+          <td><input name="dravya3" id="air" type="checkbox" value="1"/><label for="air">Air</label></td>
+      
+          <td><input name="dravya3" id="light" type="checkbox" value="2"/><label for="light">Light</label></td>
+      
+          <td><input name="dravya3" id="water" type="checkbox" value="3"/><label for="water">Water</label></td>
+      
+          <td><input name="dravya3" id="earth" type="checkbox" value="4"/><label for="earth">Earth</label></td>
+      
+          <td><input name="dravya3" id="soul" type="checkbox" value="5"/><label for="soul">Soul</label></td>
+  <td><input name="dravya3" id="mind" type="checkbox" value="6"/><label for="mind">Mind</label></td>
+      </tr>
   </table>
-  <font face="Lucida Sans">
-</form>
-</font>
+  <br />
+  </form>
+  
+  <input type = "button" value = "Check" onclick = "getSelectedCheckboxValues3('dravya3')" /><p id="da3"></p>
+  <script type="text/javascript">
+      function getSelectedCheckboxValues3(name) {
+  
+  const checkboxes3 = document.querySelectorAll(`input[name="${name}"]:checked`);
+      let values3 = [];
+      checkboxes3.forEach((checkbox2) => {
+          values3.push(checkbox2.value);
+      }); 
+          //Loop and count the number of checked CheckBoxes.
+          
+              if (values3 == 4) {
+                                document.getElementById("da3").innerHTML = "Perfect!You are right";
+              }
+  else
+  {
+  document.getElementById("da3").innerHTML = "Try Again or click the Solution button";
+  }
+          
+   
+      };
+  </script>
+  
+  <button onclick="myFunc3()">Solution and Reason</button>
+    
+    <p id="de4"></p> </p>
+    
+    <script>
+    function myFunc3() {
+    document.getElementById("de4").innerHTML = "Answer: Earth. Reason: Lens are made of glass (Earth), and have the property of refracting light.";
+    }
+    </script>
 
-<p>&nbsp;</p>
-
-<form METHOD="POST" NAME="f4">
-  <div align="left"><p><font size="5"><i><b>4. Match Stick</b></i></font><font face="Lucida Sans"></p>
-  </div><table border="0" width="100%" cellspacing="0" cellpadding="0">
-    <tr>
-      <td width="68%"><font size="2"><strong><input TYPE="checkbox" VALUE="ON" NAME="C2"> Air <input TYPE="checkbox" VALUE="ON" NAME="C3"> Light <input TYPE="checkbox" VALUE="ON" NAME="C4">
-      Water <input TYPE="checkbox" VALUE="ON" NAME="C5"> Earth <input TYPE="checkbox" VALUE="ON" NAME="C8"> Soul <input TYPE="checkbox" VALUE="ON" NAME="C9"> Mind </strong></font></td>
-      <td width="32%"><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if (  (f4.c5.checked) ) then
-	call Right(counter)
-	counter=0
-	else
-	counter=counter+1
-	call Wrong(counter)
-	call f4.reset()
-	end if" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="
-
-f4.C5.Checked=true
-" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot; Match stick is made of earth which produces light due to friction. &quot;)
-call f4.reset()" NAME="B3"> </td>
-    </tr>
+<form name="fm4">
+  <font size="5"><i><b>4. Match Stick</b></i></font>
+  <table id="t4">
+      <tr>
+          <td><input name="dravya4" id="air" type="checkbox" value="1"/><label for="air">Air</label></td>
+      
+          <td><input name="dravya4" id="light" type="checkbox" value="2"/><label for="light">Light</label></td>
+      
+          <td><input name="dravya4" id="water" type="checkbox" value="3"/><label for="water">Water</label></td>
+      
+          <td><input name="dravya4" id="earth" type="checkbox" value="4"/><label for="earth">Earth</label></td>
+      
+          <td><input name="dravya4" id="soul" type="checkbox" value="5"/><label for="soul">Soul</label></td>
+  <td><input name="dravya4" id="mind" type="checkbox" value="6"/><label for="mind">Mind</label></td>
+      </tr>
   </table>
-</form>
-</font>
+  <br />
+  </form>
+  
+  <input type = "button" value = "Check" onclick = "getSelectedCheckboxValues4('dravya4')" /><p id="da4"></p>
+  <script type="text/javascript">
+      function getSelectedCheckboxValues4(name) {
+  
+  const checkboxes4 = document.querySelectorAll(`input[name="${name}"]:checked`);
+      let values4 = [];
+      checkboxes4.forEach((checkbox4) => {
+          values4.push(checkbox4.value);
+      }); 
+          //Loop and count the number of checked CheckBoxes.
+          
+              if (values4 == 4) {
+                                document.getElementById("da4").innerHTML = "Perfect!You are right";
+              }
+  else
+  {
+  document.getElementById("da4").innerHTML = "Try Again or click the Solution button";
+  }
+          
+   
+      };
+  </script>
+  
+  <button onclick="myFunc4()">Solution and Reason</button>
+    
+    <p id="de5"></p> </p>
+    
+    <script>
+    function myFunc4() {
+    document.getElementById("de5").innerHTML = "Answer: Earth. Reason: Match stick is made of earth which produces light due to friction. ";
+    }
+    </script>
 
-<p align="left">&nbsp;</p>
 
-<form METHOD="POST" NAME="f5">
-  <div align="left"><p><font size="5"><i><b>5. Lightning</b></i></font><font face="Lucida Sans"></p>
-  </div><table border="0" width="100%" cellspacing="0" cellpadding="0">
-    <tr>
-      <td width="68%"><font size="2"><strong><input TYPE="checkbox" VALUE="ON" NAME="C2"> Air <input TYPE="checkbox" VALUE="ON" NAME="C3"> Light <input TYPE="checkbox" VALUE="ON" NAME="C4">
-      Water <input TYPE="checkbox" VALUE="ON" NAME="C5"> Earth <input TYPE="checkbox" VALUE="ON" NAME="C8"> Soul <input TYPE="checkbox" VALUE="ON" NAME="C9"> Mind </strong></font></td>
-      <td width="32%"><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" 
-        ONCLICK="if ( f5.c3.checked ) then
-	call Right(counter)
-	counter=0
-	else
-	counter=counter+1
-	call Wrong(counter)
-	call f5.reset()
-	end if " 
-NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="f5.C3.Checked=true"
-
-NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK=
-"
-call Message(&quot;Lightning is classified under fire.This is because just as fire, lightning too has lustre.&quot;)
-call f5.reset()" NAME="B3"> </td>
-    </tr>
+<form name="fm5">
+  <font size="5"><i><b>5. Lightening</b></i></font>
+  <table id="t5">
+      <tr>
+          <td><input name="dravya5" id="air" type="checkbox" value="1"/><label for="air">Air</label></td>
+      
+          <td><input name="dravya5" id="light" type="checkbox" value="2"/><label for="light">Light</label></td>
+      
+          <td><input name="dravya5" id="water" type="checkbox" value="3"/><label for="water">Water</label></td>
+      
+          <td><input name="dravya5" id="earth" type="checkbox" value="4"/><label for="earth">Earth</label></td>
+      
+          <td><input name="dravya5" id="soul" type="checkbox" value="5"/><label for="soul">Soul</label></td>
+  <td><input name="dravya5" id="mind" type="checkbox" value="6"/><label for="mind">Mind</label></td>
+      </tr>
   </table>
-</form>
-</font>
-
-<p align="left">&nbsp;</p>
-
-<form METHOD="POST" NAME="f6">
-  <div align="left"><p><font size="5"><i><b>6. Oil</b></i></font><font face="Lucida Sans"></p>
-  </div><table border="0" width="100%" cellspacing="0" cellpadding="0">
-    <tr>
-      <td width="68%"><font size="2"><strong><input TYPE="checkbox" VALUE="ON" NAME="C2"> Air <input TYPE="checkbox" VALUE="ON" NAME="C3"> Light <input TYPE="checkbox" VALUE="ON" NAME="C4">
-      Water <input TYPE="checkbox" VALUE="ON" NAME="C5"> Earth <input TYPE="checkbox" VALUE="ON" NAME="C8"> Soul <input TYPE="checkbox" VALUE="ON" NAME="C9"> Mind </strong></font></td>
-      <td width="32%"><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if ( f6.C5.Checked ) then
-	call Right(counter)
-	counter=0
-	else
-	counter=counter+1
-	call Wrong(counter)
-	call f6.reset()
-	end if" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="
-
-f6.C5.Checked=true
-" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot; Oil is a substance .It has smell (charecterestic of earth).It has fluidity due to the action of heat(Contact with fire)&quot;)
-call f6.reset()" NAME="B3"> </td>
-    </tr>
+  <br />
+  </form>
+  
+  <input type = "button" value = "Check" onclick = "getSelectedCheckboxValues5('dravya5')" /><p id="da5"></p>
+  <script type="text/javascript">
+      function getSelectedCheckboxValues5(name) {
+  
+  const checkboxes5 = document.querySelectorAll(`input[name="${name}"]:checked`);
+      let values5 = [];
+      checkboxes5.forEach((checkbox5) => {
+          values5.push(checkbox5.value);
+      }); 
+          //Loop and count the number of checked CheckBoxes.
+          
+              if (values5 == 2) {
+                                document.getElementById("da5").innerHTML = "Perfect!You are right";
+              }
+  else
+  {
+  document.getElementById("da5").innerHTML = "Try Again or click the Solution button";
+  }
+          
+   
+      };
+  </script>
+  
+  <button onclick="myFunc5()">Solution and Reason</button>
+    
+    <p id="de6"></p> </p>
+    
+    <script>
+    function myFunc5() {
+    document.getElementById("de6").innerHTML = "Answer: Light. Reason: Lightning is classified under fire.This is because just as fire, lightning too has lustre.";
+    }
+    </script>
+<form name="fm6">
+  <font size="5"><i><b>6. Oil</b></i></font>
+  <table id="t6">
+      <tr>
+          <td><input name="dravya6" id="air" type="checkbox" value="1"/><label for="air">Air</label></td>
+      
+          <td><input name="dravya6" id="light" type="checkbox" value="2"/><label for="light">Light</label></td>
+      
+          <td><input name="dravya6" id="water" type="checkbox" value="3"/><label for="water">Water</label></td>
+      
+          <td><input name="dravya6" id="earth" type="checkbox" value="4"/><label for="earth">Earth</label></td>
+      
+          <td><input name="dravya6" id="soul" type="checkbox" value="5"/><label for="soul">Soul</label></td>
+  <td><input name="dravya6" id="mind" type="checkbox" value="6"/><label for="mind">Mind</label></td>
+      </tr>
   </table>
-</form>
-</font>
+  <br />
+  </form>
+  
+  <input type = "button" value = "Check" onclick = "getSelectedCheckboxValues6('dravya6')" /><p id="da6"></p>
+  <script type="text/javascript">
+      function getSelectedCheckboxValues6(name) {
+  
+  const checkboxes6 = document.querySelectorAll(`input[name="${name}"]:checked`);
+      let values6 = [];
+      checkboxes6.forEach((checkbox6) => {
+          values6.push(checkbox6.value);
+      }); 
+          //Loop and count the number of checked CheckBoxes.
+          
+              if (values6 == 4) {
+                                document.getElementById("da6").innerHTML = "Perfect!You are right";
+              }
+  else
+  {
+  document.getElementById("da6").innerHTML = "Try Again or click the Solution button";
+  }
+          
+   
+      };
+  </script>
+  
+  <button onclick="myFunc6()">Solution and Reason</button>
+    
+    <p id="de7"></p> </p>
+    
+    <script>
+    function myFunc6() {
+    document.getElementById("de7").innerHTML = "Answer: Earth. Reason: Oil is a substance .It has smell (charecterestic of earth).It has fluidity due to the action of heat(Contact with fire)";
+    }
+    </script>
 
-<p align="left">&nbsp;</p>
 
-<form METHOD="POST" NAME="f7">
-  <div align="left"><p><font size="5"><i><b>7. Cake</b></i></font><font face="Lucida Sans"></p>
-  </div><table border="0" width="100%" cellspacing="0" cellpadding="0">
-    <tr>
-      <td width="68%"><font size="2"><strong><input TYPE="checkbox" VALUE="ON" NAME="C2"> Air <input TYPE="checkbox" VALUE="ON" NAME="C3"> Light <input TYPE="checkbox" VALUE="ON" NAME="C4">
-      Water <input TYPE="checkbox" VALUE="ON" NAME="C5"> Earth <input TYPE="checkbox" VALUE="ON" NAME="C8"> Soul <input TYPE="checkbox" VALUE="ON" NAME="C9"> Mind &nbsp;&nbsp;&nbsp;&nbsp;</strong></font></td>
-      <td width="32%"><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if ( f7.c5.checked ) then
-	call Right(counter)
-	counter=0
-	else
-	counter=counter+1
-	call Wrong(counter)
-	call f7.reset()
-	end if" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="
-
-f7.C5.Checked=true
-" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot; The primary constituent of cake is earth. The consistency is caused due to the presence of air. &quot;)
-call f7.reset()" NAME="B3"> </td>
-    </tr>
+<form name="fm7">
+  <font size="5"><i><b>7. Cake</b></i></font>
+  <table id="t7">
+      <tr>
+          <td><input name="dravya7" id="air" type="checkbox" value="1"/><label for="air">Air</label></td>
+      
+          <td><input name="dravya7" id="light" type="checkbox" value="2"/><label for="light">Light</label></td>
+      
+          <td><input name="dravya7" id="water" type="checkbox" value="3"/><label for="water">Water</label></td>
+      
+          <td><input name="dravya7" id="earth" type="checkbox" value="4"/><label for="earth">Earth</label></td>
+      
+          <td><input name="dravya7" id="soul" type="checkbox" value="5"/><label for="soul">Soul</label></td>
+  <td><input name="dravya7" id="mind" type="checkbox" value="6"/><label for="mind">Mind</label></td>
+      </tr>
   </table>
-</form>
-</font>
+  <br />
+  </form>
+  
+  <input type = "button" value = "Check" onclick = "getSelectedCheckboxValues7('dravya7')" /><p id="da7"></p>
+  <script type="text/javascript">
+      function getSelectedCheckboxValues7(name) {
+  
+  const checkboxes7 = document.querySelectorAll(`input[name="${name}"]:checked`);
+      let values7 = [];
+      checkboxes7.forEach((checkbox7) => {
+          values7.push(checkbox7.value);
+      }); 
+          //Loop and count the number of checked CheckBoxes.
+          
+              if (values7 == 4) {
+                                document.getElementById("da7").innerHTML = "Perfect!You are right";
+              }
+  else
+  {
+  document.getElementById("da7").innerHTML = "Try Again or click the Solution button";
+  }
+          
+   
+      };
+  </script>
+  
+  <button onclick="myFunc7()">Solution and Reason</button>
+    
+    <p id="de8"></p> </p>
+    
+    <script>
+    function myFunc7() {
+    document.getElementById("de8").innerHTML = "Answer: Earth. Reason: The primary constituent of cake is earth. The consistency is caused due to the presence of air. ";
+    }
+    </script>
 
-<p align="left">&nbsp;</p>
-
-<form METHOD="POST" NAME="f8">
-  <div align="left"><p><font size="5"><i><b>8. Soft drinks</b></i></font><font face="Lucida Sans"></p>
-  </div></font><table border="0" width="100%" cellspacing="0" cellpadding="0">
-    <tr>
-      <font face="Lucida Sans"><td width="68%"></font><font face="Lucida Sans" size="2"><strong><input TYPE="checkbox" VALUE="ON" NAME="C2"> Air <input TYPE="checkbox" VALUE="ON" NAME="C3">
-      Light <input TYPE="checkbox" VALUE="ON" NAME="C4"> Water <input TYPE="checkbox" VALUE="ON" NAME="C5"> Earth <input TYPE="checkbox" VALUE="ON" NAME="C8"> Soul <input TYPE="checkbox" VALUE="ON" NAME="C9"> Mind &nbsp;&nbsp;</strong></font></td>
-      <td width="32%"><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if ( f8.c4.checked ) then
-	call Right(counter)
-	counter=0
-	else
-	counter=counter+1
-	call Wrong(counter)
-	call f8.reset()
-	end if" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="
-
-f8.C4.Checked=true
-" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot; Softdrinks are made of water. The aeration is due to the presence of carbon dioxide (air).&quot;)
-call f8.reset()" NAME="B3"> </td>
-    </tr>
+<form name="fm8">
+  <font size="5"><i><b>8. Soft drinks</b></i></font>
+  <table id="t8">
+      <tr>
+          <td><input name="dravya8" id="air" type="checkbox" value="1"/><label for="air">Air</label></td>
+      
+          <td><input name="dravya8" id="light" type="checkbox" value="2"/><label for="light">Light</label></td>
+      
+          <td><input name="dravya8" id="water" type="checkbox" value="3"/><label for="water">Water</label></td>
+      
+          <td><input name="dravya8" id="earth" type="checkbox" value="4"/><label for="earth">Earth</label></td>
+      
+          <td><input name="dravya8" id="soul" type="checkbox" value="5"/><label for="soul">Soul</label></td>
+  <td><input name="dravya8" id="mind" type="checkbox" value="6"/><label for="mind">Mind</label></td>
+      </tr>
   </table>
-  <font face="Lucida Sans">
-</form>
-</font>
+  <br />
+  </form>
+  
+  <input type = "button" value = "Check" onclick = "getSelectedCheckboxValues8('dravya8')" /><p id="da8"></p>
+  <script type="text/javascript">
+      function getSelectedCheckboxValues8(name) {
+  
+  const checkboxes8 = document.querySelectorAll(`input[name="${name}"]:checked`);
+      let values8 = [];
+      checkboxes8.forEach((checkbox8) => {
+          values8.push(checkbox8.value);
+      }); 
+          //Loop and count the number of checked CheckBoxes.
+          
+              if (values8 == 3) {
+                                document.getElementById("da8").innerHTML = "Perfect!You are right";
+              }
+  else
+  {
+  document.getElementById("da8").innerHTML = "Try Again or click the Solution button";
+  }
+          
+   
+      };
+  </script>
+  
+  <button onclick="myFunc8()">Solution and Reason</button>
+    
+    <p id="de9"></p> </p>
+    
+    <script>
+    function myFunc8() {
+    document.getElementById("de9").innerHTML = "Answer: Water. Reason: Softdrinks are made of water. The aeration is due to the presence of carbon dioxide (air).";
+    }
+    </script>
 
-<p align="left">&nbsp;</p>
-
-<form METHOD="POST" NAME="f9">
-  <div align="left"><p><font size="5"><i><b>9. Rust</b></i></font><font face="Lucida Sans"></p>
-  </div><table border="0" width="100%" cellspacing="0" cellpadding="0">
-    <tr>
-      <td width="68%"><font size="2"><strong><input TYPE="checkbox" VALUE="ON" NAME="C2"> Air <input TYPE="checkbox" VALUE="ON" NAME="C3"> Light <input TYPE="checkbox" VALUE="ON" NAME="C4">
-      Water <input TYPE="checkbox" VALUE="ON" NAME="C5"> Earth <input TYPE="checkbox" VALUE="ON" NAME="C8"> Soul <input TYPE="checkbox" VALUE="ON" NAME="C9"> Mind </strong></font></td>
-      <td width="32%"><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if ( f9.c5.checked ) then
-	call Right(counter)
-	counter=0
-	else
-	counter=counter+1
-	call Wrong(counter)
-	call f9.reset()
-	end if" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="
-
-f9.C5.Checked=true
-" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot;Rust is formed due to oxidation of iron (earth) in presence of moisture (water). &quot;)
-call f9.reset()" NAME="B3"> </td>
-    </tr>
+<form name="fm9">
+  <font size="5"><i><b>9. Rust</b></i></font>
+  <table id="t9">
+      <tr>
+          <td><input name="dravya9" id="air" type="checkbox" value="1"/><label for="air">Air</label></td>
+      
+          <td><input name="dravya9" id="light" type="checkbox" value="2"/><label for="light">Light</label></td>
+      
+          <td><input name="dravya9" id="water" type="checkbox" value="3"/><label for="water">Water</label></td>
+      
+          <td><input name="dravya9" id="earth" type="checkbox" value="4"/><label for="earth">Earth</label></td>
+      
+          <td><input name="dravya9" id="soul" type="checkbox" value="5"/><label for="soul">Soul</label></td>
+  <td><input name="dravya9" id="mind" type="checkbox" value="6"/><label for="mind">Mind</label></td>
+      </tr>
   </table>
-</form>
-</font>
+  <br />
+  </form>
+  
+  <input type = "button" value = "Check" onclick = "getSelectedCheckboxValues9('dravya9')" /><p id="da9"></p>
+  <script type="text/javascript">
+      function getSelectedCheckboxValues9(name) {
+  
+  const checkboxes9 = document.querySelectorAll(`input[name="${name}"]:checked`);
+      let values9 = [];
+      checkboxes9.forEach((checkbox9) => {
+          values9.push(checkbox9.value);
+      }); 
+          //Loop and count the number of checked CheckBoxes.
+          
+              if (values9 == 4) {
+                                document.getElementById("da9").innerHTML = "Perfect!You are right";
+              }
+  else
+  {
+  document.getElementById("da9").innerHTML = "Try Again or click the Solution button";
+  }
+          
+   
+      };
+  </script>
+  
+  <button onclick="myFunc9()">Solution and Reason</button>
+    
+    <p id="de10"></p> </p>
+    
+    <script>
+    function myFunc9() {
+    document.getElementById("de10").innerHTML = "Answer: Earth. Reason: Rust is formed due to oxidation of iron (earth) in presence of moisture (water).";
+    }
+    </script>
 
-<p align="left">&nbsp;</p>
-
-<form METHOD="POST" NAME="f10">
-  <div align="left"><p><font size="5"><i><b>10. Gold</b></i></font></p>
-  </div><table border="0" width="100%" cellspacing="0" cellpadding="0">
-    <tr>
-      <td width="68%"><font face="Lucida Sans" size="2"><strong><input TYPE="checkbox" VALUE="ON" NAME="C2"> Air <input TYPE="checkbox" VALUE="ON" NAME="C3"> Light <input TYPE="checkbox" VALUE="ON" NAME="C4"> Water <input TYPE="checkbox" VALUE="ON" NAME="C5">
-      Earth <input TYPE="checkbox" VALUE="ON" NAME="C8"> Soul <input TYPE="checkbox" VALUE="ON" NAME="C9"> Mind </strong></font></td>
-      <td width="32%"><font face="Lucida Sans"><input LANGUAGE="VBScript" TYPE="button" VALUE="Answer" ONCLICK="if ( (f10.c3.checked)) then
-	call Right(counter)
-	counter=0
-	else
-	counter=counter+1
-	call Wrong(counter)
-	call f10.reset()
-	end if" NAME="B1"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Solve" ONCLICK="
-f10.C3.Checked=true
-" NAME="B2"> <input LANGUAGE="VBScript" TYPE="button" VALUE="Reason" ONCLICK="call Message(&quot; Gold is categorised as light due to its lustre.&quot;)
-call f10.reset()" NAME="B3"> </font></td>
-    </tr>
+<form name="fm10">
+  <font size="5"><i><b>10. Gold</b></i></font>
+  <table id="t10">
+      <tr>
+          <td><input name="dravya10" id="air" type="checkbox" value="1"/><label for="air">Air</label></td>
+      
+          <td><input name="dravya10" id="light" type="checkbox" value="2"/><label for="light">Light</label></td>
+      
+          <td><input name="dravya10" id="water" type="checkbox" value="3"/><label for="water">Water</label></td>
+      
+          <td><input name="dravya10" id="earth" type="checkbox" value="4"/><label for="earth">Earth</label></td>
+      
+          <td><input name="dravya10" id="soul" type="checkbox" value="5"/><label for="soul">Soul</label></td>
+  <td><input name="dravya10" id="mind" type="checkbox" value="6"/><label for="mind">Mind</label></td>
+      </tr>
   </table>
-  <font face="Lucida Sans">
-</form>
-</font>
+  <br />
+  </form>
+  
+  <input type = "button" value = "Check" onclick = "getSelectedCheckboxValues10('dravya10')" /><p id="da10"></p>
+  <script type="text/javascript">
+      function getSelectedCheckboxValues10(name) {
+  
+  const checkboxes10 = document.querySelectorAll(`input[name="${name}"]:checked`);
+      let values10 = [];
+      checkboxes10.forEach((checkbox10) => {
+          values10.push(checkbox10.value);
+      }); 
+          //Loop and count the number of checked CheckBoxes.
+          
+              if (values10 == 2) {
+                                document.getElementById("da10").innerHTML = "Perfect!You are right";
+              }
+  else
+  {
+  document.getElementById("da10").innerHTML = "Try Again or click the Solution button";
+  }
+          
+   
+      };
+  </script>
+  
+  <button onclick="myFunc10()">Solution and Reason</button>
+    
+    <p id="de11"></p> </p>
+    
+    <script>
+    function myFunc10() {
+    document.getElementById("de11").innerHTML = "Answer: Light. Reason: Gold is categorised as light due to its lustre.";
+    }
+    </script>
 
 <hr>
 
